@@ -18,7 +18,7 @@ def getStats(stats, parameters):
 # get the range array from the parameters list
 # Will
 def getRange(range, parameters):
-    range = None
+    dateRange = None
 
 # get the league from the parameters list
 # Will
@@ -40,14 +40,14 @@ def getTeamPitchingRoster(teamName, pitcherIds):
 def getPitcherEvaluations(parameters, pitcherEvals):
     stats = None
     teamName = None
-    range = None
+    dateRange = None
     league = None
     aggregate = None
     pitcherIds = None
 
     getTeamName(teamName, parameters)
     getStats(stats, parameters)
-    getRange(range, parameters)
+    getRange(dateRange, parameters)
     getLeague(league, parameters)
     getAggregate(aggregate, parameters)
     getTeamPitchingRoster(teamName, pitcherIds)
