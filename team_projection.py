@@ -1,34 +1,42 @@
 import pitcher_evaluation
 
 # read each line of the parameter file, put each line into an array, store all arrays in parameters
+# Vedant
 def readParameterFile(filename, parameters):
     parameters = None
 
 # get the team name from the parameters list
+# Will
 def getTeamName(teamName, parameters):
     teamName = None
 
 # get the stats array from the parameters list
+# Will
 def getStats(stats, parameters):
     stats = None
 
 # get the range array from the parameters list
+# Will
 def getRange(range, parameters):
     range = None
 
 # get the league from the parameters list
+# Will
 def getLeague(league, parameters):
     league = None
 
 # get the aggregate condition from the parameters list
+# Will
 def getAggregate(aggregate, parameters):
     aggregate = None
 
 # get the player Ids of all pitchers on the given team name
+# Eric
 def getTeamPitchingRoster(teamName, pitcherIds):
     teamName = None
 
 # get pitching evaluations of all pitchers on the given team name
+# Mike
 def getPitcherEvaluations(parameters, pitcherEvals):
     stats = None
     teamName = None
@@ -47,6 +55,7 @@ def getPitcherEvaluations(parameters, pitcherEvals):
         pitcherEvals[i] = pitcherEvaluation(pitcherId[i], teamName, stats, range, league, aggregate)
 
 # for each evaluation type, call the relevant evaluation function
+# Mike
 def getEvaluations(playerEvals, parameters):
     evalType = None
 
