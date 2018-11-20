@@ -1,9 +1,19 @@
 import pitcher_evaluation
+import csv
 
 # read each line of the parameter file, put each line into an array, store all arrays in parameters
 # Vedant
-def readParameterFile(filename, parameters):
-    parameters = None
+def readParameterFile(filename):
+    fileHandle = open(filename) # file handle
+    fileReader = csv.reader(fileHandle) # reader object
+    contentList = list(fileReader) # list of lists containing the rows
+    paramDict = {}
+    for row in contentList:
+        values = []
+        for val in row[1:]: # the first column is the header and the rest are values
+            values += [val]
+        paramDict[row[0]] = values
+    return paramDict
 
 # get the team name from the parameters list
 # Will
@@ -63,7 +73,7 @@ filename = None
 parameters = None
 playerEvals = None
 
-readParameterFile(filename, parameters)
+readParameterFile(filename)
 getEvaluations(playerEvals, parameters)
 
 
