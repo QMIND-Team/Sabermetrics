@@ -49,19 +49,13 @@ def getTeamPitchingRoster(teamName, pitcherIds):
 # get pitching evaluations of all pitchers on the given team name
 # Mike
 def getPitcherEvaluations(parameters):
-    stats = None
-    teamName = None
-    dateRange = None
-    league = None
-    aggregate = None
-    pitcherIds = None
+    teamName = getTeamName(teamName, parameters)
+    stats = getStats(stats, parameters)
+    dateRange = getRange(dateRange, parameters)
+    league = getLeague(league, parameters)
+    aggregate = getAggregate(aggregate, parameters)
+    pitcherIds = getTeamPitchingRoster(teamName, pitcherIds)
 
-    getTeamName(teamName, parameters)
-    getStats(stats, parameters)
-    getRange(dateRange, parameters)
-    getLeague(league, parameters)
-    getAggregate(aggregate, parameters)
-    getTeamPitchingRoster(teamName, pitcherIds)
     for i in range(pitcherIds.size()):
         pitcherEvals[i] = pitcherEvaluation(pitcherId[i], teamName, stats, dateRange, league, aggregate)
     return pitcherEvals

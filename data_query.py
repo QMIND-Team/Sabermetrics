@@ -4,7 +4,24 @@ import numpy as np
 
 # Mike
 def query(pitcherId, teamName, stats, dateRange, league, aggregate):
-    return 0
+    functionDict = checkStatsFiles(stats)
+    if functionDict["statcast"]:
+        dfStatcast = statcastData(pitcherId, functionDict["statcast"], dateRange)
+    if functionDict["teamPitching"]:
+        dfTeamPitch = teamPitchingData(teamName, dateRange, functionDict["teamPitching"], league, aggregate)
+    if functionDict["bWar"]:
+        dfBWar = bWarData(pitcherId, dateRange, functionDict["bWar"])
+    if functionDict["fangraphs"]:
+        dfFangraphs = pitchingFangraphsData(dateRange, functionDict["fangraphs"])
+    if functionDict["bref"]:
+        dfBref = pitchingBrefData(dateRange, functionDict["bref"])
+    if functionDict["savant"]:
+        dfSavant = pitchingBaseballSavantData(dateRange, functionDict["savant"])
+
+    dataframes = [dfStatcast, dfTeamPitch, dfBWar, dfFangraphs, dfBref, dfSavant]
+
+    mergedFrames = mergeAllFrames(dataframes)
+    return mergedFrames
 
 # Mike
 def checkStatsFiles(stats):
