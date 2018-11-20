@@ -17,8 +17,9 @@ def readParameterFile(filename):
 
 # get the team name from the parameters list
 # Will
-def getTeamName(teamName, parameters):
-    teamName = None
+def getTeamName(parameters):
+    teamName = parameters['team']
+    return parameters['team']
 
 # get the stats array from the parameters list
 # Will
@@ -47,7 +48,7 @@ def getTeamPitchingRoster(teamName, pitcherIds):
 
 # get pitching evaluations of all pitchers on the given team name
 # Mike
-def getPitcherEvaluations(parameters, pitcherEvals):
+def getPitcherEvaluations(parameters):
     stats = None
     teamName = None
     dateRange = None
@@ -62,19 +63,23 @@ def getPitcherEvaluations(parameters, pitcherEvals):
     getAggregate(aggregate, parameters)
     getTeamPitchingRoster(teamName, pitcherIds)
     for i in range(pitcherIds.size()):
-        pitcherEvals[i] = pitcherEvaluation(pitcherId[i], teamName, stats, range, league, aggregate)
+        pitcherEvals[i] = pitcherEvaluation(pitcherId[i], teamName, stats, dateRange, league, aggregate)
+    return pitcherEvals
 
 # for each evaluation type, call the relevant evaluation function
 # Mike
-def getEvaluations(playerEvals, parameters):
-    evalType = None
+def getEvaluations(parameters):
+    evalDict = {"pitchers": [],
+                "batters": [],
+                "fielders": []}
+    if "pitchers" in parameters:
+        evalDict["pitchers"] = getPitcherEvaluations(parameters)
+    return evalDict
 
-filename = None
-parameters = None
-playerEvals = None
+filename = "parameters_template.csv"
 
-readParameterFile(filename)
-getEvaluations(playerEvals, parameters)
+parameters = readParameterFile(filename)
+evaluations = getEvaluations(parameters)
 
 
 

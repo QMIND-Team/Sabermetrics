@@ -1,20 +1,21 @@
 import pybaseball as bball
 import pandas as pd
+import numpy as np
 
 # Mike
-def query(pitcherId, stats, dateRange, league, aggregate):
-    statsType = checkStatsFiles(stats)
+def query(pitcherId, teamName, stats, dateRange, league, aggregate):
+    return 0
 
 # Mike
 def checkStatsFiles(stats):
     statsToUse = None
-    return(statsToUse)
+    return statsToUse
 
 def statcastData(pitcherId, stats, dateRange):
     statcastData = bball.statcast_pitcher(dateRange[0], dateRange[1], pitcherId)
-    statcastDF = pd.DataFrame(statcastDF)
+    statcastDF = pd.DataFrame(statcastData)
     statsOnly = statcastDF[stats]
-    return(statsOnly)
+    return statsOnly
 
 def teamPitchingData(teamName, dateRange, stats, league, aggregate):
     df = bball.team_pitching(dateRange[0], dateRange[1], league, aggregate)
@@ -29,7 +30,7 @@ def teamPitchingData(teamName, dateRange, stats, league, aggregate):
         if col not in needed_cols:
             drop_cols += [col]
     df = df.drop(drop_cols, axis = 1)
-    return(df)
+    return df
 
 # bWarPitch  is a function that takes in 4 parameters and returns a pd data frame
 # 1. mld_ID is an array of integers of the the mld_ID that corresponds to the required player(s)
@@ -37,13 +38,13 @@ def teamPitchingData(teamName, dateRange, stats, league, aggregate):
 # 3. range is an array of two strings in the form [yyyy-mm-dd,yyy-mm-dd] which indicates the time period of the required data
 def bWarData(pitcherId, dateRange, stats):
     #Select the correct version of bwar_pitch
-    data = bwar_pitch(return_all=1)
+    data = bball.bwar_pitch(return_all=1)
 
     #Create a panda data frame from the data
     df = pd.DataFrame(data)
 
     #eliminate by mlb_ID
-    df = df[df.pitcherId.isin(mlb_ID)]
+    df = df[df.pitcherId.isin(pitcherId)]
 
     #eliminate by stats
     df = df.filter(items=stats)
@@ -61,7 +62,7 @@ def bWarData(pitcherId, dateRange, stats):
 
     #eliminate by year
     df = df[(df.year_ID >= start) & (df.year_ID <= end)]
-    return(df)
+    return df
 
 def pitchingFangraphsData(dateRange, stats):
     # extracting year from start date
@@ -73,7 +74,7 @@ def pitchingFangraphsData(dateRange, stats):
     end = end_str[:4]
 
     # get pitching_stats for specific range given
-    pitch_stats = pitching_stats(start, end)
+    pitch_stats = bball.pitching_stats(start, end)
     pitch_stats_df = pd.DataFrame(pitch_stats)
     headersList = pitch_stats_df.columns
     headers = np.asarray(headersList)
@@ -114,7 +115,7 @@ def pitchingBrefData(dateRange, stats):
     headers = []
     while a <= b:
         # make a Data Frame for the specific year and take a list of headers
-        pitch_stats = pitching_stats_bref(a)
+        pitch_stats = bball.pitching_stats_bref(a)
         pitch_stats_df = pd.DataFrame(pitch_stats)
         headersList = pitch_stats_df.columns
         headers = np.asarray(headersList)
@@ -148,7 +149,7 @@ def pitchingBrefData(dateRange, stats):
 
 def pitchingBaseballSavantData(dateRange, stats):
     # get pitching_stats for specific range given
-    pitch_stats = pitching_stats_range(dateRange[0], dateRange[1])
+    pitch_stats = bball.pitching_stats_range(dateRange[0], dateRange[1])
     pitch_stats_df = pd.DataFrame(pitch_stats)
     headersList = pitch_stats_df.columns
     headers = np.asarray(headersList)
@@ -179,5 +180,5 @@ def mergeAllFrames(dataFrames):
 
 # Eric
 def mergeFrames(frame1, frame2):
-    frame1 = None
-    return(mergedFrames)
+    mergedFrames = None
+    return mergedFrames
