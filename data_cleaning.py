@@ -2,10 +2,12 @@ import numpy as np
 import pandas as pd
 
 # gets dataframe, calls cleaning functions, returns clean data
+# Mike
 def cleaning(dataframe, nullThreshRow, nullThreshCol):
    return 0
 
 #remove rows in the data frame with nulls above the threshold
+#Eric
 def removeNullThreshRows(dataframe, nullThreshRow):
     return 0
 
@@ -14,6 +16,7 @@ def removeNullThreshColumns(dataframe, nullThreshCol):
     return 0
 
 # count number of nulls in each row
+# Vedant
 def countRowNulls(dataframe):
     return 0
 
@@ -22,6 +25,7 @@ def countColumnNulls(dataframe):
     return 0
 
 # fill a column with the median of the column
+# Will
 def fillColWithMedian(dataframe, colNum):
     return 0
 
