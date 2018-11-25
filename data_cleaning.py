@@ -18,11 +18,20 @@ def removeNullThreshColumns(dataframe, nullThreshCol):
 # count number of nulls in each row
 # Vedant
 def countRowNulls(dataframe):
-    return 0
+    '''
+    Index can be given to get number of null columns in a particular row.
+    :param dataframe: pandas DataFrame
+    :return: pandas Series: number of null values in each row
+    '''
+    return dataframe.isna().sum(axis=1)
 
 # count number of nulls in each column
 def countColumnNulls(dataframe):
-    return 0
+    '''
+    :param dataframe: pandas DataFrame
+    :return: pandas Series: number of null values within each column
+    '''
+    return dataframe.isna().sum()
 
 # fill a column with the median of the column
 # Will
