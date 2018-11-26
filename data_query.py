@@ -196,6 +196,6 @@ def mergeAllFrames(dataFrames):
     return mergedData
 
 # Eric
-def mergeFrames(frame1, frame2):
-    mergedFrames = None
+def mergeFrames(frame1, frame2,on):
+    mergedFrames = pd.merge(frame1,frame2, on = [on], how ='outer')
     return mergedFrames

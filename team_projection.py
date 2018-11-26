@@ -55,8 +55,11 @@ def getAggregate(parameters):
 
 # get the player Ids of all pitchers on the given team name
 # Eric
-def getTeamPitchingRoster(teamName, pitcherIds):
-    teamName = None
+def getTeamPitchingRoster(teamName):
+    data = pitching()
+    df = pd.DataFrame(data)
+    df = df[df.teamID.str.contains(teamName)]
+    return df
 
 # get pitching evaluations of all pitchers on the given team name
 # Mike

@@ -8,13 +8,13 @@ def team_pitching_csv():
     headers = list(df.columns)
     writer.writerow(headers)
     out_file.close()
+team_pitching_csv()
 
 def fan_graphs_csv():
     # get a list of the headers for the function
     pitching_statistics = bball.pitching_stats(2016, 2017)
     pitch_stats_df = pd.DataFrame(pitching_statistics)
     headers = np.asarray(pitch_stats_df.columns)
-
     with open("fanGraphs.csv", 'w') as csvFile:
         wr = csv.writer(csvFile, dialect='excel')
         wr.writerow(headers)
@@ -42,8 +42,17 @@ def bref_csv():
         wr.writerow(headers)
     csvFile.close()
     
+ def bwar_csv():
+    out_file = open('bwar.csv', 'w', newline = '')
+    writer = csv.writer(out_file)
+    df = bwar_pitch()
+    headers = list(df.columns)
+    writer.writerow(headers)
+    out_file.close()
+    
 
 baseball_savant_csv()
 bref_csv()
 team_pitching_csv()
 fan_graphs_csv()
+bwar_csv()
