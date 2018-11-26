@@ -39,12 +39,16 @@ def countColumnNulls(dataframe):
 
 # fill a column with the median of the column
 # Will
-def fillColWithMedian(dataframe, colNum):
-    return 0
+def fillColsWithMedian(dataframe, colNum):
+    median = findMedianOfCol(dataframe, colNum)
+    dataframe.iloc[:, colNum] = dataframe.iloc[:, colNum].fillna(median)
+    return dataframe
 
 # fill a column with the mean of the column
-def fillColWithMean(dataframe, colNum):
-    return 0
+def fillColsWithMean(dataframe, colNum):
+    mean = findMeanOfCol(dataframe, colNum)
+    dataframe.iloc[:, colNum] = dataframe.iloc[:, colNum].fillna(mean)
+    return dataframe
 
 # find the median of a column
 def findMedianOfCol(dataframe, colNum):

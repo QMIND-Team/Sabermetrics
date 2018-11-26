@@ -19,27 +19,39 @@ def readParameterFile(filename):
 # Will
 def getTeamName(parameters):
     teamName = parameters['team']
-    return parameters['team']
+    return teamName
 
 # get the stats array from the parameters list
 # Will
 def getStats(stats, parameters):
-    stats = None
+    stats_arr = []
+    for stat in range(len(stats)):
+        if stats[stat] in parameters.keys():
+            stats_arr.append(parameters[stats[stat]])
+
+    stats_array = np.asarray(stats_arr)
+    stats_df = pd.DataFrame(stats_array.reshape(1, len(stats)), columns=stats)
+    return stats_df
 
 # get the range array from the parameters list
 # Will
-def getRange(range, parameters):
-    dateRange = None
+def getRange(parameters):
+    range_arr = []
+    np.asarray(range_arr)
+    range_arr = parameters['dateRange']
+    return range_arr
 
 # get the league from the parameters list
 # Will
-def getLeague(league, parameters):
-    league = None
+def getLeague(parameters):
+    league = parameters['league']
+    return league
 
 # get the aggregate condition from the parameters list
 # Will
-def getAggregate(aggregate, parameters):
-    aggregate = None
+def getAggregate(parameters):
+    aggregate = parameters['aggregate']
+    return aggregate
 
 # get the player Ids of all pitchers on the given team name
 # Eric
