@@ -9,11 +9,15 @@ def cleaning(dataframe, nullThreshRow, nullThreshCol):
 #remove rows in the data frame with nulls above the threshold
 #Eric
 def removeNullThreshRows(dataframe, nullThreshRow):
-    return 0
+     length = dataframe.shape[1]
+     dataframe = dataframe.dropna(axis=0,thresh=length-nullThreshRow)
+     return dataframe
 
 # remove columns in the data frame with nulls above the threshold
 def removeNullThreshColumns(dataframe, nullThreshCol):
-    return 0
+     length = dataframe.shape[0]
+     dataframe = dataframe.dropna(axis=1,thresh=length-nullThreshCol)
+     return dataframe
 
 # count number of nulls in each row
 # Vedant
