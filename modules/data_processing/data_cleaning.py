@@ -50,10 +50,12 @@ def fillColsWithMean(dataframe, colNum):
     dataframe.iloc[:, colNum] = dataframe.iloc[:, colNum].fillna(mean)
     return dataframe
 
-# find the median of a column
-def findMedianOfCol(dataframe, colNum):
-    return 0
+# find median of a column
+def findMedianOfCol(dataframe, colName):
+    median = dataframe[colName].median()
+    return median
 
 # find the mean of a column
-def findMeanOfCol(dataframe, colNum):
-    return 0
+def findMeanOfCol(dataframe, colName):
+    mean = dataframe[colName].mean()
+    return mean
