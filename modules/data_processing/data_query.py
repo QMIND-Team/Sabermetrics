@@ -3,38 +3,39 @@ import pandas as pd
 import numpy as np
 
 # Mike
-def query(pitcherId, teamName, stats, dateRange, league, aggregate):
-    functionDict = checkStatsFiles(stats)
-    if functionDict["statcast"]:
-        dfStatcast = statcastData(pitcherId, functionDict["statcast"], dateRange)
-    if functionDict["teamPitching"]:
-        dfTeamPitch = teamPitchingData(teamName, dateRange, functionDict["teamPitching"], league, aggregate)
-    if functionDict["bWar"]:
-        dfBWar = bWarData(pitcherId, dateRange, functionDict["bWar"])
-    if functionDict["fangraphs"]:
-        dfFangraphs = pitchingFangraphsData(dateRange, functionDict["fangraphs"])
-    if functionDict["bref"]:
-        dfBref = pitchingBrefData(dateRange, functionDict["bref"])
-    if functionDict["savant"]:
-        dfSavant = pitchingBaseballSavantData(dateRange, functionDict["savant"])
+def query(source, stats, dateRange, league='None', aggregate='None', pitcherId='None'):
+    if source == "fangraphs":
+        dataframe = pitchingFangraphsData(dateRange, stats)
+    elif source == "bref":
+        dataframe = pitchingBrefData(dateRange, stats)
+    elif source == "savant":
+        dataframe = pitchingBaseballSavantData(dateRange, stats)
+    elif source == "teamPitching":
+        dataframe = teamPitchingData(dateRange, stats, league, aggregate)
+    elif source == "bWar":
+        dataframe = bWarData(dateRange, stats)
+    elif source == "statcast":
+        dataframe = statcastData(pitcherId, stats, dateRange)
+    else:
+        # TODO
+        raise Exception
 
-    dataframes = [dfStatcast, dfTeamPitch, dfBWar, dfFangraphs, dfBref, dfSavant]
-
-    mergedFrames = mergeAllFrames(dataframes)
-    return mergedFrames
-
-# Mike
-def checkStatsFiles(stats):
-    statsToUse = None
-    return statsToUse
+    return dataframe
 
 def statcastData(pitcherId, stats, dateRange):
-    statcastData = bball.statcast_pitcher(dateRange[0], dateRange[1], pitcherId)
-    statcastDF = pd.DataFrame(statcastData)
+    if pitcherId is None:
+        # TODO
+        raise Exception
+    data = bball.statcast_pitcher(dateRange[0], dateRange[1], pitcherId)
+    statcastDF = pd.DataFrame(data)
     statsOnly = statcastDF[stats]
     return statsOnly
 
-def teamPitchingData(teamName, dateRange, stats, league, aggregate):
+def teamPitchingData(dateRange, stats, league, aggregate):
+    if league is None or aggregate is None:
+        # TODO
+        raise Exception
+
     df = bball.team_pitching(dateRange[0], dateRange[1], league, aggregate)
 
     # ignore the parameters like player_id
@@ -53,15 +54,12 @@ def teamPitchingData(teamName, dateRange, stats, league, aggregate):
 # 1. mld_ID is an array of integers of the the mld_ID that corresponds to the required player(s)
 # 2. stats is the kind of data that is required in the form of an array of strings
 # 3. range is an array of two strings in the form [yyyy-mm-dd,yyy-mm-dd] which indicates the time period of the required data
-def bWarData(pitcherId, dateRange, stats):
+def bWarData(dateRange, stats):
     #Select the correct version of bwar_pitch
     data = bball.bwar_pitch(return_all=1)
 
     #Create a panda data frame from the data
     df = pd.DataFrame(data)
-
-    #eliminate by mlb_ID
-    df = df[df.pitcherId.isin(pitcherId)]
 
     #eliminate by stats
     df = df.filter(items=stats)
@@ -84,14 +82,16 @@ def bWarData(pitcherId, dateRange, stats):
 def pitchingFangraphsData(dateRange, stats):
     # extracting year from start date
     start_str = dateRange[0]
-    start = start_str[:4]
+    start = int(start_str[:4])
 
     # extracting year from end date
     end_str = dateRange[1]
-    end = end_str[:4]
+    end = int(end_str[:4])
 
     # get pitching_stats for specific range given
+    print("Gathering Data from Fangraphs")
     pitch_stats = bball.pitching_stats(start, end)
+    print("Data Gathering Complete")
     pitch_stats_df = pd.DataFrame(pitch_stats)
     headersList = pitch_stats_df.columns
     headers = np.asarray(headersList)
@@ -128,41 +128,23 @@ def pitchingBrefData(dateRange, stats):
     a = int(start)
     b = int(end)
 
+    final_stats = pd.DataFrame()
+
     # loop to get data from every year
-    headers = []
     while a <= b:
         # make a Data Frame for the specific year and take a list of headers
         pitch_stats = bball.pitching_stats_bref(a)
         pitch_stats_df = pd.DataFrame(pitch_stats)
-        headersList = pitch_stats_df.columns
-        headers = np.asarray(headersList)
-
-        # drop columns that are in the input stats array
-        keep_stats = []
-        index = []
-        count = 0
-        for i in stats:
-            for j in headers:
-                if j == i:
-                    index.insert(len(index) + 1, count)
-                    keep_stats.insert(len(keep_stats) + 1, j)
-                count = count + 1
-            count = 0
-
-        # make a list of columns that will be dropped
-        drop_cols = np.delete(headers, index)
-        drop = np.asarray(drop_cols)
-
-        # drop the columns from pitching stats with these names
-        pitch_stats_df = pitch_stats_df.drop(columns=drop)
+        pitch_stats_df['Year'] = a
 
         # appending to one single Data Frame
-        pitch_stats_df.append(pitch_stats_df)
+        final_stats = final_stats.append(pitch_stats_df)
 
         # go to next year
         a = a + 1
 
-        return pitch_stats_df
+    final_stats = final_stats[stats]
+    return final_stats
 
 def pitchingBaseballSavantData(dateRange, stats):
     # get pitching_stats for specific range given
@@ -190,12 +172,3 @@ def pitchingBaseballSavantData(dateRange, stats):
     pitch_stats_df = pitch_stats_df.drop(columns=drop)
     return pitch_stats_df
 
-# Eric
-def mergeAllFrames(dataFrames):
-    mergedData = None
-    return mergedData
-
-# Eric
-def mergeFrames(frame1, frame2,on):
-    mergedFrames = pd.merge(frame1,frame2, on = [on], how ='outer')
-    return mergedFrames

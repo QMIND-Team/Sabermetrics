@@ -1,6 +1,8 @@
-pitching, true
-stats, release_speed
-league, AL
-dateRange, 2017-04-01, 2017-04-02
+pitching
+source, bref
+model, marcel
+stats, ERA, WHIP, SO9
+league, al
+dateRange, 2015-04-01, 2017-12-01
 aggregate, 0
-team, TOR
+team, Toronto

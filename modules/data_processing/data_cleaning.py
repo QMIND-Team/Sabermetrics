@@ -1,11 +1,6 @@
 import numpy as np
 import pandas as pd
 
-# gets dataframe, calls cleaning functions, returns clean data
-# Mike
-def cleaning(dataframe, nullThreshRow, nullThreshCol):
-   return 0
-
 #remove rows in the data frame with nulls above the threshold
 #Eric
 def removeNullThreshRows(dataframe, nullThreshRow):
@@ -59,3 +54,13 @@ def findMedianOfCol(dataframe, colName):
 def findMeanOfCol(dataframe, colName):
     mean = dataframe[colName].mean()
     return mean
+
+def mergeAllFrames(dataFrames):
+    while len(dataFrames > 1):
+        for i in range(len(dataFrames), 2):
+            dataFrames[i] = mergeFrames(dataFrames[i], dataFrames[(i + 1)], 'year')
+    return dataFrames
+
+def mergeFrames(frame1, frame2,on):
+    mergedFrames = pd.merge(frame1,frame2, on = [on], how ='outer')
+    return mergedFrames
