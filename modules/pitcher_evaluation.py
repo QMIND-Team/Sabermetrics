@@ -18,8 +18,8 @@ def runModel(parameters):
         dateRange = getDateRange(parameters)
         marcelDF = prepareMarcelData(parameters)
 
-        #predictDF = marcel.runMarcel(marcelDF, stats, roster, league, dateRange)
-        return 0
+        predictDF = marcel.runMarcel(marcelDF, stats, roster, league, dateRange)
+        return predictDF
 
 
 
