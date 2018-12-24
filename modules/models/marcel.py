@@ -6,19 +6,19 @@ from pybaseball import pitching_stats_bref
 
 def marcel_model(Stat, PlayerID, mostRecentSeason, first_avg, second_avg, third_avg):
     # get stats for 3 previous seasons
-    first_season = pitching_stats_bref(mostRecentSeason)
-    second_season = pitching_stats_bref(mostRecentSeason-1)
-    third_season = pitching_stats_bref(mostRecentSeason-2)
+    #first_season = pitching_stats_bref(mostRecentSeason)
+    #second_season = pitching_stats_bref(mostRecentSeason-1)
+    #third_season = pitching_stats_bref(mostRecentSeason-2)
 
     # create Data Frames for these seasons
-    first_df = pd.DataFrame(first_season)
-    second_df = pd.DataFrame(second_season)
-    third_df = pd.DataFrame(third_season)
+    #first_df = pd.DataFrame(first_season)
+    #second_df = pd.DataFrame(second_season)
+    #third_df = pd.DataFrame(third_season)
 
     # set search parameters
-    first_df.set_index("Name", inplace=True)
-    second_df.set_index("Name", inplace=True)
-    third_df.set_index("Name", inplace=True)
+    #first_df.set_index("Name", inplace=True)
+    #second_df.set_index("Name", inplace=True)
+    #third_df.set_index("Name", inplace=True)
 
     # gather data for requested player in each season
     first_data = first_df.loc[PlayerID]
@@ -36,7 +36,7 @@ def marcel_model(Stat, PlayerID, mostRecentSeason, first_avg, second_avg, third_
     third_stat = third_data.loc[Stat]
 
     # calculate stat value used in calculations
-    stat = (first_stat*5)+(second_stat*4)+(third_stat*3)
+    #stat = (first_stat*5)+(second_stat*4)+(third_stat*3)
 
     # starting pitcher innings pitched value used in calculations
     IP = (first_IP*0.5)+(second_IP*0.1)+60
