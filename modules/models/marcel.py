@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-
 from pybaseball import pitching_stats_bref
+import modules.data_processing.data_cleaning as dc
 
 
 def marcel_model(Stat, PlayerID, mostRecentSeason, first_avg, second_avg, third_avg):
@@ -56,3 +56,15 @@ def marcel_model(Stat, PlayerID, mostRecentSeason, first_avg, second_avg, third_
     prediction = stat_per_IP * IP
 
     return prediction
+
+
+#If perGame equals 1, then the averages will be calculated per game
+def leagueAverage(df,perGame):
+    dictionary = {}
+    if(perGame ==1):
+        df = dc.perGameConversionAll(df, 1)
+    for column in df:
+        if(type(df[column].values[0]) != str):
+                dictionary[column] = df[column].mean()
+    return dictionary
+

@@ -1,9 +1,11 @@
 import pybaseball as bball
 import pandas as pd
 import numpy as np
+import modules.data_processing.data_cleaning as dc
 
 # Mike
 def query(source, stats, dateRange, league='None', aggregate='None', pitcherId='None'):
+
     if source == "fangraphs":
         dataframe = pitchingFangraphsData(dateRange, stats)
     elif source == "bref":
@@ -36,10 +38,10 @@ def teamPitchingData(dateRange, stats, league, aggregate):
         # TODO
         raise Exception
 
-    df = bball.team_pitching(dateRange[0], dateRange[1], league, aggregate)
+    period = dc.convertDateStringToInt(dateRange)
+    df = bball.team_pitching(period[0], period[1], league, aggregate)
 
     # ignore the parameters like player_id
-
     # drop all columns from the dataframe except the ones specified in stats
     df_headers = list(df.columns)
     needed_cols = stats + ['Team', 'Season']
@@ -64,19 +66,10 @@ def bWarData(dateRange, stats):
     #eliminate by stats
     df = df.filter(items=stats)
 
-    #Note: bwar_pitch only contain time periods by the year
-    #Determine the start of the required time period
-    start = dateRange[0]
-    start = start[0:4] #selecting only the first 4 characters which correspond to the year
-    start = int(start) #converting from a string to an int to match df's year_ID data type
-
-    #Determine the end of the required time period
-    end = dateRange[1]
-    end = end[0:4]
-    end = int(end)
+    period = dc.convertDateStringToInt(dateRange)
 
     #eliminate by year
-    df = df[(df.year_ID >= start) & (df.year_ID <= end)]
+    df = df[(df.year_ID >= period[0]) & (df.year_ID <= period[1])]
     return df
 
 def pitchingFangraphsData(dateRange, stats):
