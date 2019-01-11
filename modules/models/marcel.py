@@ -68,3 +68,38 @@ def leagueAverage(df,perGame):
                 dictionary[column] = df[column].mean()
     return dictionary
 
+def assign_weights(stats, player_name, season):
+    # last 3 seasons
+    season1 = season - 1
+    season2 = season - 2
+    season3 = season - 3
+
+    # DataFrames for last 3
+    #  update to take data after cleaning
+    df1 = pitching_stats_bref(season1)
+    df2 = pitching_stats_bref(season2)
+    df3 = pitching_stats_bref(season3)
+
+    # set index of the DataFrames to Name
+    df1 = df1.set_index('Name')
+    df2 = df2.set_index('Name')
+    df3 = df3.set_index('Name')
+
+    # stats from last 3 seasons
+    # update to convert name to player_id?
+    player_stats1 = df1.loc[player_name]
+    player_stats2 = df2.loc[player_name]
+    player_stats3 = df3.loc[player_name]
+
+    # required stats from last 3 seasons
+    stats1 = player_stats1.loc[stats]
+    stats2 = player_stats2.loc[stats]
+    stats3 = player_stats3.loc[stats]
+
+    # weighted stats
+    # highest weight for latest season
+    weight = 5
+    for i in [stats1, stats2, stats3]:
+        i *= weight
+        weight -= 1
+
