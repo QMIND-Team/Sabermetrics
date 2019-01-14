@@ -1,9 +1,9 @@
 import unittest
 import data_query as query
 
-class TestDataQuery(unittest.TestCase):
+class testDataQuery(unittest.TestCase):
 
-    def test_query(self):
+    def testQuery(self):
         stats = ["release_speed"]
         dateRange = ["2017-04-01", "2017-04-02"]
         df = query.query(573186, "", stats, dateRange, "", "")
