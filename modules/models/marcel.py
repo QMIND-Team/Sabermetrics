@@ -1,10 +1,10 @@
 import pandas as pd
 import numpy as np
-from pybaseball import pitching_stats_bref
+import pybaseball as bball
+# from pybaseball import pitching_stats_bref
 import modules.data_processing.data_cleaning as dc
 
-
-def marcel_model(Stat, PlayerID, mostRecentSeason, first_avg, second_avg, third_avg):
+def marcelModel(stat, playerId, mostRecentSeason, firstAvg, secondAvg, thirdAvg):
     # get stats for 3 previous seasons
     #first_season = pitching_stats_bref(mostRecentSeason)
     #second_season = pitching_stats_bref(mostRecentSeason-1)
@@ -21,42 +21,41 @@ def marcel_model(Stat, PlayerID, mostRecentSeason, first_avg, second_avg, third_
     #third_df.set_index("Name", inplace=True)
 
     # gather data for requested player in each season
-    first_data = first_df.loc[PlayerID]
-    second_data = second_df.loc[PlayerID]
-    third_data = third_df.loc[PlayerID]
+    firstData = firstDF.loc[playerId]
+    secondData = secondDF.loc[playerId]
+    thirdData = thirdDF.loc[playerId]
 
     # get IP stat for requested player in each season
-    first_IP = first_data.loc['IP']
-    second_IP = second_data.loc['IP']
-    third_IP = third_data.loc['IP']
+    firstIP = firstData.loc['IP']
+    secondIP = secondData.loc['IP']
+    thirdIP = thirdData.loc['IP']
 
     # get requested stat of player in each season
-    first_stat = first_data.loc[Stat]
-    second_stat = second_data.loc[Stat]
-    third_stat = third_data.loc[Stat]
+    firstStat = firstData.loc[stat]
+    secondStat = secondData.loc[stat]
+    thirdStat = thirdData.loc[stat]
 
     # calculate stat value used in calculations
-    #stat = (first_stat*5)+(second_stat*4)+(third_stat*3)
+    #stat = (firstStat*5)+(secondStat*4)+(thirdStat*3)
 
     # starting pitcher innings pitched value used in calculations
-    IP = (first_IP*0.5)+(second_IP*0.1)+60
+    IP = (firstIP*0.5)+(secondIP*0.1)+60
 
     # finding expected stat for each year incorporating total stat to total IP ratio
-    exp_first = first_avg*first_stat*5
-    exp_second = second_avg*second_stat*4
-    exp_third = third_avg*third_stat*3
+    expFirst = firstAvg*firstStat*5
+    expSecond = secondAvg*secondStat*4
+    expThird = thirdAvg*thirdStat*3
 
     # sum of the three seasons expected stat
-    exp_stat = exp_first + exp_second + exp_third
+    expStat = expFirst + expSecond + expThird
 
     # calculate stat per IP ratio
-    stat_per_IP = exp_stat/stat
+    statPerIP = expStat/stat
 
     # getting the predicted stat output using the stat per IP ratio and the predicted IP calculated
-    prediction = stat_per_IP * IP
+    prediction = statPerIP * IP
 
     return prediction
-
 
 #If perGame equals 1, then the averages will be calculated per game
 def leagueAverage(df,perGame):
@@ -76,9 +75,9 @@ def assign_weights(stats, player_name, season):
 
     # DataFrames for last 3
     #  update to take data after cleaning
-    df1 = pitching_stats_bref(season1)
-    df2 = pitching_stats_bref(season2)
-    df3 = pitching_stats_bref(season3)
+    df1 = bball.pitching_stats_bref(season1)
+    df2 = bball.pitching_stats_bref(season2)
+    df3 = bball.pitching_stats_bref(season3)
 
     # set index of the DataFrames to Name
     df1 = df1.set_index('Name')
@@ -87,14 +86,14 @@ def assign_weights(stats, player_name, season):
 
     # stats from last 3 seasons
     # update to convert name to player_id?
-    player_stats1 = df1.loc[player_name]
-    player_stats2 = df2.loc[player_name]
-    player_stats3 = df3.loc[player_name]
+    playerStats1 = df1.loc[player_name]
+    playerStats2 = df2.loc[player_name]
+    playerStats3 = df3.loc[player_name]
 
     # required stats from last 3 seasons
-    stats1 = player_stats1.loc[stats]
-    stats2 = player_stats2.loc[stats]
-    stats3 = player_stats3.loc[stats]
+    stats1 = playerStats1.loc[stats]
+    stats2 = playerStats2.loc[stats]
+    stats3 = playerStats3.loc[stats]
 
     # weighted stats
     # highest weight for latest season
@@ -102,4 +101,3 @@ def assign_weights(stats, player_name, season):
     for i in [stats1, stats2, stats3]:
         i *= weight
         weight -= 1
-

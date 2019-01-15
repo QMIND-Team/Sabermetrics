@@ -43,13 +43,13 @@ def teamPitchingData(dateRange, stats, league, aggregate):
 
     # ignore the parameters like player_id
     # drop all columns from the dataframe except the ones specified in stats
-    df_headers = list(df.columns)
-    needed_cols = stats + ['Team', 'Season']
-    drop_cols = []
-    for col in df_headers:
-        if col not in needed_cols:
-            drop_cols += [col]
-    df = df.drop(drop_cols, axis = 1)
+    dfHeaders = list(df.columns)
+    neededCols = stats + ['Team', 'Season']
+    dropCols = []
+    for column in dfHeaders:
+        if column not in neededCols:
+            dropCols += [column]
+    df = df.drop(dropCols, axis = 1)
     return df
 
 # bWarPitch  is a function that takes in 4 parameters and returns a pd data frame
@@ -74,94 +74,93 @@ def bWarData(dateRange, stats):
 
 def pitchingFangraphsData(dateRange, stats):
     # extracting year from start date
-    start_str = dateRange[0]
-    start = int(start_str[:4])
+    startStr = dateRange[0]
+    start = int(startStr[:4])
 
     # extracting year from end date
-    end_str = dateRange[1]
-    end = int(end_str[:4])
+    endStr = dateRange[1]
+    end = int(endStr[:4])
 
     # get pitching_stats for specific range given
     print("Gathering Data from Fangraphs")
-    pitch_stats = bball.pitching_stats(start, end)
+    pitchStats = bball.pitching_stats(start, end)
     print("Data Gathering Complete")
-    pitch_stats_df = pd.DataFrame(pitch_stats)
-    headersList = pitch_stats_df.columns
+    pitchStatsDF = pd.DataFrame(pitchStats)
+    headersList = pitchStatsDF.columns
     headers = np.asarray(headersList)
 
     # drop columns that are in the input stats array
-    keep_stats = []
+    keepStats = []
     index = []
     count = 0
     for i in stats:
         for j in headers:
             if j == i:
                 index.insert(len(index) + 1, count)
-                keep_stats.insert(len(keep_stats) + 1, j)
+                keepStats.insert(len(keepStats) + 1, j)
             count = count + 1
         count = 0
 
-    drop_cols = np.delete(headers, index)
-    drop = np.asarray(drop_cols)
+    dropCols = np.delete(headers, index)
+    drop = np.asarray(dropCols)
 
     # drop the columns from pitching stats with these names
-    pitch_stats_df = pitch_stats_df.drop(columns=drop)
-    return pitch_stats_df
+    pitchStatsDF = pitchStatsDF.drop(columns=drop)
+    return pitchStatsDF
 
 def pitchingBrefData(dateRange, stats):
     # extracting year from start date
-    start_str = dateRange[0]
-    start = start_str[:4]
+    startStr = dateRange[0]
+    start = startStr[:4]
 
     # extracting year from end date
-    end_str = dateRange[1]
-    end = end_str[:4]
+    endStr = dateRange[1]
+    end = endStr[:4]
 
     # make bounds based on start and end dates
     a = int(start)
     b = int(end)
 
-    final_stats = pd.DataFrame()
+    finalStats = pd.DataFrame()
 
     # loop to get data from every year
     while a <= b:
         # make a Data Frame for the specific year and take a list of headers
-        pitch_stats = bball.pitching_stats_bref(a)
-        pitch_stats_df = pd.DataFrame(pitch_stats)
-        pitch_stats_df['Year'] = a
+        pitchStats = bball.pitching_stats_bref(a)
+        pitchStatsDF = pd.DataFrame(pitchStats)
+        pitchStatsDF['Year'] = a
 
         # appending to one single Data Frame
-        final_stats = final_stats.append(pitch_stats_df)
+        finalStats = finalStats.append(pitchStatsDF)
 
         # go to next year
         a = a + 1
 
-    final_stats = final_stats[stats]
-    return final_stats
+    finalStats = finalStats[stats]
+    return finalStats
 
 def pitchingBaseballSavantData(dateRange, stats):
     # get pitching_stats for specific range given
-    pitch_stats = bball.pitching_stats_range(dateRange[0], dateRange[1])
-    pitch_stats_df = pd.DataFrame(pitch_stats)
-    headersList = pitch_stats_df.columns
+    pitchStats = bball.pitching_stats_range(dateRange[0], dateRange[1])
+    pitchStatsDF = pd.DataFrame(pitchStats)
+    headersList = pitchStatsDF.columns
     headers = np.asarray(headersList)
 
     # drop columns that are in the input stats array
-    keep_stats = []
+    keepStats = []
     index = []
     count = 0
     for i in stats:
         for j in headers:
             if j == i:
                 index.insert(len(index) + 1, count)
-                keep_stats.insert(len(keep_stats) + 1, j)
+                keepStats.insert(len(keepStats) + 1, j)
             count = count + 1
         count = 0
 
-    drop_cols = np.delete(headers, index)
-    drop = np.asarray(drop_cols)
+    dropCols = np.delete(headers, index)
+    drop = np.asarray(dropCols)
 
     # drop the columns from pitching stats with these names
-    pitch_stats_df = pitch_stats_df.drop(columns=drop)
-    return pitch_stats_df
-
+    pitchStatsDF = pitchStatsDF.drop(columns=drop)
+    return pitchStatsDF
