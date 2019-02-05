@@ -6,7 +6,7 @@ import numpy as np
 # get pitching evaluations of all pitchers on the given team name
 def getPitcherEvaluations(parameters):
     predictStats = runModel(parameters)
-    print(predictStats)
+    #print(predictStats)
     return 0
 
 def runModel(parameters):
@@ -16,17 +16,19 @@ def runModel(parameters):
         stats = getStats(parameters)
         league = getLeague(parameters)
         dateRange = getDateRange(parameters)
+        print("Fetching Stats")
         marcelDF = prepareMarcelData(parameters)
+        print("Stats Fetched")
 
         predictDF = marcel.runMarcel(marcelDF, stats, roster, league, dateRange)
-        return predictDF
+        return 0
 
 def prepareMarcelData(parameters):
     source =  getSource(parameters)
     dateRange = getDateRange(parameters)
     stats = getStats(parameters)
 
-    marcelStats = ["Name", "Age", "Year", "G", "GS", "IP"]
+    marcelStats = ["Name", "Age","Lev", "Year", "G", "GS", "IP"]
     marcelStats.extend(stats)
 
     marcelDF = dq.query(source, marcelStats, dateRange)
