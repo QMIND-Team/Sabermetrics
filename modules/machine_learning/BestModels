@@ -1,0 +1,5 @@
+
+
+bestLinearRegression = ['G_y', 'GS', 'WAR_x', 'BB%', 'K/9', 'GB%', 'ERA', 'xFIP', 'LOB%']
+bestXGBoost = ['LOB%', 'K/9', 'GS', 'xFIP', 'GB%', 'BB%', 'G_y'] RSME 11.88, error 9.16
+bestSVM = ['xFIP', 'LOB%', 'K/9', 'GS', 'ERA', 'G_y'] 11.11 rms, 9.02 error

@@ -37,11 +37,13 @@ def fillColsWithMedian(df, stat):
     df = df.fillna(median)
     return df
 
+
 #fill all columns with the mean of the column
 def fillColsWithMean(df,stat):
     mean = findMeanOfCol(df,stat)
     df = df.fillna(mean)
     return df
+
 
 # find median of a column
 def findMedianOfCol(df, colName):
@@ -60,7 +62,7 @@ def mergeAllFrames(dfList):
     return dfList
 
 def mergeFrames(frame1, frame2,on):
-    mergedFrames = pd.merge(frame1,frame2, on = [on], how ='outer')
+    mergedFrames = pd.merge(frame1,frame2, on = on, how ='inner')
     return mergedFrames
 
 #converts and array in the form ['yyyy-mm-dd','YYYY-MM-DD'] to an array into the form (int)[yyyy,YYYY]
