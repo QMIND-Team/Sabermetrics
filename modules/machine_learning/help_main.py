@@ -8,8 +8,8 @@ def getAll(start,end):
     df1 = bball.team_pitching(start, end)
     df2 = bball.team_batting(start_season=start, end_season=end, league='all', ind=1)
 
-    dfAll = dc.mergeFrames(df1, df2, ["Team", "Season"])
-
+    dfAll = dc.mergeFramesHow(df1, df2, ["Team", "Season"],'inner')
+    #print(dfAll.columns)
     return dfAll
 
 def getSortedFeatures(testedFeatures,requiredColumns,allFeatures):
