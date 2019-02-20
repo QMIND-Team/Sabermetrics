@@ -28,8 +28,7 @@ def runModel(testDf ,trainRange,seasonsTested ,target,method,showPreds,showFULLR
 
     return MDAVG, avgRMS
 
-
-def model(targetFeature, df, start, end,method,showResult,demonstrate=0):
+def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePredictions =0,onlyPredictions =0):
 
     df = df.fillna(df.median())
     df = df[df.Season >= start]
@@ -99,7 +98,9 @@ def model(targetFeature, df, start, end,method,showResult,demonstrate=0):
             if ((seasonX == seasonY - 1) and (teamX == teamY)):
                 testX.loc[i, "targetFeature"] = testY.loc[j, targetFeature]
 
-    showPreds = testX[["Team", "targetFeature"]] # used to show the results of the model
+    showPreds = testX[["Team", "Season","targetFeature"]] # used to show the results of the model
+    showPreds['Season'] = end
+
     testY = testX["targetFeature"]
     testX = testX.drop(["targetFeature"], axis=1)
     testX = hm.get_numerical_data(testX)
@@ -113,7 +114,7 @@ def model(targetFeature, df, start, end,method,showResult,demonstrate=0):
         preds = ml.XGB(trainX,trainY,testX)
 
     if method == "LR":
-        preds = ml.linearRegression(trainX,trainY,testX)
+        preds = ml.LRFS(trainX,trainY,testX)
 
     if method == "SVM":
         preds = ml.SVM(trainX,trainY,testX)
@@ -133,12 +134,23 @@ def model(targetFeature, df, start, end,method,showResult,demonstrate=0):
     if demonstrate ==1:
         dem.checkpointEleven(showPreds)
 
+
+    if givePredictions ==1:
+        predictions = showPreds[['Team','Season','prediction']]
+        predictions.columns = [targetFeature if x == 'prediction' else x for x in predictions.columns]
+
+
+
     meanDifference = showPreds.loc[:, "difference"].mean()
     RMSE = sqrt(mean_squared_error(testY, preds))
 
+
+
     if demonstrate ==1:
         dem.checkpointTwelve(meanDifference,RMSE)
-    if(demonstrate != 1):
+    if demonstrate != 1 :
          print("-----------------") # to show loading
-
-    return meanDifference, RMSE
+    if onlyPredictions==1:
+         return predictions
+    else:
+        return meanDifference,RMSE,predictions

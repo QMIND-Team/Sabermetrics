@@ -22,8 +22,7 @@ def getFeatures(df,trainRange,seasonsTested,testedFeatures,toTestFeatures,requir
 
         print("The starting accuracy is: ",bestAccurracy)
         print("The starting average RMS is ",bestAvgRMS)
-        print("")
-        print("")
+        print("\n")
 
         #--------------------------------------------
         #print(toTestFeatures)
@@ -77,6 +76,7 @@ def removeFeatures(df,trainRange,seasonsTested,testedFeatures,requiredColumns,ta
     firstTest.extend(requiredColumns)
     dfTest = df[firstTest]
 
+
     bestAccurracy, bestAvgRMS = mod.runModel(dfTest, trainRange, seasonsTested, target,method,0,1)
 
     print("The starting accuracy is: ",bestAccurracy)
@@ -114,3 +114,4 @@ def removeFeatures(df,trainRange,seasonsTested,testedFeatures,requiredColumns,ta
 
 
     return testedFeatures,removed
+

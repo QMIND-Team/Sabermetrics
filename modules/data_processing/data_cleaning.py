@@ -62,8 +62,13 @@ def mergeAllFrames(dfList):
     return dfList
 
 def mergeFrames(frame1, frame2,on):
-    mergedFrames = pd.merge(frame1,frame2, on = on, how ='inner')
+    mergedFrames = pd.merge(frame1,frame2, on = on, how ='outer')
     return mergedFrames
+
+def mergeFramesHow(frame1, frame2,on,how):
+    mergedFrames = pd.merge(frame1,frame2, on = on, how =how)
+    return mergedFrames
+
 
 #converts and array in the form ['yyyy-mm-dd','YYYY-MM-DD'] to an array into the form (int)[yyyy,YYYY]
 def convertDateStringToInt(dateRange):
