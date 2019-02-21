@@ -5,8 +5,6 @@ import numpy as np
 from pybaseball import pitching_stats_bref
 from pybaseball import batting_stats_bref
 
-# import Eric's ML Algorithm
-
 # import schedule from MLB_2019_Schedule
 import MLB_2019_Schedule
 
