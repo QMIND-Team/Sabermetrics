@@ -1,5 +1,4 @@
 from random import uniform
-# import simpy as sp
 import pandas as pd
 import numpy as np
 
@@ -7,17 +6,25 @@ from pybaseball import pitching_stats_bref
 from pybaseball import batting_stats_bref
 
 
+# import schedule from MLB_2019_Schedule
+import MLB_2019_Schedule
+
+pd.set_option('display.max_columns', 6)
+
+
 # class for season
-class Season:                                               # TODO add in ['League': Team.league] column to data frame
+class Season:
     def __init__(self):
         self.games = 1
-        self.data_df = pd.DataFrame(columns={'Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team'})
+        self.data_df = pd.DataFrame(columns={'Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team',
+                                             'League'})
 
     def nextGame(self):
         self.data_df = self.data_df[['Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team']]
         self.data_df = self.data_df.append({'Game': self.games, 'Home Team Score': game.score[0],
-                                            'Away Team Score': game.score[1], 'Home Team': teams.home,
-                                            'Away Team': teams.away}, ignore_index=True)
+                                            'Away Team Score': game.score[1], 'Home Team': playingGame.home,
+                                            'Away Team': playingGame.away, 'League': playingGame.gameLeague()},
+                                           ignore_index=True)
         pd.set_option("display.max_rows", 162)
         self.games = self.games + 1
 
@@ -203,9 +210,9 @@ class Bases:
 
 
 class Team:
-    def __init__(self, teamName):
-        self.team = teamName
-#         self.league = "MLB-AL"
+    def __init__(self, teamCity, league):
+        self.team = teamCity
+        self.league = league
 
     def getBattingRoster(self):
         batting = batting_stats_bref(2018)
@@ -222,33 +229,45 @@ class Team:
         return homePitch_df
 
     def getLeague(self):
-        pitching = pitching_stats_bref(2018)
-        pitching_df = pd.DataFrame(pitching)
-        pitching_df.set_index("Tm", inplace=True)
-        homePitching_df = pitching_df.loc[self.team]
-        league_df = homePitching_df.loc[:, "Lev"]
-        self.league = league_df.iloc[0]                 # TODO fix this warning
+        league = self.league
+        return league
 
 
 # class for team (parent class to Home and Away)
-class teamsPlaying:
-    def __init__(self):
-        self.home = '\0'
-        self.away = '\0'
+class TeamsPlaying:
+    def __init__(self, homeTeam, awayTeam):
+        self.home = homeTeam
+        self.away = awayTeam
 
-    def teams(self, home, away):
-        self.home = home
-        self.away = away
+    def gameLeague(self):
+        for team in range(len(NL)):
+            if self.home == NL[team]:
+                homeLeague = "MLB-NL"
+            if self.away == NL[team]:
+                awayLeague = "MLB-NL"
+        for team in range(len(AL)):
+            if self.home == AL[team]:
+                homeLeague = "MLB-AL"
+            if self.away == AL[team]:
+                awayLeague = "MLB-AL"
+
+        if homeLeague == "MLB-NL" and awayLeague == "MLB-NL":
+            league = "MLB-NL"
+        elif homeLeague == "MLB-AL" and awayLeague == "MLB-AL":
+            league = "MLB-AL"
+        else:
+            league = "Inter-League"
+        return league
 
 
 # class for home games (child class of Team)
-class Home(teamsPlaying):
+class Home(TeamsPlaying):
     def getStadiumAdjust(self):
         pass
 
 
 # class for away games (child class of Team)
-class Away(teamsPlaying):
+class Away(TeamsPlaying):
     def getStadiumAdjust(self):
         pass
 
@@ -388,44 +407,50 @@ game = Game()
 inning = Inning()
 batter = Batter()
 bases = Bases()
-teams = teamsPlaying()
-home = Home()
-away = Away()
-
-# Create objects for each team in the MLB
-Braves = Team("Atlanta")
-RedSox = Team("Boston")
-Phillies = Team("Philadelphia")
-Cardinals = Team("St. Louis")
-Astros = Team("Houston")
-Giants = Team("San Francisco")
-BlueJays = Team("Toronto")
-Brewers = Team("Milwaukee")
-Reds = Team("Cincinnati")
-Padres = Team("San Diego")
-Mariners = Team("Seattle")
-Indians = Team("Cleveland")
-Marlins = Team("Miami")
-Orioles = Team("Baltimore")
-Tigers = Team("Detroit")
-Twins = Team("Minnesota")
-Rangers = Team("Texas")
-Pirates = Team("Pittsburgh")
-Athletics = Team("Oakland")
-Nationals = Team("Washington")
-Rays = Team("Tampa Bay")
-Diamondbacks = Team("Arizona")
-Royals = Team("Kansas City")
-Rockies = Team("Colorado")
+playingGame = TeamsPlaying("Athletics", "Mariners")
+home = Home("Athletics", "Mariners")
+away = Away("Athletics", "Mariners")
 
 
-# TODO find what to do with cities that have more than 1 team
-WhiteSox = Team("Chicago")
-Cubs = Team("Chicago")
-Yankees = Team("New York")
-Mets = Team("New York")
-Dodgers = Team("Los Angeles")
-Angels = Team("Los Angeles")
+# create lists for teams in each MLB league
+NL = np.array(["Cubs", "Dodgers", "Cardinals", "Mets", "Pirates", "Nationals", "Braves", "Brewers", "Reds",
+               "Phillies", "Giants", "Rockies", "Diamondbacks", "Padres", "Marlins"])
+AL = np.array(["Yankees", "RedSox", "Indians", "Astros", "WhiteSox", "Athletics", "Orioles", "Rays", "Angels",
+               "BlueJays", "Twins", "Royals", "Mariners", "Rangers", "Tigers"])
+
+# Create objects for each team in the MLB-NL
+Cubs = Team("Chicago", "MLB-NL")
+Dodgers = Team("Los Angeles", "MLB-NL")
+Cardinals = Team("St. Louis", "MLB-NL")
+Mets = Team("New York", "MLB-NL")
+Pirates = Team("Pittsburgh", "MLB-NL")
+Nationals = Team("Washington", "MLB-NL")
+Braves = Team("Atlanta", "MLB-NL")
+Brewers = Team("Milwaukee", "MLB-NL")
+Reds = Team("Cincinnati", "MLB-NL")
+Phillies = Team("Philadelphia", "MLB-NL")
+Giants = Team("San Francisco", "MLB-NL")
+Rockies = Team("Colorado", "MLB-NL")
+Diamondbacks = Team("Arizona", "MLB-NL")
+Padres = Team("San Diego", "MLB-NL")
+Marlins = Team("Miami", "MLB-NL")
+
+# Create objects for each team in the MLB-AL
+Yankees = Team("New York", "MLB-AL")
+RedSox = Team("Boston", "MLB-AL")
+Indians = Team("Cleveland", "MLB-AL")
+Astros = Team("Houston", "MLB-AL")
+WhiteSox = Team("Chicago", "MLB-AL")
+Athletics = Team("Oakland", "MLB-AL")
+Orioles = Team("Baltimore", "MLB-AL")
+Rays = Team("Tampa Bay", "MLB-AL")
+Angels = Team("Los Angeles", "MLB-AL")
+BlueJays = Team("Toronto", "MLB-AL")
+Twins = Team("Minnesota", "MLB-AL")
+Royals = Team("Kansas City", "MLB-AL")
+Mariners = Team("Seattle", "MLB-AL")
+Rangers = Team("Texas", "MLB-AL")
+Tigers = Team("Detroit", "MLB-AL")
 
 
 # run the game
@@ -471,6 +496,8 @@ while season.games < 163:
             pass
 
 
-print("________________________________________\n")
+print("______________________________________________________________________\n")
 print(season.data_df)
-print("________________________________________\n")
+print("______________________________________________________________________\n")
+
+
