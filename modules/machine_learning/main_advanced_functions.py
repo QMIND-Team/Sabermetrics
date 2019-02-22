@@ -3,6 +3,7 @@ import modules.machine_learning.model as model
 import pandas as pd
 import modules.data_processing.data_cleaning as dc
 import modules.machine_learning.predicted_features_model as pfm
+import modules.machine_learning.main_functions as mf
 
 def getPredictions(toPredictFeatures,df,method,end,start,showProcess,rangeToTest):
 
@@ -36,8 +37,7 @@ def advancedModel(toPredictFeatures,df,end,start,showProcess,testRange,targetFea
         #with pd.option_context('display.max_rows', None, 'display.max_columns', None):
           #  print(predictedDf)
     MDAVG, avgRMS = pfm.predictedFeaturesModel(targetFeature,predictedDf,method,end,testRange,showProcess)
-    printResults(MDAVG, avgRMS, end)
-
+    mf.printResults(MDAVG, avgRMS, end)
 
 def runAdvancedModel(toPredictFeature,df,end,start,showProcess,testRange,targetFeature,method,seasonsToTest):
     totalMD =0
