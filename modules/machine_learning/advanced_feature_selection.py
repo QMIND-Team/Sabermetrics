@@ -127,10 +127,12 @@ def advancedFeatureRemover(df, end, start, testRange, targetFeature, method, sea
 def advancedFeatureSelection(df ,end ,start ,testRange ,targetFeature ,method ,seasonsToTest ,testedFeatures,toTestFeatures ,showProcess):
 
     for i in range(5):
-        testedFeatures, removed = advancedFeatureRemover(df, end, start, testRange, targetFeature, method,seasonsToTest, testedFeatures, showProcess)
-        toTestFeatures.extend(removed)
-        print("###########################################################")
+
 
         testedFeatures, toTestFeatures = advancedFeatureAdder(df, end, start, testRange, targetFeature, method, seasonsToTest, testedFeatures, toTestFeatures,showProcess)
 
+        print("###########################################################")
+
+        testedFeatures, removed = advancedFeatureRemover(df, end, start, testRange, targetFeature, method,seasonsToTest, testedFeatures, showProcess)
+        toTestFeatures.extend(removed)
     print("Final Features: ",testedFeatures)

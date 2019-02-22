@@ -48,10 +48,10 @@ method = "LR"
 featureSelection = 0
 testSeason = 0
 testSeasons = 0
-getPredictions =1
+getPredictions =0
 advancedPrediction =0
 runAdvancedModel =0
-advancedFeatureSelection =0
+advancedFeatureSelection =1
 
 if featureSelection ==1:
     trainRange = 5
@@ -100,8 +100,8 @@ if advancedPrediction ==1:
     testRange = 5
     end = seasonToPredict
     start = end - (testRange+1)
-    showProcess = 0
-    toPredictFeatures = ['G_y', 'GS', 'WAR_x', 'BB%','K/9', 'GB%', 'ERA','xFIP', 'LOB%']
+    showProcess = 1
+    toPredictFeatures = ['OBP', 'G_y', 'FIP', 'K%', 'HR/FB', 'LOB%', 'K/9', 'wRC+', 'GS', 'SB', 'BABIP_x', 'R']
 
 
 if runAdvancedModel ==1:
@@ -109,7 +109,7 @@ if runAdvancedModel ==1:
     testRange = 5
     end = maxSeason
     start = end - (testRange+1)
-    showProcess = 0
+    showProcess = 1
     toPredictFeatures = ['G_y', 'GS', 'WAR_x', 'BB%','K/9', 'GB%', 'ERA','xFIP', 'LOB%']
 
     seasonsToTest =4
@@ -121,10 +121,10 @@ if advancedFeatureSelection ==1:
     seasonsToTest = 4 #when calculating RMSE and accuracy, it averages the number of seasons entered, more than 5 may cause null values which break the program
     start = end - (testRange+1+seasonsToTest)
     showProcess = 0
-    advancedTestedFeatures = ['OBP', 'G_y', 'FIP', 'K%', 'HR/FB', 'LOB%', 'K/9', 'wRC+', 'GS', 'SB', 'BABIP_x', 'R'] #10.496 RMSE
-    #advancedTestedFeatures = ['G_y']
+    #advancedTestedFeatures = ['OBP', 'G_y', 'FIP', 'K%', 'HR/FB', 'LOB%', 'K/9', 'wRC+', 'GS', 'SB', 'BABIP_x', 'R'] #10.496 RMSE
+    #advancedTestedFeatures = ['OBP', 'G_y', 'FIP', 'K%', 'HR/FB', 'LOB%', 'K/9', 'wRC+', 'GS', 'SB', 'BABIP_x', 'R'] #11 RMSE extra advanced
 
-
+    advancedTestedFeatures = ['G_y']
     advancedToTestFeatures = allFeatures
     for i in advancedTestedFeatures:
         advancedToTestFeatures.remove(i)
@@ -150,7 +150,6 @@ if featureSelection == 1:
 
 elif testSeason ==1:
     mf.testSeason(df,targetFeature,testedFeatures,requiredColumns,seasonToTest,trainRange,method,showPreds,showRMS,demonstrateModel,givePredictions,showPredictions)
-
 
 
 elif testSeasons ==1:

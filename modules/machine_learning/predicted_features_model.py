@@ -10,6 +10,8 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
 
     df = df.fillna(df.median())
 
+    df[targetFeature] = df[targetFeature]*1000
+    df[targetFeature] = df[targetFeature].fillna(0.0).astype(int)
 
     trainX = df[df.Season < end] # Remove the last season from the train data
 
@@ -21,6 +23,7 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
 
     trainY = trainX[targetFeature] # Team and Season are required for later sorting
     trainY = pd.DataFrame(trainY)
+
 
    # print("max: ",trainX["Season"].max())
     #print("min: ",trainX["Season"].min())
@@ -48,6 +51,19 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
     trainY = trainY.fillna(trainY.median())
     testY = testY.fillna(testY.median())
 
+    trainX = trainX.values
+    trainY = trainY.values
+    testX = testX.values
+
+    '''
+    print(type(trainX))
+    print(type(trainY))
+    print(type(testX))
+
+    print(trainX)
+    print(trainY)
+    print(testX)
+    '''
     if method == "XGB":
         preds = ml.XGB(trainX,trainY,testX)
     if method == "LR":
@@ -56,6 +72,8 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
     if method == "SVM":
         preds = ml.SVM(trainX,trainY,testX)
 
+    testY[targetFeature] = testY[targetFeature] / 1000
+    preds = preds / 1000
 
     showPreds["prediction"] = preds
     showPreds["difference"] = showPreds[targetFeature] - showPreds["prediction"]
@@ -66,7 +84,15 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
       #  print(showPreds)
 
     meanDifference = showPreds.loc[:, "difference"].mean()
+
+    #print(type(testY))
+
+   # print(testY)
+
+   # print(preds)
+
+
     RMSE = sqrt(mean_squared_error(testY, preds))
     print("++++++++++++++++++")
 
-    return meanDifference, RMSE
+    return 0, RMSE  #to do: fix return average error, you will need to divide the value of the target feature in show preds

@@ -13,6 +13,10 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.feature_selection import RFE
 import modules.machine_learning.help_model as hm
 
+from sklearn.feature_selection import RFE
+from sklearn.linear_model import LogisticRegression
+
+
 def linearRegression(trainX,trainY,testX):
 
     '''
@@ -80,13 +84,13 @@ def LRFS(trainX,trainY,testX):
     rfecv = RFECV(estimator=clf_rf_4, step=1, cv=5, scoring='accuracy')  # 5-fold cross-validation
     rfecv = rfecv.fit(trainX,trainY)
 
-    print('Optimal number of features :', rfecv.n_features_)
+    #print('Optimal number of features :', rfecv.n_features_)
     #print('Best features :', trainX.columns[rfecv.support_])
 
     selectedFeatures = list()
 
     trainX_selected = rfecv.transform(trainX)
-    print(trainX_selected)
+    # print(trainX_selected)
 
     regressor = LinearRegression()
 
@@ -97,42 +101,38 @@ def LRFS(trainX,trainY,testX):
     preds = regressor.predict(testX_selected)
 
     return preds
-'''
-'''
 
-from sklearn.feature_selection import RFE
-from sklearn.linear_model import LogisticRegression
+'''
 
 def LRFS(trainX,trainY,testX):
 
-    print(trainY)
+   # print(trainY)
+    lr = LinearRegression()
+    #lr = LogisticRegression()
 
-
-
-    regressor = LinearRegression()
-    lr = LogisticRegression()
     selecteur = RFE(estimator= lr)
     sol = selecteur.fit(trainX,trainY)
-    print(sol.n_features_)
-    print(sol.support_)
+    #print(sol.n_features_)
+    #print(sol.support_)
 
     X_new_app = trainX[:,sol.support_]
-    print(X_new_app.shape)
+    #print(X_new_app.shape)
     modele_sel = lr.fit(X_new_app,trainY)
 
     X_new_test = testX[:,sol.support_]
+
     preds = modele_sel.predict(X_new_test)
 
     return preds
-'''
 
+'''
 
 def LRFS(trainX,trainY,testX):
     regressor = LinearRegression()
     regressor.fit(trainX, trainY)
     preds = regressor.predict(testX)
     return preds
-'''
+
 
 def LRFS(trainX,trainY,testX):
     print(type(trainY))

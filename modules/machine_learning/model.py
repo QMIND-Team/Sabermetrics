@@ -34,9 +34,14 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
     df = df[df.Season >= start]
     df = df[df.Season <= end]
 
+    df[targetFeature] = df[targetFeature]*1000
+    df[targetFeature] = df[targetFeature].fillna(0.0).astype(int)
+
+
     train = df[df.Season != end] # Remove the last season from the train data
     trainX = train[train.Season != (end - 1)] # The last year of the train data can not be used for predictions
     trainY = train[[targetFeature, "Team", "Season"]] # Team and Season are required for later sorting
+
 
     if demonstrate == 1:
         dem.checkpointOne(trainX,trainY,end)
@@ -63,6 +68,7 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
         dem.checkpointThree(trainX)
 
     #  The trainY data is now in the  same row as the corresponding trainX data
+    #print(trainX)
     trainY = trainX["targetFeature"]
     if demonstrate == 1:
         dem.checkpointFour(trainY)
@@ -102,9 +108,14 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
     showPreds['Season'] = end
 
     testY = testX["targetFeature"]
+
     testX = testX.drop(["targetFeature"], axis=1)
     testX = hm.get_numerical_data(testX)
     testX = preprocessing.scale(testX)
+
+    #print(type(trainX))
+    #print(type(trainY))
+    #print(type(testX))
 
     if demonstrate ==1:
         dem.checkpointNine()
@@ -140,6 +151,11 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
         predictions.columns = [targetFeature if x == 'prediction' else x for x in predictions.columns]
 
 
+
+    testY = testY/1000
+    preds = preds/1000
+    #print((testY))
+    #print((preds))
 
     meanDifference = showPreds.loc[:, "difference"].mean()
     RMSE = sqrt(mean_squared_error(testY, preds))
