@@ -59,7 +59,7 @@ def advancedFeatureAdder(df ,end ,start ,testRange ,targetFeature ,method ,seaso
         print("The features that will be retested are: ", testAgain)
         print("The final features are: ", testedFeatures)
         print("The final accuracy is: ", bestAccurracy)
-        print("The RMSE is: ", bestAvgRMS)
+        print("The RMSE is: ", bestAvgRMSE)
         if change == 0:
             finished = 1
 
@@ -130,9 +130,10 @@ def advancedFeatureSelection(df ,end ,start ,testRange ,targetFeature ,method ,s
 
 
         testedFeatures, toTestFeatures = advancedFeatureAdder(df, end, start, testRange, targetFeature, method, seasonsToTest, testedFeatures, toTestFeatures,showProcess)
-
         print("###########################################################")
-
         testedFeatures, removed = advancedFeatureRemover(df, end, start, testRange, targetFeature, method,seasonsToTest, testedFeatures, showProcess)
         toTestFeatures.extend(removed)
+
+
+
     print("Final Features: ",testedFeatures)

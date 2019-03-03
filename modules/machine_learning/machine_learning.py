@@ -2,6 +2,9 @@
 import xgboost as xgb
 from sklearn import preprocessing,svm
 from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error
+from math import sqrt
+
 from sklearn.feature_selection import SelectPercentile
 from sklearn.linear_model import LogisticRegression
 import numpy
@@ -41,7 +44,7 @@ def linearRegression(trainX,trainY,testX):
     regressor.fit(trainXS,trainY)
     preds = regressor.predict(testXS)
     print(select.
-    
+
     '''
     regressor = LinearRegression()
     regressor.fit(trainX, trainY)
@@ -103,42 +106,45 @@ def LRFS(trainX,trainY,testX):
     return preds
 
 '''
+def LRFS(trainX,trainY,testX,testY):
 
-def LRFS(trainX,trainY,testX):
-
-   # print(trainY)
     lr = LinearRegression()
-    #lr = LogisticRegression()
 
-    selecteur = RFE(estimator= lr)
-    sol = selecteur.fit(trainX,trainY)
-    #print(sol.n_features_)
-    #print(sol.support_)
+    numberOfFeaturesArray = trainX.shape
 
-    X_new_app = trainX[:,sol.support_]
-    #print(X_new_app.shape)
-    modele_sel = lr.fit(X_new_app,trainY)
+    numberOfFeatures  = numberOfFeaturesArray[1]
 
-    X_new_test = testX[:,sol.support_]
+    bestRMSE = 100000000
 
-    preds = modele_sel.predict(X_new_test)
+    for i in range(1,numberOfFeatures):
 
-    return preds
-
-'''
-
-def LRFS(trainX,trainY,testX):
-    regressor = LinearRegression()
-    regressor.fit(trainX, trainY)
-    preds = regressor.predict(testX)
-    return preds
+        selecteur = RFE(estimator= lr,n_features_to_select=i)
+        sol = selecteur.fit(trainX,trainY)
 
 
-def LRFS(trainX,trainY,testX):
-    print(type(trainY))
-    print(trainY.columns)
-    regressor = LinearRegression()
-    regressor.fit(trainX, trainY)
-    preds = regressor.predict(testX)
-    return preds
-'''
+        X_new_app = trainX[:,sol.support_]
+        #print(X_new_app.shape)
+        modele_sel = lr.fit(X_new_app,trainY)
+
+        X_new_test = testX[:,sol.support_]
+
+        preds = modele_sel.predict(X_new_test)
+
+        RMSE = test(preds,testY)
+
+        if (RMSE < bestRMSE):
+            bestRMSE = RMSE
+            bestPreds = preds
+            #print(bestRMSE)
+    #print("final RMSE: ")
+    #print(bestRMSE)
+
+    return bestPreds
+
+
+
+def test(preds,testY):
+
+    RMSE = sqrt(mean_squared_error(testY, preds))
+
+    return RMSE

@@ -49,9 +49,10 @@ featureSelection = 0
 testSeason = 0
 testSeasons = 0
 getPredictions =0
-advancedPrediction =0
+advancedPrediction = 0
 runAdvancedModel =0
 advancedFeatureSelection =1
+nextYearPrediction = 0
 
 if featureSelection ==1:
     trainRange = 5
@@ -97,11 +98,11 @@ if getPredictions ==1:
 
 if advancedPrediction ==1:
     seasonToPredict = 2018
-    testRange = 5
+    testRange = 2
     end = seasonToPredict
     start = end - (testRange+1)
     showProcess = 1
-    toPredictFeatures = ['OBP', 'G_y', 'FIP', 'K%', 'HR/FB', 'LOB%', 'K/9', 'wRC+', 'GS', 'SB', 'BABIP_x', 'R']
+    toPredictFeatures = ['OBP', 'G_y']
 
 
 if runAdvancedModel ==1:
@@ -111,7 +112,6 @@ if runAdvancedModel ==1:
     start = end - (testRange+1)
     showProcess = 1
     toPredictFeatures = ['G_y', 'GS', 'WAR_x', 'BB%','K/9', 'GB%', 'ERA','xFIP', 'LOB%']
-
     seasonsToTest =4
 
 if advancedFeatureSelection ==1:
@@ -122,13 +122,21 @@ if advancedFeatureSelection ==1:
     start = end - (testRange+1+seasonsToTest)
     showProcess = 0
     #advancedTestedFeatures = ['OBP', 'G_y', 'FIP', 'K%', 'HR/FB', 'LOB%', 'K/9', 'wRC+', 'GS', 'SB', 'BABIP_x', 'R'] #10.496 RMSE
-    #advancedTestedFeatures = ['OBP', 'G_y', 'FIP', 'K%', 'HR/FB', 'LOB%', 'K/9', 'wRC+', 'GS', 'SB', 'BABIP_x', 'R'] #11 RMSE extra advanced
+    advancedTestedFeatures = ['G_y', 'OBP', 'IP', 'WAR_x', 'SB', 'AVG', 'HR/FB', 'K%', 'LOB%', 'xFIP', 'BB/9', 'Def', 'ERA', 'SLG', 'BABIP_x', 'PA', 'SV'] #9.244 RMSE extra advanced
 
-    advancedTestedFeatures = ['G_y']
+    #advancedTestedFeatures = ['G_y']
     advancedToTestFeatures = allFeatures
     for i in advancedTestedFeatures:
         advancedToTestFeatures.remove(i)
     print(advancedToTestFeatures)
+
+if nextYearPrediction ==1: #NOT DONE YET, DO NOT USE
+    testRange = 5
+    start = 2018 - (testRange+1)
+    showProcess = 1
+    toPredictFeatures = ['G_y']
+    end = 2018
+
 
 # ----------------------------------------------Functions End-----------------------------------------------
 
@@ -165,3 +173,7 @@ elif runAdvancedModel ==1:
 
 elif advancedFeatureSelection==1:
     af.advancedFeatureSelection(df, end, start, testRange, targetFeature, method, seasonsToTest, advancedTestedFeatures,advancedToTestFeatures,showProcess)
+
+
+elif nextYearPrediction ==1:
+    maf.nextYearPrediction(toPredictFeatures,df,start,showProcess,testRange,targetFeature,method)
