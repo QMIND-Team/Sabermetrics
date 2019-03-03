@@ -77,6 +77,23 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
         dem.checkpointFive(trainX)
 
 
+    #---------------------------------------------------------------------------------------------
+    '''
+
+    for i in trainX.index:
+        seasonX = trainX.loc[i, 'Season']
+        teamX = trainX.loc[i, 'Team']
+        for j in trainY.index:
+            seasonY = trainY.loc[j, 'Season']
+            teamY = trainY.loc[j, 'Team']
+            if ((seasonX == seasonY - 1) and (teamX == teamY)):
+                
+                trainX.loc[i, "targetFeature"] = trainY.loc[j, targetFeature]
+
+
+    '''
+
+    #---------------------------------------------------------------------------------------------
     #Important Step
 
     trainX = trainX.drop(["targetFeature"], axis=1) #To prevent overfitting, the target feature is dropped from the trainX data
@@ -125,7 +142,7 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
         preds = ml.XGB(trainX,trainY,testX)
 
     if method == "LR":
-        preds = ml.LRFS(trainX,trainY,testX)
+        preds = ml.LRFS(trainX,trainY,testX,testY)
 
     if method == "SVM":
         preds = ml.SVM(trainX,trainY,testX)
@@ -150,12 +167,9 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
         predictions = showPreds[['Team','Season','prediction']]
         predictions.columns = [targetFeature if x == 'prediction' else x for x in predictions.columns]
 
-
-
     testY = testY/1000
     preds = preds/1000
-    #print((testY))
-    #print((preds))
+
 
     meanDifference = showPreds.loc[:, "difference"].mean()
     RMSE = sqrt(mean_squared_error(testY, preds))

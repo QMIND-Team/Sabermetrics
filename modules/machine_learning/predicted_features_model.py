@@ -15,18 +15,13 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
 
     trainX = df[df.Season < end] # Remove the last season from the train data
 
-   # print("max: ",trainX["Season"].max())
-    #print("min: ",trainX["Season"].min())
+
     max = trainX["Season"].max()
     min = max-trainRange
     trainX = trainX[trainX.Season>min]
 
     trainY = trainX[targetFeature] # Team and Season are required for later sorting
     trainY = pd.DataFrame(trainY)
-
-
-   # print("max: ",trainX["Season"].max())
-    #print("min: ",trainX["Season"].min())
 
     trainX = trainX.drop([targetFeature], axis=1)
 
@@ -67,8 +62,8 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
     if method == "XGB":
         preds = ml.XGB(trainX,trainY,testX)
     if method == "LR":
-       #preds = ml.linearRegression(trainX,trainY,testX)
-        preds = ml.LRFS(trainX,trainY,testX)
+        #preds = ml.linearRegression(trainX,trainY,testX)
+        preds = ml.LRFS(trainX,trainY,testX,testY)
     if method == "SVM":
         preds = ml.SVM(trainX,trainY,testX)
 
@@ -80,16 +75,7 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
     showPreds["difference"] = showPreds["difference"].abs()
     showPreds = showPreds.sort_values(by="Team", ascending=True)
 
-   # with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-      #  print(showPreds)
-
     meanDifference = showPreds.loc[:, "difference"].mean()
-
-    #print(type(testY))
-
-   # print(testY)
-
-   # print(preds)
 
 
     RMSE = sqrt(mean_squared_error(testY, preds))

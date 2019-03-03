@@ -4,6 +4,7 @@ import pandas as pd
 import modules.data_processing.data_cleaning as dc
 import modules.machine_learning.predicted_features_model as pfm
 import modules.machine_learning.main_functions as mf
+import modules.machine_learning.nextYearPrediction as nyp
 
 def getPredictions(toPredictFeatures,df,method,end,start,showProcess,rangeToTest):
 
@@ -61,4 +62,24 @@ def runAdvancedModel(toPredictFeature,df,end,start,showProcess,testRange,targetF
     #print("The RMSE is: ",finalAvgRMSE)
 
     return finalAvgMD,finalAvgRMSE
+
+
+def nextYearPrediction(toPredictFeatures,df,start,showProcess,testRange,targetFeature,method):
+
+    targetFeatureDf = df[['Season', 'Team', targetFeature]]
+
+
+    predictedDf = nyp.getFeatures(targetFeature, df, start, method,1)
+
+
+    predictedDf['Season'] = predictedDf['Season'].astype('float64')
+
+
+
+
+    predictedDf = dc.mergeFramesHow(targetFeatureDf, predictedDf, ["Team", "Season"], 'inner')
+
+
+    nyp.predictedFeaturesModel(targetFeature, predictedDf, method, testRange, showProcess)
+
 
