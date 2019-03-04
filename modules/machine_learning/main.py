@@ -48,7 +48,6 @@ method = "LR"
 featureSelection = 0
 testSeason = 0
 testSeasons = 0
-getPredictions =0
 advancedPrediction = 0
 runAdvancedModel =0
 advancedFeatureSelection =1
@@ -87,14 +86,6 @@ if testSeasons ==1:
     givePredictions = 1
     showPredictions = 0
 
-
-if getPredictions ==1:
-    trainRange = 5
-    end = 2016
-    start = end - trainRange
-    range = 2
-    showProcess= 1
-    toPredictFeatures = ['G_y', 'GS']
 
 if advancedPrediction ==1:
     seasonToPredict = 2018
@@ -161,11 +152,11 @@ elif testSeason ==1:
 elif testSeasons ==1:
     mf.testSeasons(df,targetFeature,testedFeatures,requiredColumns,maxSeason,trainRange,method,showPreds,showRMS,demonstrateModel,givePredictions,showPredictions,numberOfSeasons)
 
-elif getPredictions ==1:
-    maf.getPredictions(toPredictFeatures,df,method,end,start,showProcess,range)
+
 
 elif advancedPrediction ==1:
     maf.advancedModel(toPredictFeatures,df,end,start,showProcess,testRange,targetFeature,method,testRange)
+
 elif runAdvancedModel ==1:
     maf.runAdvancedModel(toPredictFeatures, df, end, start, showProcess, testRange, targetFeature, method, seasonsToTest)
 
