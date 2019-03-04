@@ -22,30 +22,6 @@ from sklearn.linear_model import LogisticRegression
 
 def linearRegression(trainX,trainY,testX):
 
-    '''
-    lr = LinearRegression()
-    rfe = RFE(lr, n_features_to_select=1)
-    rfe.fit(trainX, trainY)
-
-    print("Features sorted by their rank:")
-    print(rfe.ranking_)
-
-
-    select = SelectFromModel(RandomForestClassifier(n_estimators=100, random_state=42), threshold='median')
-
-    select.fit(trainX, trainY)
-
-    trainXS = select.transform(trainX)
-    print('The shape of X_train is: ', trainX.shape)
-    print('The shape of X_train_s is ', trainXS.shape)
-
-    testXS = select.transform(testX)
-    regressor = LinearRegression()
-    regressor.fit(trainXS,trainY)
-    preds = regressor.predict(testXS)
-    print(select.
-
-    '''
     regressor = LinearRegression()
     regressor.fit(trainX, trainY)
     preds = regressor.predict(testX)
@@ -65,47 +41,7 @@ def SVM(trainX,trainY,testX):
     return  preds
 
 
-from sklearn.feature_selection import RFECV
 
-
-from sklearn.feature_selection import SelectFromModel
-from sklearn.linear_model import Lasso
-
-'''
-def LRFS(trainX,trainY,testX):
-    estimator = Lasso()
-    featureSelection = SelectFromModel(estimator)
-    featureSelection.fit(trainX, trainY)
-    selectedFeatures = featureSelection.transform(trainX)
-    print(selectedFeatures)
-    print(trainX.columns[featureSelection.get_support()])
-'''
-
-'''
-def LRFS(trainX,trainY,testX):
-    clf_rf_4 = RandomForestClassifier()
-    rfecv = RFECV(estimator=clf_rf_4, step=1, cv=5, scoring='accuracy')  # 5-fold cross-validation
-    rfecv = rfecv.fit(trainX,trainY)
-
-    #print('Optimal number of features :', rfecv.n_features_)
-    #print('Best features :', trainX.columns[rfecv.support_])
-
-    selectedFeatures = list()
-
-    trainX_selected = rfecv.transform(trainX)
-    # print(trainX_selected)
-
-    regressor = LinearRegression()
-
-
-    regressor.fit(trainX_selected , trainY)
-
-    testX_selected = rfecv.transform(testX)
-    preds = regressor.predict(testX_selected)
-
-    return preds
-
-'''
 def LRFS(trainX,trainY,testX,testY):
 
     lr = LinearRegression()
@@ -118,17 +54,17 @@ def LRFS(trainX,trainY,testX,testY):
 
     for i in range(1,numberOfFeatures):
 
-        selecteur = RFE(estimator= lr,n_features_to_select=i)
-        sol = selecteur.fit(trainX,trainY)
+        sel = RFE(estimator= lr,n_features_to_select=i)
+        sol = sel.fit(trainX,trainY)
 
 
         X_new_app = trainX[:,sol.support_]
         #print(X_new_app.shape)
-        modele_sel = lr.fit(X_new_app,trainY)
+        moc = lr.fit(X_new_app,trainY)
 
         X_new_test = testX[:,sol.support_]
 
-        preds = modele_sel.predict(X_new_test)
+        preds = mod.predict(X_new_test)
 
         RMSE = test(preds,testY)
 
