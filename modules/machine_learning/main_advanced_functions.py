@@ -6,17 +6,17 @@ import modules.machine_learning.predicted_features_model as pfm
 import modules.machine_learning.main_functions as mf
 import modules.machine_learning.nextYearPrediction as nyp
 
-def getPredictions(toPredictFeatures,df,method,end,start,showProcess,rangeToTest):
+def getPredictions(toPredictFeatures,df,method,end,start,showProcess,testRange):
 
     #first prediction has to be done outside of the loop so that the merging could happen within the loop
 
     prediction = pd.DataFrame(columns=['Team','Season'])
 
-    for i in range(0,rangeToTest):
+    for i in range(0,end-start+1):
         yearPrediction = pd.DataFrame(columns=['Team', 'Season'])
 
         for j in toPredictFeatures:
-             newPredictions = model.model(j ,df,start-i,end-i,method,givePredictions=1,onlyPredictions =1)
+             newPredictions = model.model(j ,df,end-i-testRange,end-i,method,givePredictions=1,onlyPredictions =1)
              yearPrediction = dc.mergeFramesHow(yearPrediction, newPredictions, ["Team", "Season"],'outer')
         prediction = prediction.append(yearPrediction)
 

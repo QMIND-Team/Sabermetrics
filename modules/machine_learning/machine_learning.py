@@ -60,7 +60,7 @@ def LRFS(trainX,trainY,testX,testY):
 
         X_new_app = trainX[:,sol.support_]
         #print(X_new_app.shape)
-        moc = lr.fit(X_new_app,trainY)
+        mod = lr.fit(X_new_app,trainY)
 
         X_new_test = testX[:,sol.support_]
 
