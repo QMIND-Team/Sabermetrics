@@ -121,10 +121,8 @@ if advancedFeatureSelection ==1:
     seasonsToTest = 4 #when calculating RMSE and accuracy, it averages the number of seasons entered, more than 5 may cause null values which break the program
     start = end - (testRange+1+seasonsToTest)
     showProcess = 0
-    #advancedTestedFeatures = ['OBP', 'G_y', 'FIP', 'K%', 'HR/FB', 'LOB%', 'K/9', 'wRC+', 'GS', 'SB', 'BABIP_x', 'R'] #10.496 RMSE
-    advancedTestedFeatures = ['G_y', 'OBP', 'IP', 'WAR_x', 'SB', 'AVG', 'HR/FB', 'K%', 'LOB%', 'xFIP', 'BB/9', 'Def', 'ERA', 'SLG', 'BABIP_x', 'PA', 'SV'] #9.244 RMSE extra advanced
-
-    #advancedTestedFeatures = ['G_y']
+    #advancedTestedFeatures = ['G_y', 'OBP', 'IP', 'WAR_x', 'SB', 'AVG', 'HR/FB', 'K%', 'LOB%', 'xFIP', 'BB/9', 'Def', 'ERA', 'SLG', 'BABIP_x', 'PA', 'SV', 'R', 'Off', 'WAR_y', 'HR/9'] #9.126 RMSE extra advanced
+    advancedTestedFeatures = ['G_y']
     advancedToTestFeatures = allFeatures
     for i in advancedTestedFeatures:
         advancedToTestFeatures.remove(i)

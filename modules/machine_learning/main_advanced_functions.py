@@ -54,12 +54,16 @@ def runAdvancedModel(toPredictFeature,df,end,start,showProcess,testRange,targetF
         totalMD = totalMD+ avgMD
         totalRMSE = totalRMSE+avgRMSE
 
+        print("The RMSE is",avgRMSE)
+
+
+
     finalAvgMD = totalMD/seasonsToTest
     finalAvgRMSE = totalRMSE/seasonsToTest
 
-    #print("\nResults for average from ",end-i," to ",end);
-    #print("The average error is: ",finalAvgMD)
-    #print("The RMSE is: ",finalAvgRMSE)
+    print("\nResults for average from ",end-i," to ",end);
+    print("The average error is: ",finalAvgMD)
+    print("The RMSE is: ",finalAvgRMSE)
 
     return finalAvgMD,finalAvgRMSE
 
