@@ -1,50 +1,85 @@
+# importing libraries used throughout simulator
 from random import uniform
 import pandas as pd
 import numpy as np
+import warnings
 
 from pybaseball import pitching_stats_bref
 from pybaseball import batting_stats_bref
 
+# import Machine Learning Algorithm to fetch predicted stats
+from modules.machine_learning import mainGetPredictions as ml
 
 # import schedule from MLB_2019_Schedule
-import MLB_2019_Schedule
+import Simulator.MLB_2019_Schedule as MLB
 
-pd.set_option('display.max_columns', 6)
+# ignore warnings in code
+warnings.simplefilter("ignore")
 
 
 # class for season
 class Season:
-    def __init__(self):
+    # initialization of class instance variables
+    def __init__(self, teamName):
         self.games = 1
+        self.teamName = teamName
         self.data_df = pd.DataFrame(columns={'Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team',
                                              'League'})
 
+    # method to run a seasons worth of games for any given team
+    def playSeason(self):
+        schedule = MLB.getTeamSchedule(self.teamName)               # fetching season schedule for a given team
+        home = MLB.homeOrAway(schedule)                             # check which team is at home for each game
+        games = MLB.checkFirstBit(schedule)                         # cleaning season schedule
+        opposingTeam = iter(games)                                  # declare iterator for games in the season
+        gamesPlayed = 0
+        teams_df = pd.DataFrame(columns={"Home Team", "Away Team", "League"})   # create a DataFrame to me merged into output
+        while gamesPlayed <= 162:
+            try:
+                current = next(opposingTeam)
+                if home[gamesPlayed] == "True":                     # arrange teams in 'Home Team', 'Away Team' columns
+                    teams_df = teams_df.append({"Home Team": self.teamName, "Away Team": MLB.toName(current),
+                                                "League": TeamsPlaying(self.teamName, MLB.toName(current)).gameLeague()},
+                                               ignore_index=True)
+                elif home[gamesPlayed] == "False":
+                    teams_df = teams_df.append({"Home Team": MLB.toName(current), "Away Team": self.teamName,
+                                                "League": TeamsPlaying(MLB.toName(current), self.teamName).gameLeague()},
+                                               ignore_index=True)
+                gamesPlayed = gamesPlayed + 1
+            except StopIteration:
+                break
+        return teams_df
+
     def nextGame(self):
-        self.data_df = self.data_df[['Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team']]
+        teams_df = self.playSeason()                            # fetching Data Frame of season outcomes
+        self.data_df = self.data_df[['Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team', 'League']]
         self.data_df = self.data_df.append({'Game': self.games, 'Home Team Score': game.score[0],
-                                            'Away Team Score': game.score[1], 'Home Team': playingGame.home,
-                                            'Away Team': playingGame.away, 'League': playingGame.gameLeague()},
-                                           ignore_index=True)
+                                            'Away Team Score': game.score[1]}, ignore_index=True)
+        self.data_df.update(teams_df)                           # update the Data frame with data from season outcomes
         pd.set_option("display.max_rows", 162)
+        pd.set_option("display.max_columns", 7)
         self.games = self.games + 1
 
 
 # class for game (parent class of inning)
 class Game:
+    # initialization of class instance variables
     def __init__(self):
         self.inning = 1
         self.outs = 0
         self.score = [0, 0]
         self.top = False
 
+    # method for adding runs scored for each team
     def runScored(self):
         if self.top:                        # if top of the inning points awarded to the team of index zero
             self.score[1] = self.score[1] + 1
         else:                               # points awarded to team of index one in the bottom of innings
             self.score[0] = self.score[0] + 1
 
+    # method for behavior of an out in the game
     def out(self):
-        self.outs = self.outs + 1
+        self.outs = self.outs + 1           # add one to the out count
         if self.outs == 3:                  # at three outs switch the inning, resetting outs to zero
             self.outs = 0
             inning.inningSwitch()
@@ -57,6 +92,7 @@ class Game:
         elif self.inning == 10 and self.score[0] == self.score[1]:      # otherwise, keep going until one team wins
             pass
 
+    # method to reset the game to starting parameters
     def endGame(self):
         self.inning = 1
         self.outs = 0
@@ -66,6 +102,7 @@ class Game:
 
 # class for innings (child class of game)
 class Inning(Game):
+    # method to switch between top and bottom of inning
     def inningSwitch(self):                 # sets outs back to zero and switches between top and bottom of inning
         if game.top:
             self.outs = 0
@@ -74,35 +111,43 @@ class Inning(Game):
             self.outs = 0
             self.topOf()
 
+    # mutator to change the status of the inning (top or bottom of the inning)
     def topOf(self):                        # if top of inning, set top to true
         game.top = True
 
+    # mutator to change the status of the inning (top or bottom of the inning)
     def bottomOf(self):                     # if bottom of inning, sets top to false
         game.top = False
 
 
+# class for all behaviors/stats of batters
 class Batter:
+    # initialization of instance variables
     def __init__(self):
         self.strikes = 0
         self.balls = 0
 
+    # method for behavior of a strike
     def strike(self):
-        self.strikes = self.strikes + 1
-        if self.strikes == 3:               # if batter has 3 strikes, batter out
+        self.strikes = self.strikes + 1     # add one to strike count
+        if self.strikes == 3:               # if batter has 3 strikes, batter is out
             game.out()
             self.nextBatter()               # calls function to get stats on the next batter
 
+    # method for behavior of a ball
     def ball(self):
-        self.balls = self.balls + 1
+        self.balls = self.balls + 1         # add one to ball count
         if self.balls == 4:                 # if batter gets 4 balls
             self.single()                   # walk to first
             self.nextBatter()               # calls function to get the next batters stats
 
+    # method to fetch next batter statistics
     def nextBatter(self):
-        self.strikes = 0
+        self.strikes = 0                    # resets strike/ball count to zero
         self.balls = 0
         pass                                # get next batters statistics
 
+    # method for behavior of a single hit
     def single(self):
         if bases.basesLoaded:               # bases will stay loaded and one run will be scored
             game.runScored()
@@ -119,6 +164,7 @@ class Batter:
                 bases.second = True
         bases.first = True                  # player guaranteed to be on first
 
+    # method for behavior of a double hit
     def double(self):
         if bases.basesLoaded:               # if bases loaded, two players will score and first will become empty
             bases.first = False
@@ -136,6 +182,7 @@ class Batter:
                 game.runScored()
         bases.second = True                 # player guaranteed to be on second
 
+    # method for behavior of a triple hit
     def triple(self):
         if bases.basesLoaded:               # all players on base will score a run
             bases.first = False
@@ -155,6 +202,7 @@ class Batter:
                 game.runScored()
         bases.third = True                  # player guaranteed to be on third
 
+    # method for behavior of a home run hit
     def homeRun(self):
         if bases.basesLoaded:               # all players on base and batter will score a run
             bases.first = False
@@ -177,19 +225,23 @@ class Batter:
             game.runScored()                # run scored by batter
 
 
+# class to track base status
 class Bases:
+    # initialization of instance variables
     def __init__(self):
         self.first = False
         self.second = False
         self.third = False
         self.basesLoaded = False
 
+    # method to simulate loaded bases
     def loadedBases(self):                  # if there are players on every base, bases are loaded
         if self.first and self.second and self.third:
             self.basesLoaded = True
         else:                               # otherwise bases are not loaded
             self.basesLoaded = False
 
+    # method to output which bases are occupied
     def playerOn(self):
         self.loadedBases()                  # check if bases are loaded
         if not self.basesLoaded:            # if they aren't
@@ -209,11 +261,20 @@ class Bases:
             print("Bases Loaded")
 
 
+# class for Teams
 class Team:
-    def __init__(self, teamCity, league):
+    # initialization of instance variables
+    def __init__(self, teamName, teamCity, league):
         self.team = teamCity
         self.league = league
+        self.teamName = teamName
 
+    # method to fetch predicted team stats from MLM
+    def getPredictedStats(self, start, end, trainRange, toPredictFeatures, showProcess, method):
+        predictedStats = ml.getPredictions(start, end, trainRange, toPredictFeatures, showProcess, method)
+        return predictedStats
+
+    # method to fetch batting roster of a given team
     def getBattingRoster(self):
         batting = batting_stats_bref(2018)
         batting_df = pd.DataFrame(batting)
@@ -221,6 +282,7 @@ class Team:
         homeBat_df = batting_df.loc[self.team]
         return homeBat_df
 
+    # method to fetch pitching roster of a given team
     def getPitchingRoster(self):
         pitching = pitching_stats_bref(2018)
         pitching_df = pd.DataFrame(pitching)
@@ -228,55 +290,76 @@ class Team:
         homePitch_df = pitching_df.loc[self.team]
         return homePitch_df
 
+    # accessor to return league team plays in
     def getLeague(self):
         league = self.league
         return league
 
+    # accessor to return the name of the team
+    def getTeamName(self):
+        teamName = self.teamName
+        return teamName
 
-# class for team (parent class to Home and Away)
+
+# class for teams playing in a particular game (parent class to Home and Away)
 class TeamsPlaying:
+    # initialization of instance varaibles
     def __init__(self, homeTeam, awayTeam):
         self.home = homeTeam
         self.away = awayTeam
 
-    def gameLeague(self):
-        for team in range(len(NL)):
-            if self.home == NL[team]:
-                homeLeague = "MLB-NL"
-            if self.away == NL[team]:
-                awayLeague = "MLB-NL"
-        for team in range(len(AL)):
-            if self.home == AL[team]:
-                homeLeague = "MLB-AL"
-            if self.away == AL[team]:
-                awayLeague = "MLB-AL"
+    # accessor to return the home team
+    def getHomeTeam(self):
+        return self.home
 
-        if homeLeague == "MLB-NL" and awayLeague == "MLB-NL":
+    # accessor to return the away team
+    def getAwayTeam(self):
+        return self.away
+
+    # method to return the league in which a game falls under (based on the individual leagues of teams playing
+    def gameLeague(self):
+        homeLeague = ""
+        awayLeague = ""
+        for team in range(len(NL)):                     # iterate through NL league
+            if self.home == NL[team].getTeamName():     # if home team is in NL, set homeLeague to NL
+                homeLeague = NL[team].getLeague()
+            if self.away == NL[team].getTeamName():     # if away team is in NL, set awayLeague to NL
+                awayLeague = NL[team].getLeague()
+        for team in range(len(AL)):                     # iterate through AL league
+            if self.home == AL[team].getTeamName():     # if home team is in AL, set homeLeague to AL
+                homeLeague = AL[team].getLeague()
+            if self.away == AL[team].getTeamName():     # if away team is in AL, set awayLeague to AL
+                awayLeague = AL[team].getLeague()
+        if homeLeague == "MLB-NL" and awayLeague == "MLB-NL":   # if both teams are in NL, game league is NL
             league = "MLB-NL"
-        elif homeLeague == "MLB-AL" and awayLeague == "MLB-AL":
+        elif homeLeague == "MLB-AL" and awayLeague == "MLB-AL": # if both teams are in AL, game league is AL
             league = "MLB-AL"
-        else:
+        else:                               # if both teams are in different leagues, game league is Inter-league
             league = "Inter-League"
         return league
 
 
 # class for home games (child class of Team)
 class Home(TeamsPlaying):
+    # accessor to return stadium adjustment for home team
     def getStadiumAdjust(self):
         pass
 
 
 # class for away games (child class of Team)
 class Away(TeamsPlaying):
+    # accessor to return stadium adjustment for away team
     def getStadiumAdjust(self):
         pass
 
 
 # class for player (Parent class to Pitcher, Reliever, Positional, and DesignatedHitter)
 class Player:
-    def __init__(self, playerID):                   # Need to find a way of identifying what position a player plays
+    # initialization of instance variables
+    def __init__(self, playerID):
         self.playerID = playerID
 
+    # method to fetch the number of innings pitched by a pitcher in a season
     def inningsPitched(self):
         pitching = pitching_stats_bref(2018)
         pitching_df = pd.DataFrame(pitching)
@@ -285,20 +368,22 @@ class Player:
         IP = pitch_df.loc['IP']
         return IP
 
+    # method to distinguish between starting pitchers and relievers
     def position(self):
         global player_df
         IP = self.inningsPitched()
-        if 10 < IP < 60:
+        if 10 < IP < 60:            # if player has pitched more than 10 innings but less than 60, player is a reliever
             player_df = Reliever.getRelieverStats(self.playerID)
-        elif IP > 60:
+        elif IP > 60:               # if player has pitched more than 60 innings, player is a starting pitcher
             player_df = Pitcher.getPitcherStats(self.playerID)
-        else:
+        else:                       # if player has pitched less than 10 innings, player is a positional player
             Positional(self.playerID)
         return player_df
 
 
 # class for pitchers (child class of Player)
 class Pitcher(Player):
+    # method to fetch starting pitcher statistics, returning data frame
     def getPitcherStats(self):
         pitcher = pitching_stats_bref(2018)
         pitcher_df = pd.DataFrame(pitcher)
@@ -306,6 +391,7 @@ class Pitcher(Player):
         player_df = pitcher_df.loc[self.playerID]
         return player_df
 
+    # accessor to fetch a specific stat from the pitcher
     def getStat(self, stat):
         pitcher_stat = player_df.loc[stat]
         return pitcher_stat
@@ -313,6 +399,7 @@ class Pitcher(Player):
 
 # class for relievers (child class of Player)
 class Reliever(Player):
+    # method to fetch reliever statistics, returning data frame
     def getRelieverStats(self):
         reliever = pitching_stats_bref(2018)
         reliever_df = pd.DataFrame(reliever)
@@ -320,6 +407,7 @@ class Reliever(Player):
         player_df = reliever_df.loc[self.playerID]
         return player_df
 
+    # accessor to fetch a specific stat from the reliever
     def getStat(self, stat):
         player_stat = player_df.loc[stat]
         return player_stat
@@ -332,6 +420,7 @@ class Positional(Player):
 
 # class for designated hitters (child class of Player)
 class DesignatedHitter(Player):
+    # method to fetch batter statistics, returning a data frame
     def getBatterStats(self):
         batter = batting_stats_bref(2018)
         batter_df = pd.DataFrame(batter)
@@ -339,6 +428,7 @@ class DesignatedHitter(Player):
         player_df = batter_df.loc[self.playerID]
         return player_df
 
+    # accessor to fetch a specific stat from the batter
     def getStat(self, stat):
         player_stat = player_df.loc[stat]
         return player_stat
@@ -402,55 +492,52 @@ def getRunExpectancy():
 
 
 # initializing objects
-season = Season()
+season = Season("Yankees")          # input name of specific team of interest
 game = Game()
 inning = Inning()
 batter = Batter()
 bases = Bases()
-playingGame = TeamsPlaying("Athletics", "Mariners")
-home = Home("Athletics", "Mariners")
-away = Away("Athletics", "Mariners")
-
-
-# create lists for teams in each MLB league
-NL = np.array(["Cubs", "Dodgers", "Cardinals", "Mets", "Pirates", "Nationals", "Braves", "Brewers", "Reds",
-               "Phillies", "Giants", "Rockies", "Diamondbacks", "Padres", "Marlins"])
-AL = np.array(["Yankees", "RedSox", "Indians", "Astros", "WhiteSox", "Athletics", "Orioles", "Rays", "Angels",
-               "BlueJays", "Twins", "Royals", "Mariners", "Rangers", "Tigers"])
 
 # Create objects for each team in the MLB-NL
-Cubs = Team("Chicago", "MLB-NL")
-Dodgers = Team("Los Angeles", "MLB-NL")
-Cardinals = Team("St. Louis", "MLB-NL")
-Mets = Team("New York", "MLB-NL")
-Pirates = Team("Pittsburgh", "MLB-NL")
-Nationals = Team("Washington", "MLB-NL")
-Braves = Team("Atlanta", "MLB-NL")
-Brewers = Team("Milwaukee", "MLB-NL")
-Reds = Team("Cincinnati", "MLB-NL")
-Phillies = Team("Philadelphia", "MLB-NL")
-Giants = Team("San Francisco", "MLB-NL")
-Rockies = Team("Colorado", "MLB-NL")
-Diamondbacks = Team("Arizona", "MLB-NL")
-Padres = Team("San Diego", "MLB-NL")
-Marlins = Team("Miami", "MLB-NL")
+Cubs = Team("Cubs", "Chicago", "MLB-NL")
+Dodgers = Team("Dodgers", "Los Angeles", "MLB-NL")
+Cardinals = Team("Cardinals", "St. Louis", "MLB-NL")
+Mets = Team("Mets", "New York", "MLB-NL")
+Pirates = Team("Pirates", "Pittsburgh", "MLB-NL")
+Nationals = Team("Nationals", "Washington", "MLB-NL")
+Braves = Team("Braves", "Atlanta", "MLB-NL")
+Brewers = Team("Brewers", "Milwaukee", "MLB-NL")
+Reds = Team("Reds", "Cincinnati", "MLB-NL")
+Phillies = Team("Philies", "Philadelphia", "MLB-NL")
+Giants = Team("Giants", "San Francisco", "MLB-NL")
+Rockies = Team("Rockies", "Colorado", "MLB-NL")
+Diamondbacks = Team("Diamondbacks", "Arizona", "MLB-NL")
+Padres = Team("Padres", "San Diego", "MLB-NL")
+Marlins = Team("Marlins", "Miami", "MLB-NL")
 
 # Create objects for each team in the MLB-AL
-Yankees = Team("New York", "MLB-AL")
-RedSox = Team("Boston", "MLB-AL")
-Indians = Team("Cleveland", "MLB-AL")
-Astros = Team("Houston", "MLB-AL")
-WhiteSox = Team("Chicago", "MLB-AL")
-Athletics = Team("Oakland", "MLB-AL")
-Orioles = Team("Baltimore", "MLB-AL")
-Rays = Team("Tampa Bay", "MLB-AL")
-Angels = Team("Los Angeles", "MLB-AL")
-BlueJays = Team("Toronto", "MLB-AL")
-Twins = Team("Minnesota", "MLB-AL")
-Royals = Team("Kansas City", "MLB-AL")
-Mariners = Team("Seattle", "MLB-AL")
-Rangers = Team("Texas", "MLB-AL")
-Tigers = Team("Detroit", "MLB-AL")
+Yankees = Team("Yankees", "New York", "MLB-AL")
+RedSox = Team("RedSox", "Boston", "MLB-AL")
+Indians = Team("Indians", "Cleveland", "MLB-AL")
+Astros = Team("Astros", "Houston", "MLB-AL")
+WhiteSox = Team("WhiteSox", "Chicago", "MLB-AL")
+Athletics = Team("Athletics", "Oakland", "MLB-AL")
+Orioles = Team("Orioles", "Baltimore", "MLB-AL")
+Rays = Team("Rays", "Tampa Bay", "MLB-AL")
+Angels = Team("Angels", "Los Angeles", "MLB-AL")
+BlueJays = Team("BlueJays", "Toronto", "MLB-AL")
+Twins = Team("Twins", "Minnesota", "MLB-AL")
+Royals = Team("Royals", "Kansas City", "MLB-AL")
+Mariners = Team("Mariners", "Seattle", "MLB-AL")
+Rangers = Team("Rangers", "Texas", "MLB-AL")
+Tigers = Team("Tigers", "Detroit", "MLB-AL")
+
+# creating an array of team objects for all teams in NL
+NL = np.array([Cubs, Dodgers, Cardinals, Mets, Pirates, Nationals, Braves, Brewers, Reds,
+               Phillies, Giants, Rockies, Diamondbacks, Padres, Marlins])
+# creating an array of team objects for all teams in AL
+AL = np.array([Yankees, RedSox, Indians, Astros, WhiteSox, Athletics, Orioles, Rays, Angels,
+               BlueJays, Twins, Royals, Mariners, Rangers, Tigers])
 
 
 # run the game
@@ -496,8 +583,6 @@ while season.games < 163:
             pass
 
 
-print("______________________________________________________________________\n")
+print("_________________________________________________________________________________\n")
 print(season.data_df)
-print("______________________________________________________________________\n")
-
-
+print("_________________________________________________________________________________\n")
