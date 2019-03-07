@@ -47,6 +47,7 @@ def runMarcel(marcelDF, stats, roster, league, dateRange):
 
     print(predictDF)
     return predictDF
+
 def marcelModel(stat, playerId, firstDf, secondDf, thirdDf, firstAvg, secondAvg, thirdAvg):
 
     # gather data for requested player in each season

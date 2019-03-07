@@ -28,6 +28,7 @@ def statcastData(pitcherId, stats, dateRange):
     if pitcherId is None:
         # TODO
         raise Exception
+
     data = bball.statcast_pitcher(dateRange[0], dateRange[1], pitcherId)
     statcastDF = pd.DataFrame(data)
     statsOnly = statcastDF[stats]
@@ -39,7 +40,15 @@ def teamPitchingData(dateRange, stats, league, aggregate):
         raise Exception
 
     period = dc.convertDateStringToInt(dateRange)
-    df = bball.team_pitching(period[0], period[1], league, aggregate)
+
+    # new
+    data = pd.read_csv("../csv/team_pitching.csv", index_col=0)
+    df = pd.DataFrame()
+    for i in range(period[0], period[1] + 1):
+        # print(i)
+        # print(data[data["Season"] == i])
+        df = pd.concat([df, data[data["Season"] == i]])
+    # df = bball.team_pitching(period[0], period[1], league, aggregate)
 
     # ignore the parameters like player_id
     # drop all columns from the dataframe except the ones specified in stats
@@ -120,7 +129,7 @@ def pitchingBrefData(dateRange, stats):
     # make bounds based on start and end dates
     a = int(start)
     b = int(end)
-
+    '''
     finalStats = pd.DataFrame()
 
     # loop to get data from every year
@@ -135,6 +144,13 @@ def pitchingBrefData(dateRange, stats):
 
         # go to next year
         a = a + 1
+    '''
+    data = pd.read_csv("../csv/pitching_stats_bref.csv", index_col=0)
+    finalStats = pd.DataFrame()
+    for i in range(a, b + 1):
+        # print(i)
+        # print(data[data["Season"] == i])
+        finalStats = pd.concat([finalStats, data[data["Year"] == i]])
 
     finalStats = finalStats[stats]
     return finalStats
