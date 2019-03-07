@@ -69,6 +69,7 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
 
     #  The trainY data is now in the  same row as the corresponding trainX data
     #print(trainX)
+    #print(trainX.head())
     trainY = trainX["targetFeature"]
     if demonstrate == 1:
         dem.checkpointFour(trainY)
@@ -155,9 +156,9 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
     showPreds["difference"] = showPreds["difference"].abs()
     showPreds = showPreds.sort_values(by="Team", ascending=True)
 
-    if showResult == 1 and demonstrate != 1:
-        with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-            print(showPreds)
+    #if showResult == 1 and demonstrate != 1:
+       #with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+            #print(showPreds)
 
     if demonstrate ==1:
         dem.checkpointEleven(showPreds)
