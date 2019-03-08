@@ -8,6 +8,7 @@ from pybaseball import pitching_stats_bref
 from pybaseball import batting_stats_bref
 
 # import Machine Learning Algorithm to fetch predicted stats
+
 from modules.machine_learning import mainGetPredictions as ml
 
 # import schedule from MLB_2019_Schedule
@@ -16,9 +17,9 @@ import Simulator.MLB_2019_Schedule as MLB
 # ignore warnings in code
 warnings.simplefilter("ignore")
 
-
 # class for season
 class Season:
+
     # initialization of class instance variables
     def __init__(self, teamName):
         self.games = 1
@@ -338,7 +339,6 @@ class TeamsPlaying:
             league = "Inter-League"
         return league
 
-
 # class for home games (child class of Team)
 class Home(TeamsPlaying):
     # accessor to return stadium adjustment for home team
@@ -586,3 +586,4 @@ while season.games < 163:
 print("_________________________________________________________________________________\n")
 print(season.data_df)
 print("_________________________________________________________________________________\n")
+

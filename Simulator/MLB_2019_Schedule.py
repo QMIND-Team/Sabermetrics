@@ -1,19 +1,20 @@
 import pandas as pd
-import numpy as np
 import csv
 
 
+# function to create a data frame of MLB 2019 season schedule from a csv
 def getSchedule():
     pd.set_option('display.max_columns', 30)  # display all columns in the data frame
     pd.set_option('display.max_rows', 194)  # display all rows in the data frame
 
     # get excel spreadsheet from http://dailybaseballdata.com/base/sched4.html
     # change directory based on the place the spreadsheet is save to
-    schedule = pd.DataFrame.from_csv('/Users/willm/PycharmProjects/Sabermetrics/venv/Simulation/MLB_schedule_2019.csv',
+    schedule = pd.DataFrame.from_csv('/Users/willm/PycharmProjects/Sabermetrics-master/Simulator/MLB_schedule_2019.csv',
                                      header=1, index_col=[0, 1])
     return schedule
 
 
+# function to get the season schedule for a specific team
 def getTeamSchedule(teamName):
     team = toString(teamName)
     schedule = getSchedule()
@@ -25,7 +26,9 @@ def getTeamSchedule(teamName):
     return schedule
 
 
+# function to convert from team name to abbreviated city
 def toString(name):
+    global team
     if name == 'Angels':
         team = 'Ana'
     elif name == 'Orioles':
@@ -46,8 +49,8 @@ def toString(name):
         team = 'Min'
     elif name == 'Yankees':
         team = 'NYY'
-    elif name == 'Oak':
-        team = 'Athletics'
+    elif name == 'Athletics':
+        team = 'Oak'
     elif name == 'Mariners':
         team = 'Sea'
     elif name == 'Rays':
@@ -72,11 +75,3 @@ def toString(name):
         team = 'Los'
     return team
 
-
-def toList(dataFrame):
-    games = pd.DataFrame(dataFrame)
-    return games.values.tolist()
-
-
-teamSchedule = getTeamSchedule('Cubs')
-print(teamSchedule)
