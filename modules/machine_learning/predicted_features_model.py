@@ -71,11 +71,18 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
     preds = preds / 1000
 
     showPreds["prediction"] = preds
-    showPreds["difference"] = showPreds[targetFeature] - showPreds["prediction"]
     showPreds["difference"] = showPreds["difference"].abs()
     showPreds = showPreds.sort_values(by="Team", ascending=True)
 
-    meanDifference = showPreds.loc[:, "difference"].mean()
+    showPreds["W"] = showPreds["W"]/1000
+    showPreds["difference"] = showPreds[targetFeature] - showPreds["prediction"]
+
+
+
+
+    with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+        print(showPreds)
+
 
 
     RMSE = sqrt(mean_squared_error(testY, preds))

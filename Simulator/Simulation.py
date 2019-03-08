@@ -5,26 +5,51 @@ import numpy as np
 from pybaseball import pitching_stats_bref
 from pybaseball import batting_stats_bref
 
+# import Machine Learning Algorithm to fetch predicted stats
+from modules.machine_learning import main as ml
 
 # import schedule from MLB_2019_Schedule
-import MLB_2019_Schedule
-
-pd.set_option('display.max_columns', 6)
+import Simulator.MLB_2019_Schedule as MLB
 
 
 # class for season
 class Season:
-    def __init__(self):
+    def __init__(self, teamName):
         self.games = 1
+        self.teamName = teamName
         self.data_df = pd.DataFrame(columns={'Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team',
                                              'League'})
 
+    # Set up each game for a given team in one season
+    # TODO insert 'League' back into DataFrame
+    def playSeason(self):
+        schedule = MLB.getTeamSchedule(self.teamName)
+        home = MLB.homeOrAway(schedule)
+        games = MLB.checkFirstBit(schedule)
+        opposingTeam = iter(games)
+        gamesPlayed = 0
+        teams_df = pd.DataFrame(columns={"Home Team", "Away Team"})
+        while gamesPlayed <= 162:
+            try:
+                current = next(opposingTeam)
+                if home[gamesPlayed] == "True":
+                    teams_df = teams_df.append({"Home Team": self.teamName, "Away Team": MLB.toName(current)},
+                                               ignore_index=True)
+                elif home[gamesPlayed] == "False":
+                    teams_df = teams_df.append({"Home Team": MLB.toName(current), "Away Team": self.teamName},
+                                               ignore_index=True)
+                gamesPlayed = gamesPlayed + 1
+            except StopIteration:
+                break
+        return teams_df
+
     def nextGame(self):
+        teams_df = self.playSeason()
         self.data_df = self.data_df[['Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team']]
         self.data_df = self.data_df.append({'Game': self.games, 'Home Team Score': game.score[0],
-                                            'Away Team Score': game.score[1], 'Home Team': playingGame.home,
-                                            'Away Team': playingGame.away, 'League': playingGame.gameLeague()},
+                                            'Away Team Score': game.score[1], 'League': TeamsPlaying.gameLeague()},
                                            ignore_index=True)
+        self.data_df.update(teams_df)
         pd.set_option("display.max_rows", 162)
         self.games = self.games + 1
 
@@ -214,6 +239,13 @@ class Team:
         self.team = teamCity
         self.league = league
 
+    def getTeamStats(self, teamName):
+        teamStats = ml
+        teamStats_df = pd.DataFrame(teamStats)
+        teamStats_df.set_index("Team", inplace=True)
+        stats = teamStats_df.loc[teamName]
+        return stats
+
     def getBattingRoster(self):
         batting = batting_stats_bref(2018)
         batting_df = pd.DataFrame(batting)
@@ -238,6 +270,12 @@ class TeamsPlaying:
     def __init__(self, homeTeam, awayTeam):
         self.home = homeTeam
         self.away = awayTeam
+
+    def getHomeTeam(self):
+        return self.home
+
+    def getAwayTeam(self):
+        return self.away
 
     def gameLeague(self):
         for team in range(len(NL)):
@@ -402,15 +440,11 @@ def getRunExpectancy():
 
 
 # initializing objects
-season = Season()
+season = Season("Cubs")
 game = Game()
 inning = Inning()
 batter = Batter()
 bases = Bases()
-playingGame = TeamsPlaying("Athletics", "Mariners")
-home = Home("Athletics", "Mariners")
-away = Away("Athletics", "Mariners")
-
 
 # create lists for teams in each MLB league
 NL = np.array(["Cubs", "Dodgers", "Cardinals", "Mets", "Pirates", "Nationals", "Braves", "Brewers", "Reds",
@@ -499,5 +533,3 @@ while season.games < 163:
 print("______________________________________________________________________\n")
 print(season.data_df)
 print("______________________________________________________________________\n")
-
-
