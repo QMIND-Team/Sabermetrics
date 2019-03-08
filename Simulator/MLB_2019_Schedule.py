@@ -2,6 +2,7 @@ import pandas as pd
 import csv
 
 
+# function to create a data frame of MLB 2019 season schedule from a csv
 def getSchedule():
     pd.set_option('display.max_columns', 30)  # display all columns in the data frame
     pd.set_option('display.max_rows', 194)  # display all rows in the data frame
@@ -13,6 +14,7 @@ def getSchedule():
     return schedule
 
 
+# function to get the season schedule for a specific team
 def getTeamSchedule(teamName):
     team = toString(teamName)
     schedule = getSchedule()
@@ -24,6 +26,7 @@ def getTeamSchedule(teamName):
     return schedule
 
 
+# function to convert from team name to abbreviated city
 def toString(name):
     global team
     if name == 'Angels':
@@ -72,82 +75,3 @@ def toString(name):
         team = 'Los'
     return team
 
-
-def toName(city):
-    global teamName
-    if city == 'Ana':
-        teamName = 'Angels'
-    elif city == 'Bal':
-        teamName = 'Orioles'
-    elif city == 'Bos':
-        teamName = 'RedSox'
-    elif city == 'ChW':
-        teamName = 'WhiteSox'
-    elif city == 'Cle':
-        teamName = 'Indians'
-    elif city == 'Det':
-        teamName = 'Tigers'
-    elif city == 'Hou':
-        teamName = 'Astros'
-    elif city == 'Kan':
-        teamName = 'Royals'
-    elif city == 'Min':
-        teamName = 'Twins'
-    elif city == 'NYY':
-        teamName = 'Yankees'
-    elif city == 'Oak':
-        teamName = 'Athletics'
-    elif city == 'Sea':
-        teamName = 'Mariners'
-    elif city == 'Tam':
-        teamName = 'Rays'
-    elif city == 'Tex':
-        teamName = 'Rangers'
-    elif city == 'Tor':
-        teamName = 'BlueJays'
-    elif city == 'Ari':
-        teamName = 'Diamondbacks'
-    elif city == 'Atl':
-        teamName = 'Braves'
-    elif city == 'ChC':
-        teamName = 'Cubs'
-    elif city == 'Cin':
-        teamName = 'Reds'
-    elif city == 'Col':
-        teamName = 'Rockies'
-    elif city == 'Fla':
-        teamName = 'Marlins'
-    elif city == 'Los':
-        teamName = 'Dodgers'
-    return teamName
-
-
-def toList(dataFrame):
-    games = pd.DataFrame(dataFrame)
-    return games.values.tolist()
-
-
-def checkFirstBit(teamSchedule):
-    for i in range(len(teamSchedule)):
-        team = str(teamSchedule[i])
-        team = team[2:6]
-        if team[0] == "@":
-            sliced = team[1:4]
-            teamSchedule[i] = sliced
-        elif team[0] != "@":
-            sliced = team[0:3]
-            teamSchedule[i] = sliced
-    return teamSchedule
-
-
-def homeOrAway(teamSchedule):
-    home_lst = []
-    for i in range(len(teamSchedule)):
-        team = str(teamSchedule[i])
-        team = team[2:6]
-        if team[0] == "@":
-            home = "False"
-        else:
-            home = "True"
-        home_lst.append(home)
-    return home_lst
