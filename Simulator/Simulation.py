@@ -8,8 +8,7 @@ from pybaseball import pitching_stats_bref
 from pybaseball import batting_stats_bref
 
 # import Machine Learning Algorithm to fetch predicted stats
-
-from modules.machine_learning import mainGetPredictions as ml
+# from modules.machine_learning import mainGetPredictions as ml
 
 # import schedule from MLB_2019_Schedule
 import Simulator.MLB_2019_Schedule as MLB
@@ -17,15 +16,23 @@ import Simulator.MLB_2019_Schedule as MLB
 # ignore warnings in code
 warnings.simplefilter("ignore")
 
+pd.set_option("display.max_rows", 162)
+pd.set_option("display.max_columns", 6)
+
+
+# Data Frame headings for a hardcoded game
+game_df = pd.DataFrame(columns={"Inning", "Home score", "Away score", "Strikes", "Balls", "Outs"})
+
+
 # class for season
 class Season:
-
     # initialization of class instance variables
     def __init__(self, teamName):
         self.games = 1
         self.teamName = teamName
         self.data_df = pd.DataFrame(columns={'Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team',
                                              'League'})
+        self.hardCoding = False  # set to true if user wishes to hard code games
 
     # method to run a seasons worth of games for any given team
     def playSeason(self):
@@ -52,14 +59,16 @@ class Season:
         return teams_df
 
     def nextGame(self):
-        teams_df = self.playSeason()                            # fetching Data Frame of season outcomes
-        self.data_df = self.data_df[['Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team', 'League']]
-        self.data_df = self.data_df.append({'Game': self.games, 'Home Team Score': game.score[0],
-                                            'Away Team Score': game.score[1]}, ignore_index=True)
-        self.data_df.update(teams_df)                           # update the Data frame with data from season outcomes
-        pd.set_option("display.max_rows", 162)
-        pd.set_option("display.max_columns", 7)
-        self.games = self.games + 1
+        if season.hardCoding:
+            self.games = self.games + 1
+        else:
+            teams_df = self.playSeason()  # fetching Data Frame of season outcomes
+            self.data_df = self.data_df[['Game', 'Home Team Score', 'Away Team Score', 'Home Team', 'Away Team',
+                                         'League']]
+            self.data_df = self.data_df.append({'Game': self.games, 'Home Team Score': game.score[0],
+                                                'Away Team Score': game.score[1]}, ignore_index=True)
+            self.data_df.update(teams_df)  # update the Data frame with data from season outcomes
+            self.games = self.games + 1
 
 
 # class for game (parent class of inning)
@@ -70,6 +79,8 @@ class Game:
         self.outs = 0
         self.score = [0, 0]
         self.top = False
+        # Data Frame headings for a hardcoded game
+        self.game_df = pd.DataFrame(columns={"Inning", "Home score", "Away score", "Strikes", "Balls", "Outs"})
 
     # method for adding runs scored for each team
     def runScored(self):
@@ -77,9 +88,13 @@ class Game:
             self.score[1] = self.score[1] + 1
         else:                               # points awarded to team of index one in the bottom of innings
             self.score[0] = self.score[0] + 1
+        if season.hardCoding:               # if user is hard coding a game, input the data to df when method is called
+            game.game_df = inputData(game.game_df)
+        batter.nextBatter()
 
     # method for behavior of an out in the game
     def out(self):
+        batter.nextBatter()
         self.outs = self.outs + 1           # add one to the out count
         if self.outs == 3:                  # at three outs switch the inning, resetting outs to zero
             self.outs = 0
@@ -105,6 +120,11 @@ class Game:
 class Inning(Game):
     # method to switch between top and bottom of inning
     def inningSwitch(self):                 # sets outs back to zero and switches between top and bottom of inning
+        bases.first = False
+        bases.second = False
+        bases.third = False
+        batter.hits = 0
+        batter.walks = 0
         if game.top:
             self.outs = 0
             self.bottomOf()
@@ -127,6 +147,8 @@ class Batter:
     def __init__(self):
         self.strikes = 0
         self.balls = 0
+        self.hits = 0
+        self.walks = 0
 
     # method for behavior of a strike
     def strike(self):
@@ -134,13 +156,18 @@ class Batter:
         if self.strikes == 3:               # if batter has 3 strikes, batter is out
             game.out()
             self.nextBatter()               # calls function to get stats on the next batter
+        if season.hardCoding:  # if user is hard coding a game, input the data to df when method is called
+            game.game_df = inputData(game.game_df)
 
     # method for behavior of a ball
     def ball(self):
         self.balls = self.balls + 1         # add one to ball count
         if self.balls == 4:                 # if batter gets 4 balls
             self.single()                   # walk to first
+            self.walks = self.walks + 1
             self.nextBatter()               # calls function to get the next batters stats
+        if season.hardCoding:               # if user is hard coding a game, input the data to df when method is called
+            game.game_df = inputData(game.game_df)
 
     # method to fetch next batter statistics
     def nextBatter(self):
@@ -148,8 +175,14 @@ class Batter:
         self.balls = 0
         pass                                # get next batters statistics
 
+    # method printing out the current batting record of player at bat
+    def battingRecord(self):
+        print("Batting record : {} strikes, and {} balls".format(self.strikes, self.balls))
+
     # method for behavior of a single hit
     def single(self):
+        self.nextBatter()
+        self.hits = self.hits + 1
         if bases.basesLoaded:               # bases will stay loaded and one run will be scored
             game.runScored()
         else:
@@ -167,6 +200,8 @@ class Batter:
 
     # method for behavior of a double hit
     def double(self):
+        self.nextBatter()
+        self.hits = self.hits + 1
         if bases.basesLoaded:               # if bases loaded, two players will score and first will become empty
             bases.first = False
             game.runScored()
@@ -185,6 +220,8 @@ class Batter:
 
     # method for behavior of a triple hit
     def triple(self):
+        self.nextBatter()
+        self.hits = self.hits + 1
         if bases.basesLoaded:               # all players on base will score a run
             bases.first = False
             bases.second = False
@@ -205,6 +242,8 @@ class Batter:
 
     # method for behavior of a home run hit
     def homeRun(self):
+        self.nextBatter()
+        self.hits = self.hits + 1
         if bases.basesLoaded:               # all players on base and batter will score a run
             bases.first = False
             bases.second = False
@@ -260,6 +299,7 @@ class Bases:
                 print("Third is empty")
         else:                               # otherwise, all bases are loaded
             print("Bases Loaded")
+        print("\n")
 
 
 # class for Teams
@@ -271,9 +311,10 @@ class Team:
         self.teamName = teamName
 
     # method to fetch predicted team stats from MLM
-    def getPredictedStats(self, start, end, trainRange, toPredictFeatures, showProcess, method):
+    # TODO test that simulator can pull predicted stats from MLM
+    '''def getPredictedStats(self, start, end, trainRange, toPredictFeatures, showProcess, method):
         predictedStats = ml.getPredictions(start, end, trainRange, toPredictFeatures, showProcess, method)
-        return predictedStats
+        return predictedStats'''
 
     # method to fetch batting roster of a given team
     def getBattingRoster(self):
@@ -338,6 +379,7 @@ class TeamsPlaying:
         else:                               # if both teams are in different leagues, game league is Inter-league
             league = "Inter-League"
         return league
+
 
 # class for home games (child class of Team)
 class Home(TeamsPlaying):
@@ -491,6 +533,15 @@ def getRunExpectancy():
     return RE
 
 
+# method to update the data frame of events occurring in the hard coded game
+def inputData(dataFrame):
+    dataFrame = dataFrame[["Inning", "Home score", "Away score", "Strikes", "Balls", "Outs"]]
+    dataFrame = dataFrame.append({"Inning": game.inning, "Home score": game.score[0], "Away score": game.score[1],
+                                  "Strikes": batter.strikes, "Balls": batter.balls, "Outs": game.outs},
+                                 ignore_index=True)
+    return dataFrame
+
+
 # initializing objects
 season = Season("Yankees")          # input name of specific team of interest
 game = Game()
@@ -540,7 +591,7 @@ AL = np.array([Yankees, RedSox, Indians, Astros, WhiteSox, Athletics, Orioles, R
                BlueJays, Twins, Royals, Mariners, Rangers, Tigers])
 
 
-# run the game
+# run the season
 while season.games < 163:
     swing = uniform(0.0, 1.0)
     if swing <= 0.635:                              # batters swing at 63.5% of all pitches
@@ -583,7 +634,5 @@ while season.games < 163:
             pass
 
 
-print("_________________________________________________________________________________\n")
-print(season.data_df)
-print("_________________________________________________________________________________\n")
-
+season.data_df.set_index("Game", inplace=True, drop=True)
+season.data_df
