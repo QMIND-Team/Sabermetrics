@@ -36,7 +36,7 @@ def createTeamRosters(teamName):
                 'New York Yankees': 'NYY', 'Tampa Bay Rays': 'TBR', 'Baltimore Orioles': 'BAL', 'Cleveland Indians': 'CLE',
                 'Minnesota Twins': 'MIN', 'Detroit Tigers': 'DET', 'Chicago White Sox': 'CHW', 'Kansas City Royals': 'KCR',
                 'Houston Astros': 'HOU', 'Oakland Athletics': 'OAK', 'Seattle Mariners': 'SEA', 'Los Angeles Angels': 'LAA',
-                'Texas Rangers': 'TEX'}
+                'Texas Rangers': 'TEX', 'Toronto Blue Jays': 'TOR'}
     teamAbbreviation = teamDict[teamName]
     url = f"https://www.baseball-reference.com/teams/{teamAbbreviation}/2018-roster.shtml"
     res = requests.get(url)

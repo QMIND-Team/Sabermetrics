@@ -6,31 +6,35 @@ import modules.machine_learning.predicted_features_model as pfm
 import modules.machine_learning.main_functions as mf
 import modules.machine_learning.nextYearPrediction as nyp
 
-def getPredictions(toPredictFeatures,df,method,end,start,showProcess,rangeToTest):
+def getPredictions(toPredictFeatures,df,method,end,start,showProcess,testRange):
 
     #first prediction has to be done outside of the loop so that the merging could happen within the loop
 
     prediction = pd.DataFrame(columns=['Team','Season'])
 
-    for i in range(0,rangeToTest):
+    for i in range(0,end-start+1):
         yearPrediction = pd.DataFrame(columns=['Team', 'Season'])
 
         for j in toPredictFeatures:
-             newPredictions = model.model(j ,df,start-i,end-i,method,givePredictions=1,onlyPredictions =1)
+             #print("Start: ",end-i-testRange)
+             #print("END: ",end-i)
+             newPredictions = model.model(j,df,end-i-testRange,end-i,method,givePredictions=1,onlyPredictions =1)
              yearPrediction = dc.mergeFramesHow(yearPrediction, newPredictions, ["Team", "Season"],'outer')
         prediction = prediction.append(yearPrediction)
 
     columnsTitles = ['Season', 'Team']
     columnsTitles.extend(toPredictFeatures)
     prediction = prediction.reindex(columns=columnsTitles)
-    if showProcess == 1:
+    '''if showProcess == 1:
         with pd.option_context('display.max_rows', None, 'display.max_columns', None):
             print(prediction)
-
+    '''
     return prediction
-def advancedModel(toPredictFeatures,df,end,start,showProcess,testRange,targetFeature,method,rangeToTest):
+def advancedModel(features,df,end,start,showProcess,testRange,targetFeature,method,rangeToTest):
     targetFeatureDf = df[['Season','Team',targetFeature]]
-    predictedDf = getPredictions(toPredictFeatures,df,method,end,start,showProcess,rangeToTest)
+    predictedDf = getPredictions(features,df,method,end,start+rangeToTest,showProcess,rangeToTest)
+
+    print("here")
     predictedDf['Season'] = predictedDf['Season'].astype('float64')
     predictedDf = dc.mergeFramesHow(targetFeatureDf, predictedDf, ["Team", "Season"], 'inner')
     #if showProcess == 1:
@@ -54,12 +58,16 @@ def runAdvancedModel(toPredictFeature,df,end,start,showProcess,testRange,targetF
         totalMD = totalMD+ avgMD
         totalRMSE = totalRMSE+avgRMSE
 
+        print("The RMSE is",avgRMSE)
+
+
+
     finalAvgMD = totalMD/seasonsToTest
     finalAvgRMSE = totalRMSE/seasonsToTest
 
-    #print("\nResults for average from ",end-i," to ",end);
-    #print("The average error is: ",finalAvgMD)
-    #print("The RMSE is: ",finalAvgRMSE)
+    print("\nResults for average from ",end-i," to ",end);
+    print("The average error is: ",finalAvgMD)
+    print("The RMSE is: ",finalAvgRMSE)
 
     return finalAvgMD,finalAvgRMSE
 

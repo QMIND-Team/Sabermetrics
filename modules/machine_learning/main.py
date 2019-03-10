@@ -48,10 +48,9 @@ method = "LR"
 featureSelection = 0
 testSeason = 0
 testSeasons = 0
-getPredictions =0
-advancedPrediction = 0
-runAdvancedModel =0
-advancedFeatureSelection =1
+advancedModel = 1
+runAdvancedModel = 0
+advancedFeatureSelection =0
 nextYearPrediction = 0
 
 if featureSelection ==1:
@@ -64,15 +63,15 @@ if featureSelection ==1:
 #Test Season
 if testSeason ==1:
     seasonToTest = 2016
-    trainRange= 5
-    showPreds = 0
+    trainRange= 3
+    showPreds = 1
     demonstrateModel = 0
     showRMS = 1
     end = seasonToTest
     start = end - trainRange
-    demonstrateModel =0
+    demonstrateModel =1
     givePredictions =1
-    showPredictions =0
+    showPredictions =1
 
 if testSeasons ==1:
     maxSeason = 2018
@@ -88,21 +87,13 @@ if testSeasons ==1:
     showPredictions = 0
 
 
-if getPredictions ==1:
-    trainRange = 5
-    end = 2016
-    start = end - trainRange
-    range = 2
-    showProcess= 1
-    toPredictFeatures = ['G_y', 'GS']
-
-if advancedPrediction ==1:
+if advancedModel ==1:
     seasonToPredict = 2018
-    testRange = 2
+    testRange = 4
     end = seasonToPredict
-    start = end - (testRange+1)
+    start = end - (testRange*3)
     showProcess = 1
-    toPredictFeatures = ['OBP', 'G_y']
+    features = ['G_y', 'OBP', 'IP', 'WAR_x', 'SB', 'AVG', 'HR/FB', 'K%', 'LOB%', 'xFIP', 'BB/9', 'Def', 'ERA', 'SLG', 'BABIP_x', 'PA', 'SV', 'R', 'Off', 'WAR_y', 'HR/9']
 
 
 if runAdvancedModel ==1:
@@ -116,15 +107,13 @@ if runAdvancedModel ==1:
 
 if advancedFeatureSelection ==1:
     maxSeason = 2018
-    testRange = 4#also train range #train ones less than inputted value, more than 5 may cause null values which break the program
+    testRange = 4 #also train range #train ones less than inputted value, more than 5 may cause null values which break the program
     end = maxSeason
     seasonsToTest = 4 #when calculating RMSE and accuracy, it averages the number of seasons entered, more than 5 may cause null values which break the program
     start = end - (testRange+1+seasonsToTest)
     showProcess = 0
-    #advancedTestedFeatures = ['OBP', 'G_y', 'FIP', 'K%', 'HR/FB', 'LOB%', 'K/9', 'wRC+', 'GS', 'SB', 'BABIP_x', 'R'] #10.496 RMSE
-    advancedTestedFeatures = ['G_y', 'OBP', 'IP', 'WAR_x', 'SB', 'AVG', 'HR/FB', 'K%', 'LOB%', 'xFIP', 'BB/9', 'Def', 'ERA', 'SLG', 'BABIP_x', 'PA', 'SV'] #9.244 RMSE extra advanced
-
-    #advancedTestedFeatures = ['G_y']
+    #advancedTestedFeatures = ['G_y', 'OBP', 'IP', 'WAR_x', 'SB', 'AVG', 'HR/FB', 'K%', 'LOB%', 'xFIP', 'BB/9', 'Def', 'ERA', 'SLG', 'BABIP_x', 'PA', 'SV', 'R', 'Off', 'WAR_y', 'HR/9'] #9.126 RMSE extra advanced
+    advancedTestedFeatures = ['G_y']
     advancedToTestFeatures = allFeatures
     for i in advancedTestedFeatures:
         advancedToTestFeatures.remove(i)
@@ -163,11 +152,11 @@ elif testSeason ==1:
 elif testSeasons ==1:
     mf.testSeasons(df,targetFeature,testedFeatures,requiredColumns,maxSeason,trainRange,method,showPreds,showRMS,demonstrateModel,givePredictions,showPredictions,numberOfSeasons)
 
-elif getPredictions ==1:
-    maf.getPredictions(toPredictFeatures,df,method,end,start,showProcess,range)
 
-elif advancedPrediction ==1:
-    maf.advancedModel(toPredictFeatures,df,end,start,showProcess,testRange,targetFeature,method,testRange)
+
+elif advancedModel ==1:
+    maf.advancedModel(features,df,end,start,showProcess,testRange,targetFeature,method,testRange)
+
 elif runAdvancedModel ==1:
     maf.runAdvancedModel(toPredictFeatures, df, end, start, showProcess, testRange, targetFeature, method, seasonsToTest)
 
