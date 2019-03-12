@@ -61,16 +61,91 @@ def teamPitchingData(dateRange, stats, league, aggregate):
     df = df.drop(dropCols, axis = 1)
     return df
 
+def teamPitching(start, end=None):
+    if end is None:
+        end = start
+    data = pd.read_csv("../csv/team_pitching.csv", index_col=0)
+    df = pd.DataFrame()
+    for i in range(start, end + 1):
+        # print(i)
+        # print(data[data["Season"] == i])
+        df = pd.concat([df, data[data["Season"] == i]])
+    # df = bball.team_pitching(period[0], period[1], league, aggregate)
+
+    # ignore the parameters like player_id
+    # drop all columns from the dataframe except the ones specified in stats
+
+    # dfHeaders = list(df.columns)
+    # neededCols = stats + ['Team', 'Season']
+    # dropCols = []
+    # for column in dfHeaders:
+    #     if column not in neededCols:
+    #         dropCols += [column]
+    # df = df.drop(dropCols, axis = 1)
+
+    return df
+
+def teamBattingData(dateRange, stats, league, aggregate):
+    if league is None or aggregate is None:
+        # TODO
+        raise Exception
+
+    period = dc.convertDateStringToInt(dateRange)
+
+    # new
+    data = pd.read_csv("../csv/team_batting.csv", index_col=0)
+    df = pd.DataFrame()
+    for i in range(period[0], period[1] + 1):
+        # print(i)
+        # print(data[data["Season"] == i])
+        df = pd.concat([df, data[data["Season"] == i]])
+    # df = bball.team_pitching(period[0], period[1], league, aggregate)
+
+    # ignore the parameters like player_id
+    # drop all columns from the dataframe except the ones specified in stats
+    dfHeaders = list(df.columns)
+    neededCols = stats + ['Team', 'Season']
+    dropCols = []
+    for column in dfHeaders:
+        if column not in neededCols:
+            dropCols += [column]
+    df = df.drop(dropCols, axis = 1)
+    return df
+
+def teamBatting(start, end=None):
+    if end is None:
+        end = start
+    data = pd.read_csv("../csv/team_batting.csv", index_col=0)
+    df = pd.DataFrame()
+    for i in range(start, end + 1):
+        # print(i)
+        # print(data[data["Season"] == i])
+        df = pd.concat([df, data[data["Season"] == i]])
+    # df = bball.team_pitching(period[0], period[1], league, aggregate)
+
+    # ignore the parameters like player_id
+    # drop all columns from the dataframe except the ones specified in stats
+
+    # dfHeaders = list(df.columns)
+    # neededCols = stats + ['Team', 'Season']
+    # dropCols = []
+    # for column in dfHeaders:
+    #     if column not in neededCols:
+    #         dropCols += [column]
+    # df = df.drop(dropCols, axis = 1)
+
+    return df
+
 # bWarPitch  is a function that takes in 4 parameters and returns a pd data frame
 # 1. mld_ID is an array of integers of the the mld_ID that corresponds to the required player(s)
 # 2. stats is the kind of data that is required in the form of an array of strings
 # 3. range is an array of two strings in the form [yyyy-mm-dd,yyy-mm-dd] which indicates the time period of the required data
 def bWarData(dateRange, stats):
     #Select the correct version of bwar_pitch
-    data = bball.bwar_pitch(return_all=1)
+    df = pd.read_csv("../csv/bwar.csv", index_col=0)
 
     #Create a panda data frame from the data
-    df = pd.DataFrame(data)
+    #df = pd.DataFrame(data)
 
     #eliminate by stats
     df = df.filter(items=stats)
@@ -92,7 +167,10 @@ def pitchingFangraphsData(dateRange, stats):
 
     # get pitching_stats for specific range given
     print("Gathering Data from Fangraphs")
-    pitchStats = bball.pitching_stats(start, end)
+    pitchStats = pd.DataFrame()
+    df = pd.read_csv('../csv/pitching_fangraphs.csv')
+    for i in range(start, end + 1):
+        pitchStats.concat([pitchStats, df[df['Season'] == i]])
     print("Data Gathering Complete")
     pitchStatsDF = pd.DataFrame(pitchStats)
     headersList = pitchStatsDF.columns
@@ -153,6 +231,68 @@ def pitchingBrefData(dateRange, stats):
         finalStats = pd.concat([finalStats, data[data["Year"] == i]])
 
     finalStats = finalStats[stats]
+    return finalStats
+
+def battingBrefData(dateRange, stats):
+    # extracting year from start date
+    startStr = dateRange[0]
+    start = startStr[:4]
+
+    # extracting year from end date
+    endStr = dateRange[1]
+    end = endStr[:4]
+
+    # make bounds based on start and end dates
+    a = int(start)
+    b = int(end)
+    '''
+    finalStats = pd.DataFrame()
+
+    # loop to get data from every year
+    while a <= b:
+        # make a Data Frame for the specific year and take a list of headers
+        pitchStats = bball.pitching_stats_bref(a)
+        pitchStatsDF = pd.DataFrame(pitchStats)
+        pitchStatsDF['Year'] = a
+
+        # appending to one single Data Frame
+        finalStats = finalStats.append(pitchStatsDF)
+
+        # go to next year
+        a = a + 1
+    '''
+    data = pd.read_csv("../csv/batting_stats_bref.csv", index_col=0)
+    finalStats = pd.DataFrame()
+    for i in range(a, b + 1):
+        # print(i)
+        # print(data[data["Season"] == i])
+        finalStats = pd.concat([finalStats, data[data["Year"] == i]])
+
+    finalStats = finalStats[stats]
+    return finalStats
+
+def pitchingBref(start, end=None):
+    if end is None:
+        end = start
+    data = pd.read_csv("../csv/pitching_stats_bref.csv", index_col=0)
+    finalStats = pd.DataFrame()
+    for i in range(start, end + 1):
+        # print(i)
+        # print(data[data["Season"] == i])
+        finalStats = pd.concat([finalStats, data[data["Year"] == i]])
+
+    return finalStats
+
+def battingBref(start, end=None):
+    if end is None:
+        end = start
+    data = pd.read_csv("../csv/batting_stats_bref.csv", index_col=0)
+    finalStats = pd.DataFrame()
+    for i in range(start, end + 1):
+        # print(i)
+        # print(data[data["Season"] == i])
+        finalStats = pd.concat([finalStats, data[data["Year"] == i]])
+
     return finalStats
 
 def pitchingBaseballSavantData(dateRange, stats):

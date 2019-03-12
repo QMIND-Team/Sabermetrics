@@ -4,8 +4,8 @@ import pandas as pd
 import numpy as np
 import warnings
 
-from pybaseball import pitching_stats_bref
-from pybaseball import batting_stats_bref
+#from pybaseball import pitching_stats_bref
+#from pybaseball import batting_stats_bref
 
 # import Machine Learning Algorithm to fetch predicted stats
 
@@ -13,6 +13,9 @@ from modules.machine_learning import mainGetPredictions as ml
 
 # import schedule from MLB_2019_Schedule
 import Simulator.MLB_2019_Schedule as MLB
+
+# import data query
+import modules.data_processing.data_query as dq
 
 # ignore warnings in code
 warnings.simplefilter("ignore")
@@ -277,16 +280,18 @@ class Team:
 
     # method to fetch batting roster of a given team
     def getBattingRoster(self):
-        batting = batting_stats_bref(2018)
-        batting_df = pd.DataFrame(batting)
+        #batting = batting_stats_bref(2018)
+        batting_df = dq.battingBref(2018)
+        #batting_df = pd.DataFrame(batting)
         batting_df.set_index("Tm", inplace=True)
         homeBat_df = batting_df.loc[self.team]
         return homeBat_df
 
     # method to fetch pitching roster of a given team
     def getPitchingRoster(self):
-        pitching = pitching_stats_bref(2018)
-        pitching_df = pd.DataFrame(pitching)
+        #pitching = pitching_stats_bref(2018)
+        pitching_df = dq.pitchingBref(2018)
+        #pitching_df = pd.DataFrame(pitching)
         pitching_df.set_index("Tm", inplace=True)
         homePitch_df = pitching_df.loc[self.team]
         return homePitch_df
@@ -361,8 +366,9 @@ class Player:
 
     # method to fetch the number of innings pitched by a pitcher in a season
     def inningsPitched(self):
-        pitching = pitching_stats_bref(2018)
-        pitching_df = pd.DataFrame(pitching)
+        #pitching = pitching_stats_bref(2018)
+        pitching_df = dq.pitchingBref(2018)
+        #pitching_df = pd.DataFrame(pitching)
         pitching_df.set_index("Name", inplace=True)
         pitch_df = pitching_df.loc[self.playerID]
         IP = pitch_df.loc['IP']
@@ -385,8 +391,9 @@ class Player:
 class Pitcher(Player):
     # method to fetch starting pitcher statistics, returning data frame
     def getPitcherStats(self):
-        pitcher = pitching_stats_bref(2018)
-        pitcher_df = pd.DataFrame(pitcher)
+        #pitcher = pitching_stats_bref(2018)
+        pitcher_df = dq.pitchingBref(2018)
+        #pitcher_df = pd.DataFrame(pitcher)
         pitcher_df.set_index("Name", inplace=True)
         player_df = pitcher_df.loc[self.playerID]
         return player_df
@@ -401,8 +408,9 @@ class Pitcher(Player):
 class Reliever(Player):
     # method to fetch reliever statistics, returning data frame
     def getRelieverStats(self):
-        reliever = pitching_stats_bref(2018)
-        reliever_df = pd.DataFrame(reliever)
+        #reliever = pitching_stats_bref(2018)
+        reliever_df = dq.pitchingBref(2018)
+        #reliever_df = pd.DataFrame(reliever)
         reliever_df.set_index("Name", inplace=True)
         player_df = reliever_df.loc[self.playerID]
         return player_df
@@ -422,8 +430,9 @@ class Positional(Player):
 class DesignatedHitter(Player):
     # method to fetch batter statistics, returning a data frame
     def getBatterStats(self):
-        batter = batting_stats_bref(2018)
-        batter_df = pd.DataFrame(batter)
+        #batter = batting_stats_bref(2018)
+        batter_df = dq.battingBref(2018)
+        #batter_df = pd.DataFrame(batter)
         batter_df.set_index("Name", inplace=True)
         player_df = batter_df.loc[self.playerID]
         return player_df
