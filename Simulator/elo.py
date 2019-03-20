@@ -46,7 +46,27 @@ def playSeason(path):
     seasonDF = pd.read_csv(path)
     eloRatings = pd.read_csv('elo_ratings.csv')
 
-    pass
+    for index, row in seasonDF.iterrows():
+        homeTeam = row['Home Team']
+        awayTeam = row['Away Team']
+        homeTeamScore = row['Home Team Score']
+        awayTeamScore = row['Away Team Score']
+        homeEloRating = int(eloRatings.loc[eloRatings['Team'] == homeTeam, 'Elo Rating']) + 24 # home team advantage
+        awayEloRating = int(eloRatings.loc[eloRatings['Team'] == awayTeam, 'Elo Rating'])
+        homeExpected, awayExpected = calculateExpectedScores(homeEloRating, awayEloRating)
+        if homeTeamScore > awayTeamScore:
+            homeResult = 1
+            awayResult = 0
+        else:
+            homeResult = 0
+            awayResult = 1
+        kFactor = 5
+        newHomeRating = calculateNewRating(homeEloRating, homeExpected, homeResult, kFactor)
+        newAwayRating = calculateNewRating(awayEloRating, awayExpected, awayResult, kFactor)
+        print(homeEloRating, awayEloRating)
+        print(newHomeRating, newAwayRating)
 
+
+playSeason('2014_schedule.csv')
 
 
