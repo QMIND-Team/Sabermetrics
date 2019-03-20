@@ -1,0 +1,2464 @@
+,Home Team,Away Team,Home Team Score,Away Team Score
+0,New York Mets,Kansas City Royals,3,4
+1,St. Louis Cardinals,Pittsburgh Pirates,1,4
+2,Toronto Blue Jays,Tampa Bay Rays,5,3
+3,Chicago Cubs,Los Angeles Angels,9,0
+4,Colorado Rockies,Arizona D'Backs,10,5
+5,Washington Nationals,Atlanta Braves,4,3
+6,Minnesota Twins,Baltimore Orioles,2,3
+7,Philadelphia Phillies,Cincinnati Reds,2,6
+8,San Francisco Giants,Milwaukee Brewers,12,3
+9,Chicago White Sox,Oakland Athletics,4,3
+10,Los Angeles Dodgers,San Diego Padres,15,0
+11,Toronto Blue Jays,Tampa Bay Rays,5,3
+12,Seattle Mariners,Texas Rangers,2,3
+13,Chicago Cubs,Los Angeles Angels,6,1
+14,Colorado Rockies,Arizona D'Backs,6,11
+15,Boston Red Sox,Cleveland Indians,6,2
+16,New York Mets,Kansas City Royals,2,0
+17,Detroit Tigers,Miami Marlins,8,7
+18,San Francisco Giants,Milwaukee Brewers,2,1
+19,Houston Astros,New York Yankees,5,3
+20,Chicago White Sox,Oakland Athletics,5,4
+21,St. Louis Cardinals,Pittsburgh Pirates,5,6
+22,Los Angeles Dodgers,San Diego Padres,3,0
+23,Toronto Blue Jays,Tampa Bay Rays,2,3
+24,Seattle Mariners,Texas Rangers,10,2
+25,Colorado Rockies,Arizona D'Backs,4,3
+26,Washington Nationals,Atlanta Braves,3,1
+27,Minnesota Twins,Baltimore Orioles,2,4
+28,Philadelphia Phillies,Cincinnati Reds,2,3
+29,Boston Red Sox,Cleveland Indians,6,7
+30,Detroit Tigers,Miami Marlins,7,3
+31,San Francisco Giants,Milwaukee Brewers,3,4
+32,Houston Astros,New York Yankees,6,16
+33,Chicago White Sox,Oakland Athletics,1,2
+34,St. Louis Cardinals,Pittsburgh Pirates,1,5
+35,Los Angeles Dodgers,San Diego Padres,7,0
+36,Toronto Blue Jays,Tampa Bay Rays,3,5
+37,Seattle Mariners,Texas Rangers,9,5
+38,Texas Rangers,Los Angeles Angels,3,4
+39,Chicago Cubs,Arizona D'Backs,14,6
+40,Minnesota Twins,Baltimore Orioles,2,4
+41,Philadelphia Phillies,Cincinnati Reds,6,10
+42,Houston Astros,New York Yankees,5,8
+43,Chicago White Sox,Oakland Athletics,6,1
+44,Los Angeles Dodgers,San Francisco Giants,6,12
+45,Miami Marlins,Washington Nationals,6,4
+46,Texas Rangers,Los Angeles Angels,7,3
+47,Chicago Cubs,Arizona D'Backs,2,3
+48,St. Louis Cardinals,Atlanta Braves,7,4
+49,Tampa Bay Rays,Baltimore Orioles,1,6
+50,Cleveland Indians,Chicago White Sox,7,1
+51,Pittsburgh Pirates,Cincinnati Reds,6,5
+52,San Diego Padres,Colorado Rockies,13,6
+53,New York Yankees,Detroit Tigers,0,4
+54,Minnesota Twins,Kansas City Royals,3,4
+55,Houston Astros,Milwaukee Brewers,4,6
+56,Philadelphia Phillies,New York Mets,2,7
+57,Oakland Athletics,Seattle Mariners,3,2
+58,Los Angeles Dodgers,San Francisco Giants,2,3
+59,Boston Red Sox,Toronto Blue Jays,8,7
+60,Texas Rangers,Los Angeles Angels,4,1
+61,Chicago Cubs,Arizona D'Backs,4,2
+62,St. Louis Cardinals,Atlanta Braves,12,2
+63,Cleveland Indians,Chicago White Sox,3,7
+64,Pittsburgh Pirates,Cincinnati Reds,1,5
+65,San Diego Padres,Colorado Rockies,16,3
+66,New York Yankees,Detroit Tigers,8,4
+67,Minnesota Twins,Kansas City Royals,0,7
+68,Houston Astros,Milwaukee Brewers,6,4
+69,Philadelphia Phillies,New York Mets,1,0
+70,Oakland Athletics,Seattle Mariners,6,1
+71,Los Angeles Dodgers,San Francisco Giants,3,2
+72,Boston Red Sox,Toronto Blue Jays,8,4
+73,Texas Rangers,Los Angeles Angels,1,3
+74,Chicago Cubs,Arizona D'Backs,7,3
+75,St. Louis Cardinals,Atlanta Braves,12,7
+76,Tampa Bay Rays,Baltimore Orioles,3,5
+77,Pittsburgh Pirates,Cincinnati Reds,1,2
+78,San Diego Padres,Colorado Rockies,3,6
+79,Minnesota Twins,Kansas City Royals,3,4
+80,Houston Astros,Milwaukee Brewers,2,3
+81,Philadelphia Phillies,New York Mets,5,2
+82,Oakland Athletics,Seattle Mariners,2,1
+83,Los Angeles Dodgers,San Francisco Giants,6,9
+84,Boston Red Sox,Toronto Blue Jays,0,3
+85,Miami Marlins,Washington Nationals,2,4
+86,Baltimore Orioles,Boston Red Sox,9,7
+87,Cincinnati Reds,Chicago Cubs,3,5
+88,Pittsburgh Pirates,Detroit Tigers,7,4
+89,Kansas City Royals,Houston Astros,2,8
+90,Chicago White Sox,Minnesota Twins,4,1
+91,Miami Marlins,New York Mets,10,3
+92,Los Angeles Angels,Oakland Athletics,4,1
+93,San Diego Padres,Philadelphia Phillies,4,3
+94,Texas Rangers,Seattle Mariners,7,3
+95,Milwaukee Brewers,St. Louis Cardinals,1,10
+96,Atlanta Braves,Washington Nationals,4,6
+97,Baltimore Orioles,Boston Red Sox,9,5
+98,San Francisco Giants,Colorado Rockies,7,2
+99,Pittsburgh Pirates,Detroit Tigers,2,8
+100,Kansas City Royals,Houston Astros,3,2
+101,Arizona D'Backs,Los Angeles Dodgers,4,2
+102,Miami Marlins,New York Mets,2,1
+103,Los Angeles Angels,Oakland Athletics,5,4
+104,San Diego Padres,Philadelphia Phillies,0,3
+105,Texas Rangers,Seattle Mariners,8,0
+106,Cleveland Indians,Tampa Bay Rays,1,5
+107,New York Yankees,Toronto Blue Jays,3,2
+108,Atlanta Braves,Washington Nationals,1,2
+109,Baltimore Orioles,Boston Red Sox,2,4
+110,Cincinnati Reds,Chicago Cubs,2,9
+111,San Francisco Giants,Colorado Rockies,6,10
+112,Kansas City Royals,Houston Astros,4,2
+113,Arizona D'Backs,Los Angeles Dodgers,1,3
+114,Chicago White Sox,Minnesota Twins,3,0
+115,Miami Marlins,New York Mets,1,2
+116,Los Angeles Angels,Oakland Athletics,5,1
+117,San Diego Padres,Philadelphia Phillies,1,2
+118,Detroit Tigers,Pittsburgh Pirates,7,3
+119,Texas Rangers,Seattle Mariners,2,4
+120,Milwaukee Brewers,St. Louis Cardinals,6,4
+121,Cleveland Indians,Tampa Bay Rays,4,1
+122,New York Yankees,Toronto Blue Jays,2,7
+123,Atlanta Braves,Washington Nationals,0,3
+124,Cincinnati Reds,Chicago Cubs,1,8
+125,San Francisco Giants,Colorado Rockies,6,11
+126,Kansas City Royals,Houston Astros,6,2
+127,Arizona D'Backs,Los Angeles Dodgers,2,5
+128,Chicago White Sox,Minnesota Twins,3,1
+129,San Diego Padres,Philadelphia Phillies,0,3
+130,Detroit Tigers,Pittsburgh Pirates,7,4
+131,Milwaukee Brewers,St. Louis Cardinals,0,7
+132,Cleveland Indians,Tampa Bay Rays,6,0
+133,Baltimore Orioles,Texas Rangers,3,6
+134,New York Yankees,Toronto Blue Jays,2,4
+135,Atlanta Braves,Washington Nationals,2,6
+136,Toronto Blue Jays,Boston Red Sox,3,5
+137,Colorado Rockies,Chicago Cubs,6,1
+138,New York Mets,Cleveland Indians,6,5
+139,Detroit Tigers,Houston Astros,0,1
+140,San Francisco Giants,Los Angeles Dodgers,3,7
+141,Atlanta Braves,Miami Marlins,6,3
+142,Los Angeles Angels,Minnesota Twins,4,5
+143,Seattle Mariners,New York Yankees,7,1
+144,Kansas City Royals,Oakland Athletics,4,2
+145,Washington Nationals,Philadelphia Phillies,9,1
+146,Milwaukee Brewers,Pittsburgh Pirates,8,4
+147,Arizona D'Backs,San Diego Padres,3,2
+148,Cincinnati Reds,St. Louis Cardinals,3,14
+149,Chicago White Sox,Tampa Bay Rays,1,0
+150,Baltimore Orioles,Texas Rangers,11,5
+151,Toronto Blue Jays,Boston Red Sox,2,4
+152,Colorado Rockies,Chicago Cubs,2,6
+153,New York Mets,Cleveland Indians,5,7
+154,Detroit Tigers,Houston Astros,5,3
+155,San Francisco Giants,Los Angeles Dodgers,4,3
+156,Atlanta Braves,Miami Marlins,6,4
+157,Los Angeles Angels,Minnesota Twins,4,6
+158,Seattle Mariners,New York Yankees,3,2
+159,Kansas City Royals,Oakland Athletics,3,5
+160,Washington Nationals,Philadelphia Phillies,8,1
+161,Milwaukee Brewers,Pittsburgh Pirates,0,5
+162,Arizona D'Backs,San Diego Padres,3,5
+163,Cincinnati Reds,St. Louis Cardinals,9,8
+164,Chicago White Sox,Tampa Bay Rays,2,7
+165,Baltimore Orioles,Texas Rangers,4,8
+166,Toronto Blue Jays,Boston Red Sox,5,3
+167,Colorado Rockies,Chicago Cubs,2,0
+168,New York Mets,Cleveland Indians,6,0
+169,Detroit Tigers,Houston Astros,4,5
+170,San Francisco Giants,Los Angeles Dodgers,1,3
+171,Atlanta Braves,Miami Marlins,6,5
+172,Los Angeles Angels,Minnesota Twins,2,3
+173,Seattle Mariners,New York Yankees,3,4
+174,Kansas City Royals,Oakland Athletics,2,3
+175,Washington Nationals,Philadelphia Phillies,2,3
+176,Milwaukee Brewers,Pittsburgh Pirates,3,9
+177,Arizona D'Backs,San Diego Padres,7,3
+178,Cincinnati Reds,St. Louis Cardinals,3,4
+179,Chicago White Sox,Tampa Bay Rays,2,3
+180,Toronto Blue Jays,Boston Red Sox,4,3
+181,Los Angeles Angels,Chicago White Sox,7,0
+182,Colorado Rockies,Cincinnati Reds,5,1
+183,Washington Nationals,Miami Marlins,1,6
+184,Milwaukee Brewers,Minnesota Twins,4,7
+185,New York Mets,Philadelphia Phillies,5,2
+186,Arizona D'Backs,San Francisco Giants,9,7
+187,Chicago Cubs,St. Louis Cardinals,5,0
+188,Los Angeles Dodgers,Atlanta Braves,1,8
+189,Toronto Blue Jays,Baltimore Orioles,4,3
+190,Tampa Bay Rays,Boston Red Sox,3,0
+191,Los Angeles Angels,Chicago White Sox,0,5
+192,Colorado Rockies,Cincinnati Reds,3,4
+193,Seattle Mariners,Cleveland Indians,2,3
+194,Detroit Tigers,Kansas City Royals,6,8
+195,Washington Nationals,Miami Marlins,7,0
+196,Milwaukee Brewers,Minnesota Twins,6,5
+197,Oakland Athletics,New York Yankees,3,2
+198,New York Mets,Philadelphia Phillies,11,1
+199,Pittsburgh Pirates,San Diego Padres,4,5
+200,Arizona D'Backs,San Francisco Giants,3,0
+201,Chicago Cubs,St. Louis Cardinals,2,1
+202,Houston Astros,Texas Rangers,5,7
+203,Los Angeles Dodgers,Atlanta Braves,5,3
+204,Toronto Blue Jays,Baltimore Orioles,3,4
+205,Tampa Bay Rays,Boston Red Sox,3,7
+206,Los Angeles Angels,Chicago White Sox,1,2
+207,Colorado Rockies,Cincinnati Reds,5,6
+208,Seattle Mariners,Cleveland Indians,2,1
+209,Detroit Tigers,Kansas City Royals,3,2
+210,Washington Nationals,Miami Marlins,3,1
+211,Minnesota Twins,Milwaukee Brewers,5,10
+212,Oakland Athletics,New York Yankees,5,2
+213,New York Mets,Philadelphia Phillies,4,5
+214,Pittsburgh Pirates,San Diego Padres,2,8
+215,Arizona D'Backs,San Francisco Giants,2,1
+216,Chicago Cubs,St. Louis Cardinals,3,5
+217,Houston Astros,Texas Rangers,1,2
+218,Los Angeles Dodgers,Atlanta Braves,2,1
+219,Toronto Blue Jays,Baltimore Orioles,2,3
+220,Tampa Bay Rays,Boston Red Sox,12,8
+221,Los Angeles Angels,Chicago White Sox,3,2
+222,Chicago Cubs,Cincinnati Reds,16,0
+223,Seattle Mariners,Cleveland Indians,10,7
+224,Detroit Tigers,Kansas City Royals,0,4
+225,Washington Nationals,Miami Marlins,1,5
+226,Minnesota Twins,Milwaukee Brewers,8,1
+227,Oakland Athletics,New York Yankees,7,3
+228,Pittsburgh Pirates,San Diego Padres,11,1
+229,Arizona D'Backs,San Francisco Giants,6,2
+230,Houston Astros,Texas Rangers,4,7
+231,Seattle Mariners,Los Angeles Angels,5,2
+232,Pittsburgh Pirates,Arizona D'Backs,8,7
+233,New York Mets,Atlanta Braves,6,3
+234,Texas Rangers,Chicago White Sox,0,5
+235,Chicago Cubs,Cincinnati Reds,8,1
+236,Los Angeles Dodgers,Colorado Rockies,5,7
+237,Cleveland Indians,Detroit Tigers,2,1
+238,Boston Red Sox,Houston Astros,6,2
+239,Baltimore Orioles,Kansas City Royals,2,4
+240,Philadelphia Phillies,Milwaukee Brewers,5,2
+241,Tampa Bay Rays,New York Yankees,3,6
+242,St. Louis Cardinals,San Diego Padres,1,4
+243,Miami Marlins,San Francisco Giants,1,8
+244,Oakland Athletics,Toronto Blue Jays,8,5
+245,Minnesota Twins,Washington Nationals,4,8
+246,Seattle Mariners,Los Angeles Angels,2,4
+247,Pittsburgh Pirates,Arizona D'Backs,1,7
+248,New York Mets,Atlanta Braves,8,2
+249,Texas Rangers,Chicago White Sox,3,4
+250,Chicago Cubs,Cincinnati Reds,5,13
+251,Los Angeles Dodgers,Colorado Rockies,4,1
+252,Cleveland Indians,Detroit Tigers,10,1
+253,Boston Red Sox,Houston Astros,3,8
+254,Baltimore Orioles,Kansas City Royals,8,3
+255,Philadelphia Phillies,Milwaukee Brewers,10,6
+256,Tampa Bay Rays,New York Yankees,2,3
+257,St. Louis Cardinals,San Diego Padres,11,2
+258,Miami Marlins,San Francisco Giants,2,7
+259,Oakland Athletics,Toronto Blue Jays,3,9
+260,Minnesota Twins,Washington Nationals,0,2
+261,Seattle Mariners,Los Angeles Angels,9,4
+262,Pittsburgh Pirates,Arizona D'Backs,12,10
+263,New York Mets,Atlanta Braves,3,2
+264,Texas Rangers,Chicago White Sox,1,4
+265,Chicago Cubs,Cincinnati Reds,9,0
+266,Los Angeles Dodgers,Colorado Rockies,12,10
+267,Cleveland Indians,Detroit Tigers,6,3
+268,Boston Red Sox,Houston Astros,7,5
+269,Baltimore Orioles,Kansas City Royals,1,6
+270,Philadelphia Phillies,Milwaukee Brewers,5,8
+271,Tampa Bay Rays,New York Yankees,8,1
+272,St. Louis Cardinals,San Diego Padres,8,5
+273,Miami Marlins,San Francisco Giants,5,4
+274,Oakland Athletics,Toronto Blue Jays,3,6
+275,Minnesota Twins,Washington Nationals,5,6
+276,Kansas City Royals,Los Angeles Angels,1,6
+277,St. Louis Cardinals,Arizona D'Backs,7,12
+278,Boston Red Sox,Atlanta Braves,1,0
+279,Pittsburgh Pirates,Colorado Rockies,6,1
+280,Oakland Athletics,Detroit Tigers,3,7
+281,Miami Marlins,Los Angeles Dodgers,3,2
+282,Cleveland Indians,Minnesota Twins,3,4
+283,Cincinnati Reds,New York Mets,3,5
+284,Houston Astros,Seattle Mariners,2,3
+285,San Diego Padres,San Francisco Giants,4,5
+286,Baltimore Orioles,Tampa Bay Rays,0,2
+287,New York Yankees,Texas Rangers,3,1
+288,Chicago White Sox,Toronto Blue Jays,7,5
+289,Kansas City Royals,Los Angeles Angels,4,9
+290,St. Louis Cardinals,Arizona D'Backs,8,2
+291,Boston Red Sox,Atlanta Braves,11,4
+292,Milwaukee Brewers,Chicago Cubs,3,4
+293,Pittsburgh Pirates,Colorado Rockies,9,4
+294,Oakland Athletics,Detroit Tigers,5,1
+295,Miami Marlins,Los Angeles Dodgers,6,3
+296,Cleveland Indians,Minnesota Twins,5,6
+297,Cincinnati Reds,New York Mets,3,4
+298,Houston Astros,Seattle Mariners,1,11
+299,San Diego Padres,San Francisco Giants,0,1
+300,Baltimore Orioles,Tampa Bay Rays,1,3
+301,New York Yankees,Texas Rangers,1,10
+302,Chicago White Sox,Toronto Blue Jays,10,1
+303,Philadelphia Phillies,Washington Nationals,4,3
+304,Kansas City Royals,Los Angeles Angels,2,4
+305,St. Louis Cardinals,Arizona D'Backs,11,4
+306,Atlanta Braves,Boston Red Sox,4,9
+307,Pittsburgh Pirates,Colorado Rockies,9,8
+308,Oakland Athletics,Detroit Tigers,4,9
+309,Miami Marlins,Los Angeles Dodgers,2,0
+310,Cleveland Indians,Minnesota Twins,6,5
+311,Cincinnati Reds,New York Mets,2,5
+312,Houston Astros,Seattle Mariners,7,4
+313,San Diego Padres,San Francisco Giants,9,13
+314,Baltimore Orioles,Tampa Bay Rays,3,1
+315,New York Yankees,Texas Rangers,2,3
+316,Chicago White Sox,Toronto Blue Jays,4,0
+317,Philadelphia Phillies,Washington Nationals,3,0
+318,St. Louis Cardinals,Arizona D'Backs,0,3
+319,Chicago White Sox,Baltimore Orioles,2,10
+320,Atlanta Braves,Boston Red Sox,5,3
+321,Milwaukee Brewers,Chicago Cubs,2,7
+322,Oakland Athletics,Detroit Tigers,3,7
+323,Miami Marlins,Los Angeles Dodgers,5,3
+324,Philadelphia Phillies,Washington Nationals,3,0
+325,Colorado Rockies,Arizona D'Backs,9,0
+326,Chicago White Sox,Baltimore Orioles,3,6
+327,New York Yankees,Boston Red Sox,2,4
+328,Atlanta Braves,Chicago Cubs,1,6
+329,San Diego Padres,Los Angeles Dodgers,5,1
+330,Miami Marlins,Milwaukee Brewers,6,3
+331,Detroit Tigers,Minnesota Twins,9,2
+332,San Francisco Giants,New York Mets,1,13
+333,Houston Astros,Oakland Athletics,4,7
+334,Cleveland Indians,Philadelphia Phillies,3,4
+335,Cincinnati Reds,Pittsburgh Pirates,1,4
+336,Kansas City Royals,Seattle Mariners,0,1
+337,Washington Nationals,St. Louis Cardinals,5,4
+338,Toronto Blue Jays,Tampa Bay Rays,6,1
+339,Los Angeles Angels,Texas Rangers,2,4
+340,Colorado Rockies,Arizona D'Backs,5,2
+341,Chicago White Sox,Baltimore Orioles,8,7
+342,New York Yankees,Boston Red Sox,0,8
+343,San Diego Padres,Los Angeles Dodgers,5,2
+344,Miami Marlins,Milwaukee Brewers,7,5
+345,Detroit Tigers,Minnesota Twins,4,1
+346,San Francisco Giants,New York Mets,5,6
+347,Houston Astros,Oakland Athletics,0,2
+348,Cleveland Indians,Philadelphia Phillies,3,4
+349,Cincinnati Reds,Pittsburgh Pirates,1,5
+350,Kansas City Royals,Seattle Mariners,0,6
+351,Washington Nationals,St. Louis Cardinals,6,1
+352,Toronto Blue Jays,Tampa Bay Rays,3,4
+353,Los Angeles Angels,Texas Rangers,2,7
+354,Colorado Rockies,Arizona D'Backs,6,3
+355,Chicago White Sox,Baltimore Orioles,7,1
+356,New York Yankees,Boston Red Sox,7,8
+357,Atlanta Braves,Chicago Cubs,4,3
+358,San Diego Padres,Los Angeles Dodgers,0,1
+359,Miami Marlins,Milwaukee Brewers,5,14
+360,Detroit Tigers,Minnesota Twins,6,5
+361,San Francisco Giants,New York Mets,6,1
+362,Houston Astros,Oakland Athletics,2,1
+363,Cleveland Indians,Philadelphia Phillies,1,2
+364,Cincinnati Reds,Pittsburgh Pirates,6,5
+365,Kansas City Royals,Seattle Mariners,4,1
+366,Washington Nationals,St. Louis Cardinals,6,1
+367,Toronto Blue Jays,Tampa Bay Rays,5,1
+368,Los Angeles Angels,Texas Rangers,9,6
+369,San Francisco Giants,Cincinnati Reds,9,6
+370,Minnesota Twins,Houston Astros,6,2
+371,Washington Nationals,Kansas City Royals,2,0
+372,Los Angeles Angels,Milwaukee Brewers,5,8
+373,Atlanta Braves,New York Mets,1,4
+374,Seattle Mariners,Oakland Athletics,4,3
+375,Chicago Cubs,Pittsburgh Pirates,7,2
+376,Colorado Rockies,San Diego Padres,1,2
+377,Philadelphia Phillies,St. Louis Cardinals,3,10
+378,Texas Rangers,Toronto Blue Jays,2,1
+379,New York Yankees,Baltimore Orioles,1,4
+380,Boston Red Sox,Chicago White Sox,1,4
+381,San Francisco Giants,Cincinnati Reds,3,1
+382,Detroit Tigers,Cleveland Indians,3,7
+383,Minnesota Twins,Houston Astros,4,6
+384,Washington Nationals,Kansas City Royals,6,7
+385,Arizona D'Backs,Miami Marlins,4,7
+386,Los Angeles Angels,Milwaukee Brewers,4,5
+387,Atlanta Braves,New York Mets,3,0
+388,Seattle Mariners,Oakland Athletics,8,2
+389,Chicago Cubs,Pittsburgh Pirates,7,1
+390,Colorado Rockies,San Diego Padres,3,6
+391,Philadelphia Phillies,St. Louis Cardinals,1,0
+392,Los Angeles Dodgers,Tampa Bay Rays,10,5
+393,Texas Rangers,Toronto Blue Jays,1,3
+394,New York Yankees,Baltimore Orioles,7,0
+395,Boston Red Sox,Chicago White Sox,5,2
+396,San Francisco Giants,Cincinnati Reds,4,7
+397,Detroit Tigers,Cleveland Indians,0,4
+398,Minnesota Twins,Houston Astros,4,16
+399,Washington Nationals,Kansas City Royals,13,2
+400,Arizona D'Backs,Miami Marlins,3,4
+401,Los Angeles Angels,Milwaukee Brewers,7,3
+402,Atlanta Braves,New York Mets,0,8
+403,Seattle Mariners,Oakland Athletics,9,8
+404,Chicago Cubs,Pittsburgh Pirates,6,2
+405,Colorado Rockies,San Diego Padres,2,0
+406,Philadelphia Phillies,St. Louis Cardinals,4,5
+407,Los Angeles Dodgers,Tampa Bay Rays,5,8
+408,Texas Rangers,Toronto Blue Jays,3,4
+409,New York Yankees,Baltimore Orioles,0,1
+410,Boston Red Sox,Chicago White Sox,7,3
+411,Washington Nationals,Chicago Cubs,2,5
+412,Milwaukee Brewers,Cincinnati Reds,5,9
+413,Detroit Tigers,Cleveland Indians,4,9
+414,Seattle Mariners,Houston Astros,6,3
+415,Arizona D'Backs,Miami Marlins,0,4
+416,New York Mets,San Diego Padres,3,5
+417,Colorado Rockies,San Francisco Giants,17,7
+418,Philadelphia Phillies,St. Louis Cardinals,0,4
+419,Texas Rangers,Toronto Blue Jays,2,12
+420,Tampa Bay Rays,Los Angeles Angels,5,2
+421,Arizona D'Backs,Atlanta Braves,7,2
+422,Minnesota Twins,Chicago White Sox,4,10
+423,Washington Nationals,Chicago Cubs,6,8
+424,Milwaukee Brewers,Cincinnati Reds,1,5
+425,Kansas City Royals,Cleveland Indians,1,7
+426,Texas Rangers,Detroit Tigers,5,1
+427,Seattle Mariners,Houston Astros,3,6
+428,Philadelphia Phillies,Miami Marlins,4,6
+429,Boston Red Sox,New York Yankees,2,3
+430,New York Mets,San Diego Padres,0,2
+431,Colorado Rockies,San Francisco Giants,4,6
+432,Pittsburgh Pirates,St. Louis Cardinals,4,2
+433,Los Angeles Dodgers,Toronto Blue Jays,2,5
+434,Tampa Bay Rays,Los Angeles Angels,4,2
+435,Arizona D'Backs,Atlanta Braves,4,2
+436,Oakland Athletics,Baltimore Orioles,8,4
+437,Oakland Athletics,Baltimore Orioles,2,5
+438,Minnesota Twins,Chicago White Sox,2,7
+439,Washington Nationals,Chicago Cubs,5,8
+440,Milwaukee Brewers,Cincinnati Reds,13,7
+441,Kansas City Royals,Cleveland Indians,7,0
+442,Texas Rangers,Detroit Tigers,10,5
+443,Seattle Mariners,Houston Astros,3,2
+444,Philadelphia Phillies,Miami Marlins,4,3
+445,Boston Red Sox,New York Yankees,2,8
+446,New York Mets,San Diego Padres,6,3
+447,Colorado Rockies,San Francisco Giants,1,2
+448,Pittsburgh Pirates,St. Louis Cardinals,4,6
+449,Los Angeles Dodgers,Toronto Blue Jays,6,2
+450,Tampa Bay Rays,Los Angeles Angels,3,1
+451,Arizona D'Backs,Atlanta Braves,5,3
+452,Oakland Athletics,Baltimore Orioles,3,11
+453,Minnesota Twins,Chicago White Sox,1,3
+454,Washington Nationals,Chicago Cubs,3,4
+455,Milwaukee Brewers,Cincinnati Reds,5,4
+456,Kansas City Royals,Cleveland Indians,4,5
+457,Texas Rangers,Detroit Tigers,8,3
+458,Seattle Mariners,Houston Astros,1,5
+459,Philadelphia Phillies,Miami Marlins,6,5
+460,Boston Red Sox,New York Yankees,5,1
+461,New York Mets,San Diego Padres,4,3
+462,Colorado Rockies,San Francisco Giants,2,0
+463,Pittsburgh Pirates,St. Louis Cardinals,10,5
+464,Los Angeles Dodgers,Toronto Blue Jays,4,2
+465,Oakland Athletics,Boston Red Sox,7,14
+466,Pittsburgh Pirates,Cincinnati Reds,2,3
+467,Arizona D'Backs,Colorado Rockies,10,5
+468,Cleveland Indians,Houston Astros,1,7
+469,New York Mets,Los Angeles Dodgers,4,2
+470,Milwaukee Brewers,Miami Marlins,1,4
+471,Kansas City Royals,New York Yankees,3,6
+472,Tampa Bay Rays,Seattle Mariners,2,5
+473,Toronto Blue Jays,San Francisco Giants,3,1
+474,Chicago White Sox,Texas Rangers,8,4
+475,Detroit Tigers,Washington Nationals,4,5
+476,St. Louis Cardinals,Los Angeles Angels,8,1
+477,Philadelphia Phillies,Atlanta Braves,3,2
+478,Oakland Athletics,Boston Red Sox,5,13
+479,San Diego Padres,Chicago Cubs,7,8
+480,Arizona D'Backs,Colorado Rockies,5,1
+481,Cleveland Indians,Houston Astros,4,0
+482,New York Mets,Los Angeles Dodgers,2,3
+483,Milwaukee Brewers,Miami Marlins,10,2
+484,Baltimore Orioles,Minnesota Twins,5,3
+485,Kansas City Royals,New York Yankees,7,10
+486,Tampa Bay Rays,Seattle Mariners,4,6
+487,Toronto Blue Jays,San Francisco Giants,4,0
+488,Chicago White Sox,Texas Rangers,11,13
+489,Detroit Tigers,Washington Nationals,5,4
+490,St. Louis Cardinals,Los Angeles Angels,5,2
+491,Philadelphia Phillies,Atlanta Braves,1,5
+492,Oakland Athletics,Boston Red Sox,3,13
+493,San Diego Padres,Chicago Cubs,7,4
+494,San Diego Padres,Chicago Cubs,1,0
+495,Pittsburgh Pirates,Cincinnati Reds,5,4
+496,Arizona D'Backs,Colorado Rockies,7,8
+497,Cleveland Indians,Houston Astros,3,5
+498,New York Mets,Los Angeles Dodgers,4,3
+499,Milwaukee Brewers,Miami Marlins,2,3
+500,Baltimore Orioles,Minnesota Twins,9,2
+501,Kansas City Royals,New York Yankees,7,3
+502,Tampa Bay Rays,Seattle Mariners,5,6
+503,Toronto Blue Jays,San Francisco Giants,4,5
+504,Chicago White Sox,Texas Rangers,5,6
+505,Detroit Tigers,Washington Nationals,2,3
+506,St. Louis Cardinals,Los Angeles Angels,12,10
+507,San Francisco Giants,Arizona D'Backs,4,2
+508,Philadelphia Phillies,Atlanta Braves,7,4
+509,Detroit Tigers,Baltimore Orioles,5,7
+510,Houston Astros,Boston Red Sox,1,11
+511,New York Mets,Los Angeles Dodgers,0,5
+512,San Diego Padres,Milwaukee Brewers,3,0
+513,Kansas City Royals,New York Yankees,3,7
+514,San Francisco Giants,Arizona D'Backs,3,1
+515,Detroit Tigers,Baltimore Orioles,0,1
+516,Houston Astros,Boston Red Sox,7,6
+517,Pittsburgh Pirates,Chicago Cubs,4,9
+518,Minnesota Twins,Cleveland Indians,6,7
+519,New York Mets,Colorado Rockies,2,5
+520,Atlanta Braves,Kansas City Royals,1,5
+521,St. Louis Cardinals,Los Angeles Dodgers,4,8
+522,San Diego Padres,Milwaukee Brewers,0,1
+523,Chicago White Sox,New York Yankees,7,1
+524,Cincinnati Reds,Philadelphia Phillies,2,3
+525,Los Angeles Angels,Seattle Mariners,7,6
+526,Oakland Athletics,Tampa Bay Rays,6,3
+527,Toronto Blue Jays,Texas Rangers,5,0
+528,Miami Marlins,Washington Nationals,3,5
+529,San Francisco Giants,Arizona D'Backs,5,3
+530,Detroit Tigers,Baltimore Orioles,3,9
+531,Houston Astros,Boston Red Sox,5,6
+532,Pittsburgh Pirates,Chicago Cubs,2,8
+533,Minnesota Twins,Cleveland Indians,6,3
+534,New York Mets,Colorado Rockies,4,7
+535,Atlanta Braves,Kansas City Royals,5,0
+536,St. Louis Cardinals,Los Angeles Dodgers,3,5
+537,San Diego Padres,Milwaukee Brewers,8,7
+538,Chicago White Sox,New York Yankees,1,2
+539,Cincinnati Reds,Philadelphia Phillies,3,4
+540,Los Angeles Angels,Seattle Mariners,9,7
+541,Oakland Athletics,Tampa Bay Rays,0,6
+542,Toronto Blue Jays,Texas Rangers,5,6
+543,Miami Marlins,Washington Nationals,4,6
+544,Miami Marlins,Washington Nationals,7,1
+545,San Francisco Giants,Arizona D'Backs,2,1
+546,Detroit Tigers,Baltimore Orioles,6,5
+547,Houston Astros,Boston Red Sox,9,10
+548,Pittsburgh Pirates,Chicago Cubs,2,1
+549,Minnesota Twins,Cleveland Indians,5,1
+550,New York Mets,Colorado Rockies,3,4
+551,Atlanta Braves,Kansas City Royals,2,4
+552,St. Louis Cardinals,Los Angeles Dodgers,5,2
+553,San Diego Padres,Milwaukee Brewers,2,3
+554,Chicago White Sox,New York Yankees,5,7
+555,Cincinnati Reds,Philadelphia Phillies,9,4
+556,Los Angeles Angels,Seattle Mariners,3,0
+557,Oakland Athletics,Tampa Bay Rays,7,6
+558,Toronto Blue Jays,Texas Rangers,6,7
+559,Miami Marlins,Washington Nationals,5,1
+560,New York Yankees,Arizona D'Backs,2,12
+561,Cincinnati Reds,Cleveland Indians,6,15
+562,Minnesota Twins,Detroit Tigers,8,10
+563,Los Angeles Angels,Los Angeles Dodgers,7,6
+564,Texas Rangers,Oakland Athletics,1,3
+565,Miami Marlins,Philadelphia Phillies,5,3
+566,Atlanta Braves,Pittsburgh Pirates,5,8
+567,Tampa Bay Rays,Toronto Blue Jays,13,2
+568,New York Yankees,Arizona D'Backs,3,5
+569,Seattle Mariners,Baltimore Orioles,10,0
+570,Houston Astros,Chicago White Sox,6,5
+571,Cincinnati Reds,Cleveland Indians,1,13
+572,Minnesota Twins,Detroit Tigers,2,7
+573,Boston Red Sox,Kansas City Royals,4,8
+574,Los Angeles Angels,Los Angeles Dodgers,1,5
+575,Chicago Cubs,Milwaukee Brewers,2,4
+576,Washington Nationals,New York Mets,0,2
+577,Texas Rangers,Oakland Athletics,5,8
+578,Miami Marlins,Philadelphia Phillies,1,3
+579,Atlanta Braves,Pittsburgh Pirates,9,12
+580,San Francisco Giants,San Diego Padres,5,1
+581,Colorado Rockies,St. Louis Cardinals,3,1
+582,Tampa Bay Rays,Toronto Blue Jays,12,2
+583,Los Angeles Dodgers,Los Angeles Angels,1,8
+584,New York Yankees,Arizona D'Backs,4,2
+585,Seattle Mariners,Baltimore Orioles,2,5
+586,Houston Astros,Chicago White Sox,5,3
+587,Cleveland Indians,Cincinnati Reds,8,7
+588,Minnesota Twins,Detroit Tigers,3,6
+589,Boston Red Sox,Kansas City Royals,2,3
+590,Boston Red Sox,Kansas City Royals,5,2
+591,Chicago Cubs,Milwaukee Brewers,2,1
+592,Washington Nationals,New York Mets,7,1
+593,Texas Rangers,Oakland Athletics,1,8
+594,Miami Marlins,Philadelphia Phillies,2,4
+595,Atlanta Braves,Pittsburgh Pirates,3,1
+596,San Francisco Giants,San Diego Padres,2,1
+597,Colorado Rockies,St. Louis Cardinals,0,2
+598,Tampa Bay Rays,Toronto Blue Jays,6,3
+599,Los Angeles Dodgers,Los Angeles Angels,4,7
+600,Seattle Mariners,Baltimore Orioles,7,2
+601,Houston Astros,Chicago White Sox,1,2
+602,Cleveland Indians,Cincinnati Reds,7,2
+603,Chicago Cubs,Milwaukee Brewers,3,5
+604,Toronto Blue Jays,Minnesota Twins,3,2
+605,Washington Nationals,New York Mets,9,1
+606,New York Yankees,Oakland Athletics,4,1
+607,Atlanta Braves,Pittsburgh Pirates,2,8
+608,San Francisco Giants,San Diego Padres,3,1
+609,Colorado Rockies,St. Louis Cardinals,7,13
+610,Baltimore Orioles,Los Angeles Angels,9,4
+611,Cleveland Indians,Boston Red Sox,4,2
+612,Kansas City Royals,Chicago White Sox,4,1
+613,Seattle Mariners,Cincinnati Reds,8,3
+614,Tampa Bay Rays,Detroit Tigers,7,5
+615,Texas Rangers,Houston Astros,2,1
+616,Washington Nationals,Miami Marlins,4,1
+617,Toronto Blue Jays,Minnesota Twins,9,3
+618,Milwaukee Brewers,New York Mets,2,3
+619,New York Yankees,Oakland Athletics,8,3
+620,Atlanta Braves,Philadelphia Phillies,7,1
+621,Colorado Rockies,Pittsburgh Pirates,1,2
+622,Los Angeles Dodgers,San Diego Padres,6,7
+623,Chicago Cubs,San Francisco Giants,8,1
+624,Arizona D'Backs,St. Louis Cardinals,11,7
+625,Baltimore Orioles,Los Angeles Angels,3,1
+626,Cleveland Indians,Boston Red Sox,1,9
+627,Kansas City Royals,Chicago White Sox,2,1
+628,Seattle Mariners,Cincinnati Reds,4,0
+629,Tampa Bay Rays,Detroit Tigers,4,5
+630,Texas Rangers,Houston Astros,2,1
+631,Washington Nationals,Miami Marlins,2,3
+632,Toronto Blue Jays,Minnesota Twins,3,5
+633,Milwaukee Brewers,New York Mets,4,5
+634,New York Yankees,Oakland Athletics,5,1
+635,Atlanta Braves,Philadelphia Phillies,2,0
+636,Colorado Rockies,Pittsburgh Pirates,5,1
+637,Los Angeles Dodgers,San Diego Padres,2,3
+638,Chicago Cubs,San Francisco Giants,3,5
+639,Arizona D'Backs,St. Louis Cardinals,2,6
+640,Baltimore Orioles,Los Angeles Angels,2,10
+641,Cleveland Indians,Boston Red Sox,2,5
+642,Kansas City Royals,Chicago White Sox,2,3
+643,Seattle Mariners,Cincinnati Reds,5,4
+644,Tampa Bay Rays,Detroit Tigers,4,9
+645,Texas Rangers,Houston Astros,9,2
+646,Washington Nationals,Miami Marlins,8,2
+647,Toronto Blue Jays,Minnesota Twins,3,1
+648,Milwaukee Brewers,New York Mets,1,3
+649,New York Yankees,Oakland Athletics,5,4
+650,Atlanta Braves,Philadelphia Phillies,0,5
+651,Los Angeles Dodgers,San Diego Padres,9,5
+652,Chicago Cubs,San Francisco Giants,0,1
+653,Arizona D'Backs,St. Louis Cardinals,7,2
+654,Cleveland Indians,Chicago White Sox,6,7
+655,Cleveland Indians,Chicago White Sox,5,1
+656,Philadelphia Phillies,Detroit Tigers,4,5
+657,Cincinnati Reds,Los Angeles Dodgers,0,1
+658,Tampa Bay Rays,Miami Marlins,6,7
+659,Kansas City Royals,Minnesota Twins,10,4
+660,Colorado Rockies,Pittsburgh Pirates,3,6
+661,Oakland Athletics,Seattle Mariners,5,0
+662,San Diego Padres,San Francisco Giants,0,1
+663,Chicago Cubs,St. Louis Cardinals,3,4
+664,Los Angeles Angels,Texas Rangers,2,0
+665,New York Mets,Washington Nationals,7,1
+666,Milwaukee Brewers,Atlanta Braves,2,1
+667,Colorado Rockies,Boston Red Sox,3,8
+668,Cleveland Indians,Chicago White Sox,6,2
+669,Philadelphia Phillies,Detroit Tigers,1,3
+670,Baltimore Orioles,Houston Astros,2,3
+671,Cincinnati Reds,Los Angeles Dodgers,2,8
+672,Tampa Bay Rays,Miami Marlins,4,3
+673,Kansas City Royals,Minnesota Twins,7,4
+674,Toronto Blue Jays,New York Yankees,0,6
+675,Arizona D'Backs,Pittsburgh Pirates,1,12
+676,Oakland Athletics,Seattle Mariners,5,6
+677,San Diego Padres,San Francisco Giants,2,8
+678,Chicago Cubs,St. Louis Cardinals,12,3
+679,Los Angeles Angels,Texas Rangers,1,4
+680,New York Mets,Washington Nationals,4,7
+681,Milwaukee Brewers,Atlanta Braves,3,2
+682,Colorado Rockies,Boston Red Sox,3,10
+683,Cleveland Indians,Chicago White Sox,4,3
+684,Philadelphia Phillies,Detroit Tigers,8,5
+685,Baltimore Orioles,Houston Astros,3,4
+686,Cincinnati Reds,Los Angeles Dodgers,1,3
+687,Kansas City Royals,Minnesota Twins,5,7
+688,Toronto Blue Jays,New York Yankees,8,4
+689,Arizona D'Backs,Pittsburgh Pirates,4,5
+690,Oakland Athletics,Seattle Mariners,3,13
+691,San Diego Padres,San Francisco Giants,3,4
+692,Chicago Cubs,St. Louis Cardinals,9,8
+693,Miami Marlins,Tampa Bay Rays,4,3
+694,Los Angeles Angels,Texas Rangers,9,15
+695,New York Mets,Washington Nationals,2,0
+696,Milwaukee Brewers,Atlanta Braves,6,2
+697,Colorado Rockies,Boston Red Sox,8,2
+698,Baltimore Orioles,Houston Astros,2,4
+699,Toronto Blue Jays,New York Yankees,3,1
+700,Arizona D'Backs,Pittsburgh Pirates,3,8
+701,Miami Marlins,Tampa Bay Rays,9,1
+702,St. Louis Cardinals,Washington Nationals,1,2
+703,Houston Astros,Los Angeles Angels,2,7
+704,San Diego Padres,Arizona D'Backs,10,3
+705,Miami Marlins,Atlanta Braves,2,4
+706,Philadelphia Phillies,Chicago Cubs,2,6
+707,Baltimore Orioles,Cleveland Indians,6,4
+708,San Francisco Giants,Colorado Rockies,2,5
+709,Chicago White Sox,Kansas City Royals,5,7
+710,Cincinnati Reds,Milwaukee Brewers,5,9
+711,Los Angeles Dodgers,New York Mets,5,6
+712,Detroit Tigers,Oakland Athletics,4,1
+713,Minnesota Twins,Seattle Mariners,7,2
+714,New York Yankees,Tampa Bay Rays,4,1
+715,Pittsburgh Pirates,Texas Rangers,9,1
+716,Boston Red Sox,Toronto Blue Jays,5,7
+717,St. Louis Cardinals,Washington Nationals,6,2
+718,Houston Astros,Los Angeles Angels,4,2
+719,San Diego Padres,Arizona D'Backs,7,8
+720,Miami Marlins,Atlanta Braves,2,7
+721,Philadelphia Phillies,Chicago Cubs,1,4
+722,Baltimore Orioles,Cleveland Indians,4,11
+723,San Francisco Giants,Colorado Rockies,10,5
+724,Chicago White Sox,Kansas City Royals,7,8
+725,Cincinnati Reds,Milwaukee Brewers,7,6
+726,Los Angeles Dodgers,New York Mets,9,1
+727,Detroit Tigers,Oakland Athletics,3,12
+728,Minnesota Twins,Seattle Mariners,6,5
+729,New York Yankees,Tampa Bay Rays,5,9
+730,Pittsburgh Pirates,Texas Rangers,2,5
+731,Boston Red Sox,Toronto Blue Jays,9,10
+732,St. Louis Cardinals,Washington Nationals,9,4
+733,Houston Astros,Los Angeles Angels,8,6
+734,San Diego Padres,Arizona D'Backs,3,6
+735,Miami Marlins,Atlanta Braves,7,3
+736,Philadelphia Phillies,Chicago Cubs,2,7
+737,Baltimore Orioles,Cleveland Indians,6,4
+738,San Francisco Giants,Colorado Rockies,8,3
+739,Chicago White Sox,Kansas City Royals,4,5
+740,Cincinnati Reds,Milwaukee Brewers,4,5
+741,Los Angeles Dodgers,New York Mets,4,2
+742,Detroit Tigers,Oakland Athletics,2,4
+743,Minnesota Twins,Seattle Mariners,5,4
+744,New York Yankees,Tampa Bay Rays,2,1
+745,Pittsburgh Pirates,Texas Rangers,2,6
+746,Boston Red Sox,Toronto Blue Jays,5,3
+747,St. Louis Cardinals,Washington Nationals,2,10
+748,Detroit Tigers,Los Angeles Angels,1,5
+749,Houston Astros,Arizona D'Backs,8,3
+750,San Francisco Giants,Atlanta Braves,3,5
+751,Boston Red Sox,Baltimore Orioles,7,2
+752,Los Angeles Dodgers,Chicago Cubs,0,2
+753,Texas Rangers,Cleveland Indians,9,2
+754,Cincinnati Reds,Colorado Rockies,11,8
+755,Tampa Bay Rays,Kansas City Royals,2,6
+756,Pittsburgh Pirates,Miami Marlins,10,0
+757,St. Louis Cardinals,Milwaukee Brewers,6,0
+758,Chicago White Sox,New York Mets,0,1
+759,Minnesota Twins,Oakland Athletics,2,3
+760,Washington Nationals,Philadelphia Phillies,4,3
+761,San Diego Padres,Seattle Mariners,3,9
+762,New York Yankees,Toronto Blue Jays,2,4
+763,Detroit Tigers,Los Angeles Angels,9,11
+764,Houston Astros,Arizona D'Backs,8,5
+765,San Francisco Giants,Atlanta Braves,4,0
+766,Boston Red Sox,Baltimore Orioles,6,2
+767,Los Angeles Dodgers,Chicago Cubs,5,0
+768,Texas Rangers,Cleveland Indians,7,3
+769,Cincinnati Reds,Colorado Rockies,4,17
+770,Tampa Bay Rays,Kansas City Royals,5,10
+771,Pittsburgh Pirates,Miami Marlins,1,3
+772,St. Louis Cardinals,Milwaukee Brewers,10,3
+773,Chicago White Sox,New York Mets,6,4
+774,Minnesota Twins,Oakland Athletics,4,7
+775,Washington Nationals,Philadelphia Phillies,5,1
+776,San Diego Padres,Seattle Mariners,4,16
+777,New York Yankees,Toronto Blue Jays,1,4
+778,Detroit Tigers,Los Angeles Angels,3,0
+779,San Francisco Giants,Atlanta Braves,4,5
+780,Boston Red Sox,Baltimore Orioles,9,13
+781,Los Angeles Dodgers,Chicago Cubs,1,2
+782,Texas Rangers,Cleveland Indians,4,5
+783,Cincinnati Reds,Colorado Rockies,7,2
+784,Arizona D'Backs,Houston Astros,4,5
+785,Tampa Bay Rays,Kansas City Royals,3,6
+786,Pittsburgh Pirates,Miami Marlins,2,3
+787,St. Louis Cardinals,Milwaukee Brewers,1,3
+788,Chicago White Sox,New York Mets,2,1
+789,Minnesota Twins,Oakland Athletics,1,5
+790,Washington Nationals,Philadelphia Phillies,7,2
+791,Seattle Mariners,San Diego Padres,6,14
+792,New York Yankees,Toronto Blue Jays,0,7
+793,San Francisco Giants,Atlanta Braves,6,0
+794,Boston Red Sox,Baltimore Orioles,7,12
+795,Los Angeles Dodgers,Chicago Cubs,2,7
+796,Kansas City Royals,Cleveland Indians,4,5
+797,Cincinnati Reds,Colorado Rockies,11,4
+798,New York Yankees,Detroit Tigers,5,4
+799,Arizona D'Backs,Houston Astros,3,0
+800,Pittsburgh Pirates,Miami Marlins,3,4
+801,Tampa Bay Rays,Minnesota Twins,4,6
+802,Milwaukee Brewers,Philadelphia Phillies,4,1
+803,Seattle Mariners,San Diego Padres,16,13
+804,New York Yankees,Baltimore Orioles,5,6
+805,Toronto Blue Jays,Boston Red Sox,5,2
+806,Arizona D'Backs,Chicago Cubs,0,6
+807,Washington Nationals,Cincinnati Reds,2,7
+808,Kansas City Royals,Cleveland Indians,1,6
+809,Chicago White Sox,Detroit Tigers,3,10
+810,Oakland Athletics,Houston Astros,2,12
+811,Atlanta Braves,Los Angeles Dodgers,2,4
+812,New York Mets,Miami Marlins,6,2
+813,Tampa Bay Rays,Minnesota Twins,4,2
+814,Milwaukee Brewers,Philadelphia Phillies,3,6
+815,Los Angeles Angels,Pittsburgh Pirates,9,2
+816,Colorado Rockies,San Diego Padres,0,4
+817,San Francisco Giants,St. Louis Cardinals,5,1
+818,Seattle Mariners,Texas Rangers,3,7
+819,New York Yankees,Baltimore Orioles,8,6
+820,Toronto Blue Jays,Boston Red Sox,4,6
+821,Arizona D'Backs,Chicago Cubs,3,5
+822,Washington Nationals,Cincinnati Reds,3,6
+823,Kansas City Royals,Cleveland Indians,1,7
+824,Chicago White Sox,Detroit Tigers,4,7
+825,Oakland Athletics,Houston Astros,5,6
+826,Atlanta Braves,Los Angeles Dodgers,0,4
+827,New York Mets,Miami Marlins,6,4
+828,Tampa Bay Rays,Minnesota Twins,7,4
+829,Milwaukee Brewers,Philadelphia Phillies,6,3
+830,Los Angeles Angels,Pittsburgh Pirates,7,8
+831,Colorado Rockies,San Diego Padres,3,4
+832,San Francisco Giants,St. Louis Cardinals,4,7
+833,Seattle Mariners,Texas Rangers,4,10
+834,New York Yankees,Baltimore Orioles,1,3
+835,Toronto Blue Jays,Boston Red Sox,5,4
+836,Arizona D'Backs,Chicago Cubs,3,2
+837,Washington Nationals,Cincinnati Reds,10,9
+838,Kansas City Royals,Cleveland Indians,0,7
+839,Chicago White Sox,Detroit Tigers,2,5
+840,Oakland Athletics,Houston Astros,2,5
+841,Atlanta Braves,Los Angeles Dodgers,6,12
+842,New York Mets,Miami Marlins,0,1
+843,Tampa Bay Rays,Minnesota Twins,7,5
+844,Milwaukee Brewers,Philadelphia Phillies,1,8
+845,Los Angeles Angels,Pittsburgh Pirates,5,4
+846,Colorado Rockies,San Diego Padres,10,3
+847,San Francisco Giants,St. Louis Cardinals,3,6
+848,Seattle Mariners,Texas Rangers,2,3
+849,Tampa Bay Rays,Arizona D'Backs,6,4
+850,Kansas City Royals,Baltimore Orioles,1,4
+851,Toronto Blue Jays,Detroit Tigers,0,11
+852,Colorado Rockies,Los Angeles Dodgers,6,1
+853,Los Angeles Angels,New York Yankees,2,5
+854,Chicago Cubs,Philadelphia Phillies,6,4
+855,Atlanta Braves,San Diego Padres,2,7
+856,Cleveland Indians,Seattle Mariners,3,1
+857,Houston Astros,Texas Rangers,5,6
+858,Tampa Bay Rays,Arizona D'Backs,0,5
+859,Kansas City Royals,Baltimore Orioles,1,9
+860,Washington Nationals,Chicago White Sox,10,5
+861,St. Louis Cardinals,Cincinnati Reds,6,7
+862,Toronto Blue Jays,Detroit Tigers,2,3
+863,Colorado Rockies,Los Angeles Dodgers,3,4
+864,Oakland Athletics,Milwaukee Brewers,4,5
+865,Miami Marlins,Minnesota Twins,4,6
+866,Los Angeles Angels,New York Yankees,3,6
+867,Chicago Cubs,Philadelphia Phillies,2,3
+868,New York Mets,Pittsburgh Pirates,1,3
+869,New York Mets,Pittsburgh Pirates,1,3
+870,Atlanta Braves,San Diego Padres,3,4
+871,Cleveland Indians,Seattle Mariners,1,7
+872,Boston Red Sox,San Francisco Giants,5,3
+873,Houston Astros,Texas Rangers,3,4
+874,Tampa Bay Rays,Arizona D'Backs,6,3
+875,Kansas City Royals,Baltimore Orioles,0,4
+876,Washington Nationals,Chicago White Sox,11,4
+877,St. Louis Cardinals,Cincinnati Reds,12,7
+878,Toronto Blue Jays,Detroit Tigers,7,2
+879,Colorado Rockies,Los Angeles Dodgers,1,0
+880,Oakland Athletics,Milwaukee Brewers,0,4
+881,Miami Marlins,Minnesota Twins,5,7
+882,Los Angeles Angels,New York Yankees,6,12
+883,Chicago Cubs,Philadelphia Phillies,8,1
+884,New York Mets,Pittsburgh Pirates,6,5
+885,Atlanta Braves,San Diego Padres,4,2
+886,Cleveland Indians,Seattle Mariners,0,5
+887,Boston Red Sox,San Francisco Giants,1,2
+888,Houston Astros,Texas Rangers,3,1
+889,Washington Nationals,Chicago White Sox,1,3
+890,St. Louis Cardinals,Cincinnati Reds,3,2
+891,Pittsburgh Pirates,Colorado Rockies,5,11
+892,New York Mets,Milwaukee Brewers,5,2
+893,Miami Marlins,Minnesota Twins,10,3
+894,Los Angeles Angels,New York Yankees,3,6
+895,Cleveland Indians,Seattle Mariners,5,3
+896,Houston Astros,Texas Rangers,3,5
+897,Baltimore Orioles,Toronto Blue Jays,6,5
+898,Cleveland Indians,Los Angeles Angels,6,2
+899,Miami Marlins,Arizona D'Backs,8,6
+900,Chicago Cubs,Atlanta Braves,1,5
+901,Kansas City Royals,Chicago White Sox,5,7
+902,Oakland Athletics,Cincinnati Reds,1,2
+903,San Diego Padres,Colorado Rockies,7,5
+904,New York Mets,Milwaukee Brewers,2,1
+905,Boston Red Sox,Minnesota Twins,8,1
+906,Detroit Tigers,New York Yankees,0,4
+907,St. Louis Cardinals,Pittsburgh Pirates,9,3
+908,Texas Rangers,Seattle Mariners,5,7
+909,Los Angeles Dodgers,San Francisco Giants,3,2
+910,Houston Astros,Tampa Bay Rays,3,4
+911,Baltimore Orioles,Toronto Blue Jays,3,4
+912,Philadelphia Phillies,Washington Nationals,6,9
+913,Cleveland Indians,Los Angeles Angels,3,4
+914,Miami Marlins,Arizona D'Backs,3,5
+915,Chicago Cubs,Atlanta Braves,8,2
+916,Kansas City Royals,Chicago White Sox,4,1
+917,Oakland Athletics,Cincinnati Reds,1,2
+918,San Diego Padres,Colorado Rockies,3,5
+919,New York Mets,Milwaukee Brewers,4,7
+920,Boston Red Sox,Minnesota Twins,15,4
+921,Detroit Tigers,New York Yankees,6,1
+922,St. Louis Cardinals,Pittsburgh Pirates,5,1
+923,Texas Rangers,Seattle Mariners,2,1
+924,Los Angeles Dodgers,San Francisco Giants,4,5
+925,Houston Astros,Tampa Bay Rays,4,3
+926,Baltimore Orioles,Toronto Blue Jays,6,11
+927,Philadelphia Phillies,Washington Nationals,0,8
+928,Cleveland Indians,Los Angeles Angels,8,3
+929,Miami Marlins,Arizona D'Backs,0,6
+930,Chicago Cubs,Atlanta Braves,13,2
+931,Kansas City Royals,Chicago White Sox,3,1
+932,Oakland Athletics,Cincinnati Reds,6,1
+933,San Diego Padres,Colorado Rockies,1,2
+934,New York Mets,Milwaukee Brewers,3,5
+935,Boston Red Sox,Minnesota Twins,4,7
+936,Detroit Tigers,New York Yankees,4,1
+937,St. Louis Cardinals,Pittsburgh Pirates,8,3
+938,Texas Rangers,Seattle Mariners,6,4
+939,Los Angeles Dodgers,San Francisco Giants,1,2
+940,Houston Astros,Tampa Bay Rays,0,5
+941,Baltimore Orioles,Toronto Blue Jays,9,10
+942,Philadelphia Phillies,Washington Nationals,4,5
+943,Minnesota Twins,Los Angeles Angels,9,4
+944,Los Angeles Dodgers,Arizona D'Backs,2,3
+945,Cincinnati Reds,Atlanta Braves,9,8
+946,Detroit Tigers,Chicago White Sox,9,10
+947,Cleveland Indians,Kansas City Royals,1,2
+948,Texas Rangers,Oakland Athletics,5,14
+949,Miami Marlins,San Diego Padres,13,4
+950,Milwaukee Brewers,San Francisco Giants,5,11
+951,Philadelphia Phillies,Toronto Blue Jays,7,0
+952,Chicago Cubs,Washington Nationals,1,4
+953,Minnesota Twins,Los Angeles Angels,4,5
+954,Los Angeles Dodgers,Arizona D'Backs,7,4
+955,Cincinnati Reds,Atlanta Braves,3,1
+956,Baltimore Orioles,Boston Red Sox,3,2
+957,Detroit Tigers,Chicago White Sox,11,8
+958,New York Yankees,Colorado Rockies,10,13
+959,Cleveland Indians,Kansas City Royals,2,3
+960,Pittsburgh Pirates,New York Mets,4,0
+961,Texas Rangers,Oakland Athletics,10,6
+962,Miami Marlins,San Diego Padres,5,2
+963,Milwaukee Brewers,San Francisco Giants,2,3
+964,Houston Astros,St. Louis Cardinals,5,2
+965,Seattle Mariners,Tampa Bay Rays,7,8
+966,Philadelphia Phillies,Toronto Blue Jays,3,11
+967,Chicago Cubs,Washington Nationals,4,3
+968,Minnesota Twins,Los Angeles Angels,2,10
+969,Los Angeles Dodgers,Arizona D'Backs,3,2
+970,Cincinnati Reds,Atlanta Braves,8,9
+971,Baltimore Orioles,Boston Red Sox,4,6
+972,Detroit Tigers,Chicago White Sox,3,5
+973,New York Yankees,Colorado Rockies,3,6
+974,Cleveland Indians,Kansas City Royals,4,9
+975,Pittsburgh Pirates,New York Mets,2,11
+976,Texas Rangers,Oakland Athletics,7,5
+977,Toronto Blue Jays,Philadelphia Phillies,7,2
+978,Miami Marlins,San Diego Padres,3,6
+979,Milwaukee Brewers,San Francisco Giants,1,10
+980,Houston Astros,St. Louis Cardinals,4,1
+981,Seattle Mariners,Tampa Bay Rays,2,3
+982,Chicago Cubs,Washington Nationals,4,5
+983,Cincinnati Reds,Atlanta Braves,2,7
+984,Baltimore Orioles,Boston Red Sox,5,1
+985,Detroit Tigers,Kansas City Royals,10,4
+986,Milwaukee Brewers,Los Angeles Dodgers,8,6
+987,New York Yankees,Minnesota Twins,4,1
+988,Pittsburgh Pirates,New York Mets,4,6
+989,Texas Rangers,Oakland Athletics,5,1
+990,Toronto Blue Jays,Philadelphia Phillies,13,2
+991,Washington Nationals,San Diego Padres,8,5
+992,Seattle Mariners,Tampa Bay Rays,6,4
+993,Toronto Blue Jays,Baltimore Orioles,13,3
+994,Seattle Mariners,Boston Red Sox,8,4
+995,Pittsburgh Pirates,Chicago Cubs,0,6
+996,Chicago White Sox,Cleveland Indians,2,3
+997,Cincinnati Reds,Houston Astros,4,2
+998,Detroit Tigers,Kansas City Royals,3,10
+999,Milwaukee Brewers,Los Angeles Dodgers,2,3
+1000,Colorado Rockies,Miami Marlins,1,5
+1001,New York Yankees,Minnesota Twins,8,2
+1002,Atlanta Braves,New York Mets,5,1
+1003,Los Angeles Angels,Oakland Athletics,2,3
+1004,Arizona D'Backs,Philadelphia Phillies,10,2
+1005,Washington Nationals,San Diego Padres,7,5
+1006,Texas Rangers,St. Louis Cardinals,1,0
+1007,San Francisco Giants,Tampa Bay Rays,5,1
+1008,Toronto Blue Jays,Baltimore Orioles,2,4
+1009,Seattle Mariners,Boston Red Sox,2,6
+1010,Pittsburgh Pirates,Chicago Cubs,3,4
+1011,Chicago White Sox,Cleveland Indians,2,13
+1012,Cincinnati Reds,Houston Astros,4,5
+1013,Detroit Tigers,Kansas City Royals,5,16
+1014,Milwaukee Brewers,Los Angeles Dodgers,6,10
+1015,Colorado Rockies,Miami Marlins,6,9
+1016,New York Yankees,Minnesota Twins,7,6
+1017,Atlanta Braves,New York Mets,4,3
+1018,Los Angeles Angels,Oakland Athletics,7,1
+1019,Arizona D'Backs,Philadelphia Phillies,4,1
+1020,Washington Nationals,San Diego Padres,3,7
+1021,Texas Rangers,St. Louis Cardinals,4,3
+1022,San Francisco Giants,Tampa Bay Rays,6,4
+1023,Toronto Blue Jays,Baltimore Orioles,6,11
+1024,Seattle Mariners,Boston Red Sox,1,2
+1025,Pittsburgh Pirates,Chicago Cubs,5,10
+1026,Chicago White Sox,Cleveland Indians,2,3
+1027,Cincinnati Reds,Houston Astros,0,6
+1028,Detroit Tigers,Kansas City Royals,1,2
+1029,Milwaukee Brewers,Los Angeles Dodgers,1,2
+1030,Colorado Rockies,Miami Marlins,0,3
+1031,New York Yankees,Minnesota Twins,4,7
+1032,Atlanta Braves,New York Mets,6,0
+1033,Los Angeles Angels,Oakland Athletics,2,0
+1034,Arizona D'Backs,Philadelphia Phillies,5,1
+1035,Washington Nationals,San Diego Padres,3,6
+1036,Texas Rangers,St. Louis Cardinals,5,4
+1037,San Francisco Giants,Tampa Bay Rays,5,1
+1038,Chicago White Sox,Boston Red Sox,3,1
+1039,St. Louis Cardinals,Chicago Cubs,3,2
+1040,Tampa Bay Rays,Cleveland Indians,4,7
+1041,Seattle Mariners,Detroit Tigers,7,8
+1042,Los Angeles Angels,Houston Astros,7,10
+1043,Washington Nationals,Los Angeles Dodgers,1,4
+1044,Colorado Rockies,Miami Marlins,5,3
+1045,Arizona D'Backs,Philadelphia Phillies,3,1
+1046,San Francisco Giants,Pittsburgh Pirates,0,1
+1047,Baltimore Orioles,Texas Rangers,3,4
+1048,San Diego Padres,Baltimore Orioles,10,7
+1049,Chicago White Sox,Boston Red Sox,3,1
+1050,St. Louis Cardinals,Chicago Cubs,4,3
+1051,Tampa Bay Rays,Cleveland Indians,0,6
+1052,Seattle Mariners,Detroit Tigers,2,4
+1053,Los Angeles Angels,Houston Astros,2,3
+1054,Washington Nationals,Los Angeles Dodgers,2,3
+1055,Atlanta Braves,Miami Marlins,3,2
+1056,Philadelphia Phillies,Minnesota Twins,10,14
+1057,Colorado Rockies,New York Yankees,8,4
+1058,Kansas City Royals,New York Mets,1,2
+1059,Milwaukee Brewers,Oakland Athletics,3,5
+1060,San Francisco Giants,Pittsburgh Pirates,15,4
+1061,Cincinnati Reds,Texas Rangers,8,2
+1062,Arizona D'Backs,Toronto Blue Jays,4,2
+1063,San Diego Padres,Baltimore Orioles,2,7
+1064,Chicago White Sox,Boston Red Sox,8,6
+1065,St. Louis Cardinals,Chicago Cubs,7,2
+1066,Tampa Bay Rays,Cleveland Indians,1,6
+1067,Seattle Mariners,Detroit Tigers,1,5
+1068,Los Angeles Angels,Houston Astros,2,3
+1069,Washington Nationals,Los Angeles Dodgers,3,4
+1070,Atlanta Braves,Miami Marlins,0,3
+1071,Philadelphia Phillies,Minnesota Twins,5,6
+1072,Colorado Rockies,New York Yankees,8,9
+1073,Kansas City Royals,New York Mets,3,4
+1074,Milwaukee Brewers,Oakland Athletics,4,2
+1075,San Francisco Giants,Pittsburgh Pirates,7,6
+1076,Cincinnati Reds,Texas Rangers,4,6
+1077,Arizona D'Backs,Toronto Blue Jays,2,5
+1078,Oakland Athletics,Los Angeles Angels,5,4
+1079,New York Mets,Atlanta Braves,3,4
+1080,Chicago White Sox,Boston Red Sox,7,8
+1081,San Diego Padres,Cincinnati Reds,7,4
+1082,Arizona D'Backs,Colorado Rockies,7,6
+1083,Seattle Mariners,Detroit Tigers,4,5
+1084,Chicago Cubs,Miami Marlins,2,4
+1085,Philadelphia Phillies,Minnesota Twins,7,3
+1086,San Francisco Giants,Pittsburgh Pirates,5,3
+1087,Oakland Athletics,Los Angeles Angels,7,4
+1088,New York Mets,Atlanta Braves,8,6
+1089,Tampa Bay Rays,Baltimore Orioles,3,6
+1090,Toronto Blue Jays,Chicago White Sox,2,3
+1091,San Diego Padres,Cincinnati Reds,13,4
+1092,Arizona D'Backs,Colorado Rockies,10,9
+1093,Cleveland Indians,Detroit Tigers,7,5
+1094,Houston Astros,Kansas City Royals,13,4
+1095,Chicago Cubs,Miami Marlins,5,4
+1096,Washington Nationals,Milwaukee Brewers,3,5
+1097,Minnesota Twins,New York Yankees,3,5
+1098,Los Angeles Dodgers,Pittsburgh Pirates,6,8
+1099,St. Louis Cardinals,Seattle Mariners,3,4
+1100,Philadelphia Phillies,San Francisco Giants,4,5
+1101,Boston Red Sox,Texas Rangers,8,7
+1102,Oakland Athletics,Los Angeles Angels,7,3
+1103,New York Mets,Atlanta Braves,1,0
+1104,Tampa Bay Rays,Baltimore Orioles,0,5
+1105,Tampa Bay Rays,Baltimore Orioles,6,8
+1106,Toronto Blue Jays,Chicago White Sox,10,8
+1107,San Diego Padres,Cincinnati Reds,3,0
+1108,Arizona D'Backs,Colorado Rockies,6,11
+1109,Cleveland Indians,Detroit Tigers,6,0
+1110,Houston Astros,Kansas City Royals,13,5
+1111,Chicago Cubs,Miami Marlins,6,9
+1112,Washington Nationals,Milwaukee Brewers,5,6
+1113,Minnesota Twins,New York Yankees,1,2
+1114,Los Angeles Dodgers,Pittsburgh Pirates,1,6
+1115,St. Louis Cardinals,Seattle Mariners,4,5
+1116,Philadelphia Phillies,San Francisco Giants,3,2
+1117,Boston Red Sox,Texas Rangers,3,10
+1118,Oakland Athletics,Los Angeles Angels,6,7
+1119,New York Mets,Atlanta Braves,2,5
+1120,Tampa Bay Rays,Baltimore Orioles,5,12
+1121,Toronto Blue Jays,Chicago White Sox,2,5
+1122,San Diego Padres,Cincinnati Reds,0,3
+1123,Arizona D'Backs,Colorado Rockies,7,9
+1124,Cleveland Indians,Detroit Tigers,9,3
+1125,Houston Astros,Kansas City Royals,1,6
+1126,Chicago Cubs,Miami Marlins,1,6
+1127,Washington Nationals,Milwaukee Brewers,3,2
+1128,Minnesota Twins,New York Yankees,7,1
+1129,Los Angeles Dodgers,Pittsburgh Pirates,3,4
+1130,St. Louis Cardinals,Seattle Mariners,11,6
+1131,Philadelphia Phillies,San Francisco Giants,7,8
+1132,Boston Red Sox,Texas Rangers,2,6
+1133,Houston Astros,Los Angeles Angels,4,2
+1134,Philadelphia Phillies,Arizona D'Backs,8,0
+1135,Cleveland Indians,Atlanta Braves,8,3
+1136,Chicago Cubs,Cincinnati Reds,11,8
+1137,Toronto Blue Jays,Colorado Rockies,5,9
+1138,St. Louis Cardinals,Kansas City Royals,2,6
+1139,Texas Rangers,New York Yankees,9,6
+1140,Los Angeles Dodgers,Pittsburgh Pirates,5,4
+1141,Oakland Athletics,San Francisco Giants,8,3
+1142,Boston Red Sox,Tampa Bay Rays,7,13
+1143,New York Mets,Washington Nationals,4,11
+1144,Houston Astros,Los Angeles Angels,7,1
+1145,Philadelphia Phillies,Arizona D'Backs,4,3
+1146,Cleveland Indians,Atlanta Braves,5,3
+1147,Minnesota Twins,Chicago White Sox,4,0
+1148,Chicago Cubs,Cincinnati Reds,7,2
+1149,Toronto Blue Jays,Colorado Rockies,14,9
+1150,Miami Marlins,Detroit Tigers,5,7
+1151,St. Louis Cardinals,Kansas City Royals,8,4
+1152,Los Angeles Dodgers,Milwaukee Brewers,6,5
+1153,Texas Rangers,New York Yankees,7,1
+1154,Baltimore Orioles,San Diego Padres,11,7
+1155,Pittsburgh Pirates,Seattle Mariners,2,5
+1156,Oakland Athletics,San Francisco Giants,13,11
+1157,Boston Red Sox,Tampa Bay Rays,8,2
+1158,New York Mets,Washington Nationals,0,5
+1159,Houston Astros,Los Angeles Angels,10,4
+1160,Philadelphia Phillies,Arizona D'Backs,9,8
+1161,Cleveland Indians,Atlanta Braves,3,0
+1162,Minnesota Twins,Chicago White Sox,6,9
+1163,Chicago Cubs,Cincinnati Reds,9,2
+1164,Toronto Blue Jays,Colorado Rockies,5,3
+1165,Miami Marlins,Detroit Tigers,3,10
+1166,Los Angeles Dodgers,Milwaukee Brewers,0,7
+1167,Texas Rangers,New York Yankees,7,9
+1168,San Francisco Giants,Oakland Athletics,1,7
+1169,Baltimore Orioles,San Diego Padres,12,6
+1170,Pittsburgh Pirates,Seattle Mariners,8,1
+1171,Kansas City Royals,St. Louis Cardinals,3,2
+1172,Boston Red Sox,Tampa Bay Rays,0,4
+1173,New York Mets,Washington Nationals,2,4
+1174,Miami Marlins,Atlanta Braves,5,8
+1175,Minnesota Twins,Chicago White Sox,5,6
+1176,Los Angeles Dodgers,Milwaukee Brewers,8,1
+1177,Texas Rangers,New York Yankees,1,2
+1178,Chicago Cubs,New York Mets,3,4
+1179,San Francisco Giants,Oakland Athletics,12,6
+1180,Baltimore Orioles,Seattle Mariners,3,5
+1181,Kansas City Royals,St. Louis Cardinals,4,2
+1182,Detroit Tigers,Tampa Bay Rays,10,7
+1183,Cleveland Indians,Toronto Blue Jays,4,1
+1184,Cincinnati Reds,Washington Nationals,4,13
+1185,San Francisco Giants,Arizona D'Backs,6,4
+1186,Miami Marlins,Atlanta Braves,7,5
+1187,Los Angeles Angels,Boston Red Sox,4,5
+1188,Chicago White Sox,Houston Astros,0,5
+1189,Colorado Rockies,Los Angeles Dodgers,0,5
+1190,Texas Rangers,Minnesota Twins,3,2
+1191,Chicago Cubs,New York Mets,2,10
+1192,Pittsburgh Pirates,Oakland Athletics,7,3
+1193,Kansas City Royals,Philadelphia Phillies,3,4
+1194,New York Yankees,San Diego Padres,6,7
+1195,Baltimore Orioles,Seattle Mariners,2,5
+1196,Milwaukee Brewers,St. Louis Cardinals,1,7
+1197,Detroit Tigers,Tampa Bay Rays,10,2
+1198,Cleveland Indians,Toronto Blue Jays,2,1
+1199,Cincinnati Reds,Washington Nationals,2,3
+1200,San Francisco Giants,Arizona D'Backs,5,6
+1201,Miami Marlins,Atlanta Braves,1,9
+1202,Los Angeles Angels,Boston Red Sox,21,2
+1203,Chicago White Sox,Houston Astros,7,6
+1204,Colorado Rockies,Los Angeles Dodgers,1,6
+1205,Texas Rangers,Minnesota Twins,5,17
+1206,Chicago Cubs,New York Mets,3,4
+1207,Pittsburgh Pirates,Oakland Athletics,4,2
+1208,Kansas City Royals,Philadelphia Phillies,6,2
+1209,New York Yankees,San Diego Padres,1,2
+1210,Baltimore Orioles,Seattle Mariners,6,12
+1211,Milwaukee Brewers,St. Louis Cardinals,0,3
+1212,Detroit Tigers,Tampa Bay Rays,3,2
+1213,Cleveland Indians,Toronto Blue Jays,6,9
+1214,Cincinnati Reds,Washington Nationals,9,4
+1215,San Francisco Giants,Arizona D'Backs,5,4
+1216,Miami Marlins,Atlanta Braves,5,2
+1217,Los Angeles Angels,Boston Red Sox,5,10
+1218,Chicago White Sox,Houston Astros,4,1
+1219,Colorado Rockies,Los Angeles Dodgers,1,4
+1220,Texas Rangers,Minnesota Twins,4,5
+1221,Chicago Cubs,New York Mets,3,14
+1222,Pittsburgh Pirates,Oakland Athletics,6,3
+1223,Kansas City Royals,Philadelphia Phillies,2,7
+1224,New York Yankees,San Diego Padres,6,3
+1225,Baltimore Orioles,Seattle Mariners,4,9
+1226,Milwaukee Brewers,St. Louis Cardinals,8,9
+1227,Detroit Tigers,Tampa Bay Rays,5,1
+1228,Cleveland Indians,Toronto Blue Jays,1,17
+1229,Cincinnati Reds,Washington Nationals,1,12
+1230,San Diego Padres,Arizona D'Backs,8,4
+1231,Texas Rangers,Boston Red Sox,5,12
+1232,New York Yankees,Chicago White Sox,2,8
+1233,Cincinnati Reds,Chicago Cubs,4,10
+1234,Detroit Tigers,Cleveland Indians,3,5
+1235,Seattle Mariners,Houston Astros,1,2
+1236,Baltimore Orioles,Los Angeles Dodgers,5,7
+1237,Oakland Athletics,Minnesota Twins,3,1
+1238,Miami Marlins,New York Mets,6,8
+1239,Atlanta Braves,Philadelphia Phillies,2,8
+1240,Colorado Rockies,San Francisco Giants,1,3
+1241,Pittsburgh Pirates,St. Louis Cardinals,4,2
+1242,Los Angeles Angels,Tampa Bay Rays,2,4
+1243,Kansas City Royals,Toronto Blue Jays,2,6
+1244,Milwaukee Brewers,Washington Nationals,1,0
+1245,San Diego Padres,Arizona D'Backs,5,7
+1246,Texas Rangers,Boston Red Sox,7,2
+1247,New York Yankees,Chicago White Sox,9,0
+1248,Cincinnati Reds,Chicago Cubs,9,5
+1249,Detroit Tigers,Cleveland Indians,1,12
+1250,Seattle Mariners,Houston Astros,2,5
+1251,Baltimore Orioles,Los Angeles Dodgers,4,1
+1252,Oakland Athletics,Minnesota Twins,4,11
+1253,Miami Marlins,New York Mets,5,2
+1254,Atlanta Braves,Philadelphia Phillies,1,5
+1255,Colorado Rockies,San Francisco Giants,7,3
+1256,Pittsburgh Pirates,St. Louis Cardinals,5,2
+1257,Los Angeles Angels,Tampa Bay Rays,13,5
+1258,Kansas City Royals,Toronto Blue Jays,3,8
+1259,Milwaukee Brewers,Washington Nationals,5,2
+1260,San Diego Padres,Arizona D'Backs,13,6
+1261,Texas Rangers,Boston Red Sox,6,11
+1262,New York Yankees,Chicago White Sox,0,5
+1263,Cincinnati Reds,Chicago Cubs,5,3
+1264,Detroit Tigers,Cleveland Indians,12,2
+1265,Seattle Mariners,Houston Astros,8,9
+1266,Baltimore Orioles,Los Angeles Dodgers,6,4
+1267,Oakland Athletics,Minnesota Twins,0,4
+1268,Miami Marlins,New York Mets,2,4
+1269,Atlanta Braves,Philadelphia Phillies,3,4
+1270,Colorado Rockies,San Francisco Giants,1,5
+1271,Pittsburgh Pirates,St. Louis Cardinals,7,5
+1272,Los Angeles Angels,Tampa Bay Rays,7,2
+1273,Kansas City Royals,Toronto Blue Jays,2,4
+1274,Milwaukee Brewers,Washington Nationals,4,7
+1275,Atlanta Braves,Chicago Cubs,4,3
+1276,New York Yankees,Cleveland Indians,5,4
+1277,Philadelphia Phillies,Colorado Rockies,2,11
+1278,Oakland Athletics,Houston Astros,3,1
+1279,Seattle Mariners,Kansas City Royals,3,4
+1280,San Diego Padres,Los Angeles Dodgers,6,0
+1281,Washington Nationals,New York Mets,7,9
+1282,Pittsburgh Pirates,St. Louis Cardinals,1,5
+1283,Los Angeles Angels,Tampa Bay Rays,5,1
+1284,Minnesota Twins,Texas Rangers,10,1
+1285,Detroit Tigers,Toronto Blue Jays,4,5
+1286,Los Angeles Angels,Baltimore Orioles,9,5
+1287,Tampa Bay Rays,Boston Red Sox,5,6
+1288,Atlanta Braves,Chicago White Sox,11,8
+1289,New York Yankees,Cleveland Indians,2,10
+1290,Philadelphia Phillies,Colorado Rockies,5,3
+1291,Oakland Athletics,Houston Astros,9,10
+1292,Seattle Mariners,Kansas City Royals,3,2
+1293,San Diego Padres,Los Angeles Dodgers,6,10
+1294,Cincinnati Reds,Miami Marlins,1,3
+1295,St. Louis Cardinals,Milwaukee Brewers,3,4
+1296,Washington Nationals,New York Mets,3,1
+1297,Chicago Cubs,Pittsburgh Pirates,4,8
+1298,Arizona D'Backs,San Francisco Giants,2,6
+1299,Minnesota Twins,Texas Rangers,5,6
+1300,Detroit Tigers,Toronto Blue Jays,0,6
+1301,Los Angeles Angels,Baltimore Orioles,2,3
+1302,Tampa Bay Rays,Boston Red Sox,1,4
+1303,Atlanta Braves,Chicago White Sox,4,5
+1304,New York Yankees,Cleveland Indians,7,6
+1305,Philadelphia Phillies,Colorado Rockies,3,8
+1306,Oakland Athletics,Houston Astros,3,2
+1307,Seattle Mariners,Kansas City Royals,3,5
+1308,San Diego Padres,Los Angeles Dodgers,3,4
+1309,Cincinnati Reds,Miami Marlins,2,4
+1310,St. Louis Cardinals,Milwaukee Brewers,8,1
+1311,Washington Nationals,New York Mets,6,1
+1312,Chicago Cubs,Pittsburgh Pirates,6,12
+1313,Arizona D'Backs,San Francisco Giants,2,4
+1314,Minnesota Twins,Texas Rangers,8,6
+1315,Detroit Tigers,Toronto Blue Jays,3,2
+1316,Los Angeles Angels,Baltimore Orioles,2,4
+1317,Tampa Bay Rays,Boston Red Sox,0,4
+1318,Atlanta Braves,Chicago White Sox,2,0
+1319,New York Yankees,Cleveland Indians,11,7
+1320,Philadelphia Phillies,Colorado Rockies,10,3
+1321,Oakland Athletics,Houston Astros,1,2
+1322,Seattle Mariners,Kansas City Royals,8,5
+1323,San Diego Padres,Los Angeles Dodgers,1,3
+1324,Cincinnati Reds,Miami Marlins,3,7
+1325,St. Louis Cardinals,Milwaukee Brewers,5,1
+1326,Washington Nationals,New York Mets,3,2
+1327,Chicago Cubs,Pittsburgh Pirates,6,5
+1328,Arizona D'Backs,San Francisco Giants,0,4
+1329,Minnesota Twins,Texas Rangers,15,5
+1330,Detroit Tigers,Toronto Blue Jays,1,6
+1331,Chicago White Sox,Los Angeles Angels,0,7
+1332,Los Angeles Dodgers,Arizona D'Backs,13,7
+1333,Colorado Rockies,Atlanta Braves,11,2
+1334,Texas Rangers,Chicago Cubs,0,6
+1335,Milwaukee Brewers,Cincinnati Reds,4,5
+1336,Kansas City Royals,Detroit Tigers,2,4
+1337,Cleveland Indians,Minnesota Twins,5,2
+1338,Boston Red Sox,New York Yankees,5,3
+1339,Toronto Blue Jays,Oakland Athletics,7,8
+1340,New York Mets,Philadelphia Phillies,5,3
+1341,San Francisco Giants,San Diego Padres,1,4
+1342,Houston Astros,Seattle Mariners,7,3
+1343,Miami Marlins,St. Louis Cardinals,7,6
+1344,Baltimore Orioles,Tampa Bay Rays,4,3
+1345,Pittsburgh Pirates,Washington Nationals,1,5
+1346,Chicago White Sox,Los Angeles Angels,0,1
+1347,Los Angeles Dodgers,Arizona D'Backs,1,2
+1348,Colorado Rockies,Atlanta Braves,4,3
+1349,Texas Rangers,Chicago Cubs,1,3
+1350,Milwaukee Brewers,Cincinnati Reds,9,1
+1351,Kansas City Royals,Detroit Tigers,8,4
+1352,Cleveland Indians,Minnesota Twins,4,5
+1353,Boston Red Sox,New York Yankees,5,2
+1354,Toronto Blue Jays,Oakland Athletics,4,5
+1355,New York Mets,Philadelphia Phillies,2,4
+1356,San Francisco Giants,San Diego Padres,6,7
+1357,Houston Astros,Seattle Mariners,0,1
+1358,Miami Marlins,St. Louis Cardinals,0,5
+1359,Baltimore Orioles,Tampa Bay Rays,2,1
+1360,Pittsburgh Pirates,Washington Nationals,0,6
+1361,Chicago White Sox,Los Angeles Angels,1,8
+1362,Los Angeles Dodgers,Arizona D'Backs,5,6
+1363,Colorado Rockies,Atlanta Braves,0,1
+1364,Texas Rangers,Chicago Cubs,4,1
+1365,Milwaukee Brewers,Cincinnati Reds,0,1
+1366,Kansas City Royals,Detroit Tigers,2,4
+1367,Cleveland Indians,Minnesota Twins,6,1
+1368,Boston Red Sox,New York Yankees,1,3
+1369,Toronto Blue Jays,Oakland Athletics,5,3
+1370,New York Mets,Philadelphia Phillies,5,0
+1371,San Francisco Giants,San Diego Padres,3,5
+1372,Houston Astros,Seattle Mariners,8,1
+1373,Miami Marlins,St. Louis Cardinals,6,3
+1374,Baltimore Orioles,Tampa Bay Rays,2,5
+1375,Pittsburgh Pirates,Washington Nationals,2,1
+1376,Texas Rangers,Los Angeles Angels,5,9
+1377,New York Mets,Chicago Cubs,1,5
+1378,Atlanta Braves,Cincinnati Reds,2,8
+1379,Tampa Bay Rays,Colorado Rockies,4,7
+1380,Minnesota Twins,Detroit Tigers,0,1
+1381,Cleveland Indians,Kansas City Royals,3,7
+1382,Baltimore Orioles,New York Yankees,1,2
+1383,Houston Astros,Oakland Athletics,4,7
+1384,Miami Marlins,Philadelphia Phillies,3,2
+1385,Chicago White Sox,Seattle Mariners,3,4
+1386,San Diego Padres,St. Louis Cardinals,2,10
+1387,Texas Rangers,Los Angeles Angels,6,8
+1388,Toronto Blue Jays,Arizona D'Backs,5,1
+1389,San Francisco Giants,Boston Red Sox,0,4
+1390,New York Mets,Chicago Cubs,2,1
+1391,Atlanta Braves,Cincinnati Reds,5,4
+1392,Tampa Bay Rays,Colorado Rockies,10,1
+1393,Minnesota Twins,Detroit Tigers,6,2
+1394,Cleveland Indians,Kansas City Royals,7,3
+1395,Baltimore Orioles,New York Yankees,1,7
+1396,Houston Astros,Oakland Athletics,3,4
+1397,Miami Marlins,Philadelphia Phillies,2,1
+1398,Milwaukee Brewers,Pittsburgh Pirates,2,3
+1399,Chicago White Sox,Seattle Mariners,6,1
+1400,Los Angeles Dodgers,Washington Nationals,8,4
+1401,Texas Rangers,Los Angeles Angels,4,7
+1402,Toronto Blue Jays,Arizona D'Backs,10,4
+1403,San Francisco Giants,Boston Red Sox,7,11
+1404,New York Mets,Chicago Cubs,2,6
+1405,Atlanta Braves,Cincinnati Reds,3,6
+1406,Tampa Bay Rays,Colorado Rockies,11,3
+1407,Minnesota Twins,Detroit Tigers,4,1
+1408,Cleveland Indians,Kansas City Royals,11,4
+1409,Baltimore Orioles,New York Yankees,0,5
+1410,Houston Astros,Oakland Athletics,7,0
+1411,Miami Marlins,Philadelphia Phillies,1,4
+1412,Milwaukee Brewers,Pittsburgh Pirates,9,5
+1413,Chicago White Sox,Seattle Mariners,5,6
+1414,San Diego Padres,St. Louis Cardinals,2,4
+1415,San Diego Padres,St. Louis Cardinals,2,3
+1416,Los Angeles Dodgers,Washington Nationals,1,8
+1417,Minnesota Twins,Boston Red Sox,2,13
+1418,Detroit Tigers,Chicago White Sox,2,1
+1419,Atlanta Braves,Colorado Rockies,3,7
+1420,Baltimore Orioles,New York Yankees,4,1
+1421,Tampa Bay Rays,Oakland Athletics,7,3
+1422,Miami Marlins,Philadelphia Phillies,9,3
+1423,Milwaukee Brewers,Pittsburgh Pirates,3,5
+1424,San Diego Padres,St. Louis Cardinals,5,6
+1425,Los Angeles Dodgers,Washington Nationals,6,3
+1426,Cleveland Indians,Baltimore Orioles,1,5
+1427,Minnesota Twins,Boston Red Sox,2,1
+1428,Detroit Tigers,Chicago White Sox,7,5
+1429,Arizona D'Backs,Cincinnati Reds,2,6
+1430,Atlanta Braves,Colorado Rockies,3,4
+1431,Los Angeles Angels,Houston Astros,1,2
+1432,Texas Rangers,Kansas City Royals,1,3
+1433,New York Mets,Miami Marlins,5,3
+1434,Chicago Cubs,Milwaukee Brewers,5,2
+1435,San Francisco Giants,New York Yankees,2,3
+1436,Tampa Bay Rays,Oakland Athletics,0,1
+1437,Philadelphia Phillies,Pittsburgh Pirates,4,0
+1438,Los Angeles Dodgers,St. Louis Cardinals,3,4
+1439,Seattle Mariners,Toronto Blue Jays,2,1
+1440,San Diego Padres,Washington Nationals,5,3
+1441,Cleveland Indians,Baltimore Orioles,2,5
+1442,Minnesota Twins,Boston Red Sox,11,9
+1443,Detroit Tigers,Chicago White Sox,3,4
+1444,Arizona D'Backs,Cincinnati Reds,1,6
+1445,Atlanta Braves,Colorado Rockies,4,8
+1446,Los Angeles Angels,Houston Astros,2,7
+1447,Texas Rangers,Kansas City Royals,7,4
+1448,New York Mets,Miami Marlins,2,7
+1449,Chicago Cubs,Milwaukee Brewers,1,6
+1450,San Francisco Giants,New York Yankees,2,1
+1451,Tampa Bay Rays,Oakland Athletics,3,4
+1452,Philadelphia Phillies,Pittsburgh Pirates,4,7
+1453,Los Angeles Dodgers,St. Louis Cardinals,7,2
+1454,Seattle Mariners,Toronto Blue Jays,14,5
+1455,San Diego Padres,Washington Nationals,2,3
+1456,Cleveland Indians,Baltimore Orioles,3,5
+1457,Minnesota Twins,Boston Red Sox,7,8
+1458,Detroit Tigers,Chicago White Sox,4,5
+1459,Arizona D'Backs,Cincinnati Reds,9,8
+1460,Atlanta Braves,Colorado Rockies,2,7
+1461,Los Angeles Angels,Houston Astros,3,13
+1462,Texas Rangers,Kansas City Royals,2,1
+1463,New York Mets,Miami Marlins,3,0
+1464,Chicago Cubs,Milwaukee Brewers,6,5
+1465,San Francisco Giants,New York Yankees,2,5
+1466,Tampa Bay Rays,Oakland Athletics,2,3
+1467,Philadelphia Phillies,Pittsburgh Pirates,4,5
+1468,Los Angeles Dodgers,St. Louis Cardinals,9,6
+1469,Seattle Mariners,Toronto Blue Jays,0,2
+1470,San Diego Padres,Washington Nationals,10,6
+1471,Colorado Rockies,Baltimore Orioles,2,3
+1472,Detroit Tigers,Boston Red Sox,4,2
+1473,Chicago Cubs,Chicago White Sox,4,5
+1474,New York Yankees,Houston Astros,2,1
+1475,Los Angeles Angels,Kansas City Royals,6,2
+1476,Philadelphia Phillies,Miami Marlins,4,0
+1477,Arizona D'Backs,Milwaukee Brewers,2,7
+1478,Cincinnati Reds,San Francisco Giants,7,5
+1479,Oakland Athletics,Texas Rangers,6,7
+1480,San Diego Padres,Toronto Blue Jays,2,4
+1481,Colorado Rockies,Baltimore Orioles,6,3
+1482,Detroit Tigers,Boston Red Sox,9,8
+1483,Chicago Cubs,Chicago White Sox,0,3
+1484,Washington Nationals,Cleveland Indians,6,7
+1485,New York Yankees,Houston Astros,6,3
+1486,Los Angeles Angels,Kansas City Royals,13,0
+1487,Tampa Bay Rays,Los Angeles Dodgers,2,3
+1488,Philadelphia Phillies,Miami Marlins,0,5
+1489,Arizona D'Backs,Milwaukee Brewers,4,9
+1490,Atlanta Braves,Minnesota Twins,2,0
+1491,St. Louis Cardinals,New York Mets,3,2
+1492,St. Louis Cardinals,New York Mets,1,3
+1493,Seattle Mariners,Pittsburgh Pirates,7,4
+1494,Cincinnati Reds,San Francisco Giants,7,9
+1495,Oakland Athletics,Texas Rangers,6,3
+1496,San Diego Padres,Toronto Blue Jays,6,7
+1497,Colorado Rockies,Baltimore Orioles,3,1
+1498,Detroit Tigers,Boston Red Sox,4,3
+1499,Chicago White Sox,Chicago Cubs,1,8
+1500,Washington Nationals,Cleveland Indians,4,1
+1501,New York Yankees,Houston Astros,1,4
+1502,Los Angeles Angels,Kansas City Royals,5,7
+1503,Tampa Bay Rays,Los Angeles Dodgers,3,1
+1504,Philadelphia Phillies,Miami Marlins,1,11
+1505,Arizona D'Backs,Milwaukee Brewers,8,1
+1506,Atlanta Braves,Minnesota Twins,9,7
+1507,St. Louis Cardinals,New York Mets,5,4
+1508,Seattle Mariners,Pittsburgh Pirates,1,10
+1509,Cincinnati Reds,San Francisco Giants,2,1
+1510,Oakland Athletics,Texas Rangers,6,4
+1511,San Diego Padres,Toronto Blue Jays,8,4
+1512,Boston Red Sox,Los Angeles Angels,1,2
+1513,Philadelphia Phillies,Atlanta Braves,7,5
+1514,Chicago White Sox,Chicago Cubs,1,3
+1515,St. Louis Cardinals,Miami Marlins,5,4
+1516,Arizona D'Backs,Milwaukee Brewers,4,6
+1517,Baltimore Orioles,Minnesota Twins,2,6
+1518,Colorado Rockies,New York Mets,2,1
+1519,Washington Nationals,San Francisco Giants,4,2
+1520,Kansas City Royals,Texas Rangers,2,3
+1521,Boston Red Sox,Los Angeles Angels,6,2
+1522,Philadelphia Phillies,Atlanta Braves,1,2
+1523,Seattle Mariners,Chicago Cubs,1,12
+1524,Oakland Athletics,Cleveland Indians,3,5
+1525,Houston Astros,Detroit Tigers,6,14
+1526,Arizona D'Backs,Los Angeles Dodgers,7,9
+1527,St. Louis Cardinals,Miami Marlins,11,6
+1528,Pittsburgh Pirates,Milwaukee Brewers,1,3
+1529,Chicago White Sox,Minnesota Twins,1,2
+1530,Colorado Rockies,New York Mets,6,1
+1531,Cincinnati Reds,San Diego Padres,6,0
+1532,Washington Nationals,San Francisco Giants,4,1
+1533,New York Yankees,Tampa Bay Rays,1,5
+1534,Kansas City Royals,Texas Rangers,3,8
+1535,Baltimore Orioles,Toronto Blue Jays,5,6
+1536,Boston Red Sox,Los Angeles Angels,2,5
+1537,Philadelphia Phillies,Atlanta Braves,9,5
+1538,Seattle Mariners,Chicago Cubs,4,1
+1539,Oakland Athletics,Cleveland Indians,3,6
+1540,Houston Astros,Detroit Tigers,2,3
+1541,Arizona D'Backs,Los Angeles Dodgers,4,2
+1542,St. Louis Cardinals,Miami Marlins,0,11
+1543,Pittsburgh Pirates,Milwaukee Brewers,3,5
+1544,Chicago White Sox,Minnesota Twins,6,5
+1545,Colorado Rockies,New York Mets,7,2
+1546,Cincinnati Reds,San Diego Padres,1,2
+1547,Washington Nationals,San Francisco Giants,3,5
+1548,New York Yankees,Tampa Bay Rays,3,6
+1549,Kansas City Royals,Texas Rangers,1,2
+1550,Baltimore Orioles,Toronto Blue Jays,1,9
+1551,Boston Red Sox,Los Angeles Angels,5,3
+1552,Philadelphia Phillies,Atlanta Braves,1,2
+1553,Seattle Mariners,Chicago Cubs,6,7
+1554,Oakland Athletics,Cleveland Indians,0,8
+1555,Houston Astros,Detroit Tigers,0,11
+1556,Arizona D'Backs,Los Angeles Dodgers,3,14
+1557,St. Louis Cardinals,Miami Marlins,4,5
+1558,Pittsburgh Pirates,Milwaukee Brewers,2,4
+1559,Chicago White Sox,Minnesota Twins,4,6
+1560,Colorado Rockies,New York Mets,4,6
+1561,Cincinnati Reds,San Diego Padres,3,2
+1562,Washington Nationals,San Francisco Giants,1,3
+1563,New York Yankees,Tampa Bay Rays,3,5
+1564,Kansas City Royals,Texas Rangers,3,5
+1565,Baltimore Orioles,Toronto Blue Jays,6,2
+1566,Washington Nationals,Arizona D'Backs,14,1
+1567,Miami Marlins,Chicago Cubs,0,5
+1568,Minnesota Twins,Cleveland Indians,12,5
+1569,Toronto Blue Jays,Houston Astros,1,2
+1570,New York Yankees,New York Mets,6,5
+1571,Milwaukee Brewers,San Diego Padres,3,7
+1572,Boston Red Sox,Seattle Mariners,2,1
+1573,Kansas City Royals,Tampa Bay Rays,3,0
+1574,Oakland Athletics,Los Angeles Angels,4,5
+1575,Washington Nationals,Arizona D'Backs,10,4
+1576,Pittsburgh Pirates,Atlanta Braves,5,3
+1577,Texas Rangers,Baltimore Orioles,1,5
+1578,Miami Marlins,Chicago Cubs,2,3
+1579,St. Louis Cardinals,Cincinnati Reds,5,7
+1580,Minnesota Twins,Cleveland Indians,10,6
+1581,Los Angeles Dodgers,Colorado Rockies,3,7
+1582,Chicago White Sox,Detroit Tigers,5,11
+1583,Toronto Blue Jays,Houston Astros,2,1
+1584,New York Yankees,New York Mets,1,7
+1585,San Francisco Giants,Philadelphia Phillies,8,13
+1586,Milwaukee Brewers,San Diego Padres,3,2
+1587,Boston Red Sox,Seattle Mariners,4,5
+1588,Kansas City Royals,Tampa Bay Rays,3,2
+1589,Oakland Athletics,Los Angeles Angels,6,8
+1590,Washington Nationals,Arizona D'Backs,8,3
+1591,Pittsburgh Pirates,Atlanta Braves,4,8
+1592,Texas Rangers,Baltimore Orioles,2,3
+1593,Miami Marlins,Chicago Cubs,4,5
+1594,St. Louis Cardinals,Cincinnati Reds,5,4
+1595,Minnesota Twins,Cleveland Indians,13,5
+1596,Los Angeles Dodgers,Colorado Rockies,2,12
+1597,Chicago White Sox,Detroit Tigers,1,2
+1598,Toronto Blue Jays,Houston Astros,3,1
+1599,New York Mets,New York Yankees,5,9
+1600,San Francisco Giants,Philadelphia Phillies,4,5
+1601,Milwaukee Brewers,San Diego Padres,3,12
+1602,Boston Red Sox,Seattle Mariners,1,3
+1603,Kansas City Royals,Tampa Bay Rays,0,12
+1604,Oakland Athletics,Los Angeles Angels,8,6
+1605,Pittsburgh Pirates,Atlanta Braves,2,5
+1606,Texas Rangers,Baltimore Orioles,5,3
+1607,St. Louis Cardinals,Cincinnati Reds,0,7
+1608,Minnesota Twins,Cleveland Indians,2,9
+1609,Los Angeles Dodgers,Colorado Rockies,4,2
+1610,Chicago White Sox,Detroit Tigers,6,3
+1611,Toronto Blue Jays,Houston Astros,4,1
+1612,New York Mets,New York Yankees,4,1
+1613,San Francisco Giants,Philadelphia Phillies,3,2
+1614,Boston Red Sox,Seattle Mariners,3,2
+1615,Kansas City Royals,Tampa Bay Rays,2,3
+1616,Milwaukee Brewers,Arizona D'Backs,2,3
+1617,Baltimore Orioles,Chicago White Sox,7,5
+1618,Miami Marlins,Colorado Rockies,5,3
+1619,New York Mets,Detroit Tigers,3,4
+1620,Texas Rangers,Houston Astros,0,5
+1621,Toronto Blue Jays,Kansas City Royals,4,3
+1622,Boston Red Sox,Los Angeles Dodgers,9,0
+1623,Cleveland Indians,New York Yankees,7,13
+1624,Chicago Cubs,Oakland Athletics,7,2
+1625,Cincinnati Reds,Pittsburgh Pirates,2,3
+1626,Philadelphia Phillies,San Diego Padres,5,4
+1627,Los Angeles Angels,Seattle Mariners,4,6
+1628,Atlanta Braves,St. Louis Cardinals,0,1
+1629,Minnesota Twins,Tampa Bay Rays,6,2
+1630,San Francisco Giants,Washington Nationals,1,5
+1631,Milwaukee Brewers,Arizona D'Backs,15,6
+1632,Baltimore Orioles,Chicago White Sox,2,4
+1633,Miami Marlins,Colorado Rockies,6,12
+1634,New York Mets,Detroit Tigers,5,6
+1635,Texas Rangers,Houston Astros,3,2
+1636,Toronto Blue Jays,Kansas City Royals,2,4
+1637,Boston Red Sox,Los Angeles Dodgers,0,3
+1638,Cleveland Indians,New York Yankees,5,2
+1639,Chicago Cubs,Oakland Athletics,4,0
+1640,Cincinnati Reds,Pittsburgh Pirates,3,5
+1641,Philadelphia Phillies,San Diego Padres,7,9
+1642,Los Angeles Angels,Seattle Mariners,6,8
+1643,Atlanta Braves,St. Louis Cardinals,13,5
+1644,Minnesota Twins,Tampa Bay Rays,3,7
+1645,San Francisco Giants,Washington Nationals,7,1
+1646,Milwaukee Brewers,Arizona D'Backs,3,9
+1647,Baltimore Orioles,Chicago White Sox,10,2
+1648,Miami Marlins,Colorado Rockies,10,7
+1649,New York Mets,Detroit Tigers,3,1
+1650,Texas Rangers,Houston Astros,5,3
+1651,Toronto Blue Jays,Kansas City Royals,1,7
+1652,Boston Red Sox,Los Angeles Dodgers,5,8
+1653,Cleveland Indians,New York Yankees,2,3
+1654,Chicago Cubs,Oakland Athletics,3,1
+1655,Cincinnati Reds,Pittsburgh Pirates,7,3
+1656,Philadelphia Phillies,San Diego Padres,6,5
+1657,Los Angeles Angels,Seattle Mariners,1,3
+1658,Atlanta Braves,St. Louis Cardinals,6,3
+1659,Minnesota Twins,Tampa Bay Rays,6,3
+1660,San Francisco Giants,Washington Nationals,0,1
+1661,Texas Rangers,Colorado Rockies,4,3
+1662,Philadelphia Phillies,Los Angeles Dodgers,4,9
+1663,San Francisco Giants,Miami Marlins,8,7
+1664,Atlanta Braves,Milwaukee Brewers,4,3
+1665,Houston Astros,Minnesota Twins,1,3
+1666,Baltimore Orioles,Oakland Athletics,2,3
+1667,Detroit Tigers,Seattle Mariners,0,3
+1668,Cincinnati Reds,St. Louis Cardinals,4,5
+1669,Tampa Bay Rays,Toronto Blue Jays,5,7
+1670,New York Yankees,Boston Red Sox,3,5
+1671,Los Angeles Angels,Chicago Cubs,1,5
+1672,Texas Rangers,Colorado Rockies,7,5
+1673,Chicago White Sox,Kansas City Royals,7,5
+1674,Philadelphia Phillies,Los Angeles Dodgers,3,9
+1675,San Francisco Giants,Miami Marlins,0,2
+1676,Atlanta Braves,Milwaukee Brewers,2,1
+1677,Houston Astros,Minnesota Twins,7,5
+1678,Arizona D'Backs,New York Mets,5,3
+1679,Baltimore Orioles,Oakland Athletics,1,2
+1680,San Diego Padres,Pittsburgh Pirates,4,6
+1681,Detroit Tigers,Seattle Mariners,5,6
+1682,Cincinnati Reds,St. Louis Cardinals,7,4
+1683,Tampa Bay Rays,Toronto Blue Jays,9,2
+1684,Cleveland Indians,Washington Nationals,3,1
+1685,New York Yankees,Boston Red Sox,9,4
+1686,Los Angeles Angels,Chicago Cubs,1,3
+1687,Chicago White Sox,Kansas City Royals,2,3
+1688,Philadelphia Phillies,Los Angeles Dodgers,6,2
+1689,San Francisco Giants,Miami Marlins,1,0
+1690,Atlanta Braves,Milwaukee Brewers,3,4
+1691,Arizona D'Backs,New York Mets,3,2
+1692,Baltimore Orioles,Oakland Athletics,0,1
+1693,San Diego Padres,Pittsburgh Pirates,4,0
+1694,Detroit Tigers,Seattle Mariners,1,3
+1695,Cincinnati Reds,St. Louis Cardinals,2,3
+1696,Colorado Rockies,Texas Rangers,4,5
+1697,Tampa Bay Rays,Toronto Blue Jays,0,7
+1698,Cleveland Indians,Washington Nationals,4,7
+1699,New York Yankees,Boston Red Sox,4,2
+1700,St. Louis Cardinals,Chicago Cubs,3,4
+1701,Los Angeles Angels,Cleveland Indians,4,14
+1702,Chicago White Sox,Kansas City Royals,1,2
+1703,Atlanta Braves,Milwaukee Brewers,3,11
+1704,Houston Astros,Minnesota Twins,15,7
+1705,Houston Astros,Minnesota Twins,10,2
+1706,Arizona D'Backs,New York Mets,9,0
+1707,Baltimore Orioles,Oakland Athletics,9,6
+1708,San Diego Padres,Pittsburgh Pirates,0,4
+1709,Colorado Rockies,Texas Rangers,12,9
+1710,Arizona D'Backs,Boston Red Sox,4,9
+1711,St. Louis Cardinals,Chicago Cubs,2,13
+1712,Los Angeles Angels,Cleveland Indians,3,13
+1713,Pittsburgh Pirates,Los Angeles Dodgers,5,1
+1714,Chicago White Sox,Miami Marlins,4,2
+1715,Cincinnati Reds,Milwaukee Brewers,7,4
+1716,Kansas City Royals,Minnesota Twins,7,3
+1717,Tampa Bay Rays,New York Yankees,3,6
+1718,San Diego Padres,New York Mets,8,6
+1719,Seattle Mariners,Oakland Athletics,3,6
+1720,Colorado Rockies,Philadelphia Phillies,6,10
+1721,Baltimore Orioles,San Francisco Giants,5,2
+1722,Detroit Tigers,Texas Rangers,5,8
+1723,Houston Astros,Toronto Blue Jays,5,3
+1724,Atlanta Braves,Washington Nationals,8,5
+1725,Arizona D'Backs,Boston Red Sox,3,6
+1726,St. Louis Cardinals,Chicago Cubs,8,4
+1727,Los Angeles Angels,Cleveland Indians,1,5
+1728,Pittsburgh Pirates,Los Angeles Dodgers,4,8
+1729,Chicago White Sox,Miami Marlins,8,7
+1730,Cincinnati Reds,Milwaukee Brewers,11,5
+1731,Kansas City Royals,Minnesota Twins,3,5
+1732,Tampa Bay Rays,New York Yankees,4,8
+1733,San Diego Padres,New York Mets,2,3
+1734,Seattle Mariners,Oakland Athletics,4,3
+1735,Colorado Rockies,Philadelphia Phillies,3,6
+1736,Baltimore Orioles,San Francisco Giants,2,6
+1737,Detroit Tigers,Texas Rangers,2,0
+1738,Houston Astros,Toronto Blue Jays,2,4
+1739,Atlanta Braves,Washington Nationals,6,7
+1740,Arizona D'Backs,Boston Red Sox,2,16
+1741,St. Louis Cardinals,Chicago Cubs,6,4
+1742,Los Angeles Angels,Cleveland Indians,4,5
+1743,Pittsburgh Pirates,Los Angeles Dodgers,11,3
+1744,Chicago White Sox,Miami Marlins,4,5
+1745,Cincinnati Reds,Milwaukee Brewers,3,7
+1746,Kansas City Royals,Minnesota Twins,11,4
+1747,Tampa Bay Rays,New York Yankees,12,3
+1748,San Diego Padres,New York Mets,1,5
+1749,Seattle Mariners,Oakland Athletics,8,4
+1750,Colorado Rockies,Philadelphia Phillies,6,7
+1751,Baltimore Orioles,San Francisco Giants,8,7
+1752,Detroit Tigers,Texas Rangers,7,0
+1753,Houston Astros,Toronto Blue Jays,2,9
+1754,Atlanta Braves,Washington Nationals,1,9
+1755,Seattle Mariners,Los Angeles Angels,3,2
+1756,New York Mets,Arizona D'Backs,6,10
+1757,Miami Marlins,Cincinnati Reds,6,3
+1758,Boston Red Sox,Cleveland Indians,3,2
+1759,Washington Nationals,Colorado Rockies,5,4
+1760,Kansas City Royals,Detroit Tigers,3,1
+1761,Toronto Blue Jays,New York Yankees,0,1
+1762,Pittsburgh Pirates,San Francisco Giants,8,5
+1763,San Diego Padres,Tampa Bay Rays,2,8
+1764,Oakland Athletics,Texas Rangers,2,5
+1765,Seattle Mariners,Los Angeles Angels,6,7
+1766,New York Mets,Arizona D'Backs,7,5
+1767,Minnesota Twins,Atlanta Braves,4,2
+1768,Boston Red Sox,Baltimore Orioles,5,3
+1769,Milwaukee Brewers,Chicago Cubs,0,4
+1770,Milwaukee Brewers,Chicago Cubs,1,4
+1771,Miami Marlins,Cincinnati Reds,3,6
+1772,Chicago White Sox,Cleveland Indians,1,3
+1773,Washington Nationals,Colorado Rockies,2,6
+1774,Kansas City Royals,Detroit Tigers,6,1
+1775,St. Louis Cardinals,Houston Astros,8,5
+1776,Toronto Blue Jays,New York Yankees,12,6
+1777,Los Angeles Dodgers,Philadelphia Phillies,15,5
+1778,Pittsburgh Pirates,San Francisco Giants,4,3
+1779,San Diego Padres,Tampa Bay Rays,1,15
+1780,Oakland Athletics,Texas Rangers,4,5
+1781,Seattle Mariners,Los Angeles Angels,4,3
+1782,New York Mets,Arizona D'Backs,5,13
+1783,Minnesota Twins,Atlanta Braves,10,3
+1784,Boston Red Sox,Baltimore Orioles,8,1
+1785,Milwaukee Brewers,Chicago Cubs,1,6
+1786,Miami Marlins,Cincinnati Reds,2,3
+1787,Chicago White Sox,Cleveland Indians,10,7
+1788,Washington Nationals,Colorado Rockies,10,12
+1789,Kansas City Royals,Detroit Tigers,4,1
+1790,St. Louis Cardinals,Houston Astros,8,2
+1791,Toronto Blue Jays,New York Yankees,7,4
+1792,Los Angeles Dodgers,Philadelphia Phillies,7,2
+1793,Pittsburgh Pirates,San Francisco Giants,6,5
+1794,San Diego Padres,Tampa Bay Rays,0,2
+1795,Oakland Athletics,Texas Rangers,2,6
+1796,Seattle Mariners,Los Angeles Angels,4,6
+1797,Washington Nationals,Atlanta Braves,8,2
+1798,Houston Astros,Baltimore Orioles,5,13
+1799,Milwaukee Brewers,Chicago Cubs,6,9
+1800,Miami Marlins,Cincinnati Reds,4,5
+1801,Chicago White Sox,Cleveland Indians,4,5
+1802,Boston Red Sox,Detroit Tigers,3,4
+1803,Minnesota Twins,Kansas City Royals,1,8
+1804,Los Angeles Dodgers,Philadelphia Phillies,4,5
+1805,Arizona D'Backs,San Diego Padres,8,9
+1806,New York Mets,San Francisco Giants,7,10
+1807,New York Yankees,Los Angeles Angels,7,0
+1808,Washington Nationals,Atlanta Braves,7,6
+1809,Houston Astros,Baltimore Orioles,15,8
+1810,Oakland Athletics,Chicago White Sox,9,0
+1811,Los Angeles Dodgers,Cincinnati Reds,2,9
+1812,Toronto Blue Jays,Cleveland Indians,2,3
+1813,Chicago Cubs,Colorado Rockies,6,7
+1814,Boston Red Sox,Detroit Tigers,10,2
+1815,Minnesota Twins,Kansas City Royals,4,5
+1816,St. Louis Cardinals,Philadelphia Phillies,4,3
+1817,Miami Marlins,Pittsburgh Pirates,6,5
+1818,Arizona D'Backs,San Diego Padres,4,7
+1819,Milwaukee Brewers,Seattle Mariners,6,7
+1820,New York Mets,San Francisco Giants,1,8
+1821,Texas Rangers,Tampa Bay Rays,6,2
+1822,New York Yankees,Los Angeles Angels,5,1
+1823,Washington Nationals,Atlanta Braves,11,9
+1824,Houston Astros,Baltimore Orioles,12,2
+1825,Oakland Athletics,Chicago White Sox,2,6
+1826,Los Angeles Dodgers,Cincinnati Reds,1,11
+1827,Toronto Blue Jays,Cleveland Indians,6,5
+1828,Chicago Cubs,Colorado Rockies,9,2
+1829,Boston Red Sox,Detroit Tigers,3,2
+1830,Minnesota Twins,Kansas City Royals,0,10
+1831,St. Louis Cardinals,Philadelphia Phillies,2,4
+1832,Miami Marlins,Pittsburgh Pirates,3,1
+1833,Arizona D'Backs,San Diego Padres,2,1
+1834,Milwaukee Brewers,Seattle Mariners,2,8
+1835,New York Mets,San Francisco Giants,9,5
+1836,Texas Rangers,Tampa Bay Rays,2,8
+1837,New York Yankees,Los Angeles Angels,0,2
+1838,Washington Nationals,Atlanta Braves,6,7
+1839,Houston Astros,Baltimore Orioles,5,3
+1840,Oakland Athletics,Chicago White Sox,2,4
+1841,Los Angeles Dodgers,Cincinnati Reds,4,0
+1842,Toronto Blue Jays,Cleveland Indians,2,3
+1843,Chicago Cubs,Colorado Rockies,4,11
+1844,Boston Red Sox,Detroit Tigers,5,10
+1845,Minnesota Twins,Kansas City Royals,1,2
+1846,St. Louis Cardinals,Philadelphia Phillies,9,0
+1847,Miami Marlins,Pittsburgh Pirates,3,2
+1848,Arizona D'Backs,San Diego Padres,1,9
+1849,Milwaukee Brewers,Seattle Mariners,7,6
+1850,New York Mets,San Francisco Giants,2,0
+1851,Texas Rangers,Tampa Bay Rays,4,8
+1852,Atlanta Braves,Arizona D'Backs,8,9
+1853,Washington Nationals,Baltimore Orioles,3,4
+1854,Los Angeles Dodgers,Cincinnati Reds,18,9
+1855,Colorado Rockies,Milwaukee Brewers,2,4
+1856,Cleveland Indians,Oakland Athletics,1,0
+1857,Houston Astros,Pittsburgh Pirates,3,1
+1858,Chicago Cubs,San Diego Padres,5,1
+1859,New York Yankees,Seattle Mariners,5,7
+1860,Boston Red Sox,Tampa Bay Rays,6,2
+1861,Atlanta Braves,Arizona D'Backs,7,4
+1862,Washington Nationals,Baltimore Orioles,1,8
+1863,Philadelphia Phillies,Chicago White Sox,1,9
+1864,Texas Rangers,Cincinnati Reds,0,3
+1865,San Francisco Giants,Los Angeles Dodgers,5,9
+1866,Kansas City Royals,Miami Marlins,1,0
+1867,Colorado Rockies,Milwaukee Brewers,4,6
+1868,Detroit Tigers,Minnesota Twins,8,3
+1869,Cleveland Indians,Oakland Athletics,1,9
+1870,Houston Astros,Pittsburgh Pirates,1,7
+1871,Chicago Cubs,San Diego Padres,5,3
+1872,New York Yankees,Seattle Mariners,5,1
+1873,New York Mets,St. Louis Cardinals,7,4
+1874,Boston Red Sox,Tampa Bay Rays,2,1
+1875,Los Angeles Angels,Toronto Blue Jays,2,7
+1876,Atlanta Braves,Arizona D'Backs,9,10
+1877,Philadelphia Phillies,Chicago White Sox,5,3
+1878,Texas Rangers,Cincinnati Reds,6,5
+1879,San Francisco Giants,Los Angeles Dodgers,0,1
+1880,Kansas City Royals,Miami Marlins,0,3
+1881,Colorado Rockies,Milwaukee Brewers,1,7
+1882,Detroit Tigers,Minnesota Twins,9,4
+1883,Cleveland Indians,Oakland Athletics,1,5
+1884,Houston Astros,Pittsburgh Pirates,5,4
+1885,Chicago Cubs,San Diego Padres,6,3
+1886,New York Yankees,Seattle Mariners,5,0
+1887,New York Mets,St. Louis Cardinals,1,8
+1888,Boston Red Sox,Tampa Bay Rays,3,4
+1889,Los Angeles Angels,Toronto Blue Jays,8,2
+1890,Baltimore Orioles,Washington Nationals,10,8
+1891,Atlanta Braves,Arizona D'Backs,3,1
+1892,Seattle Mariners,Chicago White Sox,6,7
+1893,San Francisco Giants,Los Angeles Dodgers,4,0
+1894,Kansas City Royals,Miami Marlins,5,2
+1895,Pittsburgh Pirates,Milwaukee Brewers,3,2
+1896,Detroit Tigers,Minnesota Twins,8,5
+1897,New York Mets,St. Louis Cardinals,10,6
+1898,Boston Red Sox,Tampa Bay Rays,1,2
+1899,Cleveland Indians,Texas Rangers,0,9
+1900,Los Angeles Angels,Toronto Blue Jays,6,3
+1901,Baltimore Orioles,Washington Nationals,0,4
+1902,Cincinnati Reds,Arizona D'Backs,3,4
+1903,Kansas City Royals,Boston Red Sox,6,3
+1904,Seattle Mariners,Chicago White Sox,3,1
+1905,Los Angeles Angels,Detroit Tigers,2,4
+1906,Tampa Bay Rays,Houston Astros,4,5
+1907,Chicago Cubs,Los Angeles Dodgers,6,4
+1908,San Diego Padres,Miami Marlins,6,7
+1909,Pittsburgh Pirates,Milwaukee Brewers,5,3
+1910,Baltimore Orioles,New York Yankees,4,14
+1911,Philadelphia Phillies,New York Mets,4,9
+1912,Atlanta Braves,San Francisco Giants,0,7
+1913,Oakland Athletics,St. Louis Cardinals,1,3
+1914,Cleveland Indians,Texas Rangers,12,1
+1915,Minnesota Twins,Toronto Blue Jays,8,15
+1916,Colorado Rockies,Washington Nationals,5,8
+1917,Cincinnati Reds,Arizona D'Backs,13,0
+1918,Kansas City Royals,Boston Red Sox,3,8
+1919,Seattle Mariners,Chicago White Sox,3,9
+1920,Los Angeles Angels,Detroit Tigers,3,2
+1921,Tampa Bay Rays,Houston Astros,2,6
+1922,Chicago Cubs,Los Angeles Dodgers,2,3
+1923,San Diego Padres,Miami Marlins,1,0
+1924,Pittsburgh Pirates,Milwaukee Brewers,9,6
+1925,Baltimore Orioles,New York Yankees,5,13
+1926,Philadelphia Phillies,New York Mets,1,12
+1927,Atlanta Braves,San Francisco Giants,3,1
+1928,Oakland Athletics,St. Louis Cardinals,3,2
+1929,Cleveland Indians,Texas Rangers,0,7
+1930,Minnesota Twins,Toronto Blue Jays,7,8
+1931,Colorado Rockies,Washington Nationals,9,4
+1932,Cincinnati Reds,Arizona D'Backs,2,11
+1933,Kansas City Royals,Boston Red Sox,10,4
+1934,Seattle Mariners,Chicago White Sox,1,4
+1935,Los Angeles Angels,Detroit Tigers,5,0
+1936,Tampa Bay Rays,Houston Astros,10,4
+1937,Chicago Cubs,Los Angeles Dodgers,0,1
+1938,San Diego Padres,Miami Marlins,3,1
+1939,Pittsburgh Pirates,Milwaukee Brewers,3,1
+1940,Baltimore Orioles,New York Yankees,5,0
+1941,Philadelphia Phillies,New York Mets,5,1
+1942,Atlanta Braves,San Francisco Giants,4,13
+1943,Oakland Athletics,St. Louis Cardinals,7,4
+1944,Cleveland Indians,Texas Rangers,1,2
+1945,Minnesota Twins,Toronto Blue Jays,6,9
+1946,Colorado Rockies,Washington Nationals,5,3
+1947,Cincinnati Reds,Los Angeles Angels,2,9
+1948,Toronto Blue Jays,Baltimore Orioles,5,1
+1949,Tampa Bay Rays,Boston Red Sox,4,9
+1950,Pittsburgh Pirates,Chicago Cubs,7,8
+1951,Minnesota Twins,Cleveland Indians,0,1
+1952,Los Angeles Dodgers,Colorado Rockies,1,8
+1953,Chicago White Sox,Detroit Tigers,3,4
+1954,Oakland Athletics,Houston Astros,0,6
+1955,New York Yankees,Kansas City Royals,5,8
+1956,St. Louis Cardinals,Milwaukee Brewers,6,5
+1957,Miami Marlins,New York Mets,1,2
+1958,Washington Nationals,Philadelphia Phillies,4,0
+1959,Seattle Mariners,Texas Rangers,3,6
+1960,Cincinnati Reds,Los Angeles Angels,2,4
+1961,San Diego Padres,Atlanta Braves,3,7
+1962,Toronto Blue Jays,Baltimore Orioles,3,5
+1963,Tampa Bay Rays,Boston Red Sox,4,3
+1964,Pittsburgh Pirates,Chicago Cubs,0,3
+1965,Minnesota Twins,Cleveland Indians,4,5
+1966,Chicago White Sox,Detroit Tigers,4,8
+1967,Oakland Athletics,Houston Astros,1,3
+1968,New York Yankees,Kansas City Royals,5,4
+1969,St. Louis Cardinals,Milwaukee Brewers,2,1
+1970,Miami Marlins,New York Mets,4,7
+1971,Washington Nationals,Philadelphia Phillies,3,2
+1972,Arizona D'Backs,San Francisco Giants,4,3
+1973,Seattle Mariners,Texas Rangers,7,8
+1974,Cincinnati Reds,Los Angeles Angels,0,3
+1975,San Diego Padres,Atlanta Braves,1,8
+1976,Toronto Blue Jays,Baltimore Orioles,5,3
+1977,Tampa Bay Rays,Boston Red Sox,6,8
+1978,Pittsburgh Pirates,Chicago Cubs,5,6
+1979,Minnesota Twins,Cleveland Indians,4,8
+1980,Los Angeles Dodgers,Colorado Rockies,0,7
+1981,Los Angeles Dodgers,Colorado Rockies,10,8
+1982,Chicago White Sox,Detroit Tigers,2,3
+1983,Oakland Athletics,Houston Astros,3,4
+1984,New York Yankees,Kansas City Royals,5,4
+1985,St. Louis Cardinals,Milwaukee Brewers,1,3
+1986,Miami Marlins,New York Mets,2,5
+1987,Washington Nationals,Philadelphia Phillies,2,1
+1988,Arizona D'Backs,San Francisco Giants,2,4
+1989,Seattle Mariners,Texas Rangers,1,14
+1990,San Diego Padres,Atlanta Braves,6,9
+1991,San Francisco Giants,Chicago Cubs,4,5
+1992,Chicago White Sox,Minnesota Twins,5,8
+1993,Miami Marlins,New York Mets,6,4
+1994,New York Yankees,Baltimore Orioles,0,8
+1995,San Francisco Giants,Chicago Cubs,1,2
+1996,St. Louis Cardinals,Cincinnati Reds,2,3
+1997,Miami Marlins,Cleveland Indians,2,6
+1998,Arizona D'Backs,Colorado Rockies,7,14
+1999,Detroit Tigers,Kansas City Royals,7,6
+2000,San Diego Padres,Los Angeles Dodgers,4,2
+2001,Chicago White Sox,Minnesota Twins,11,4
+2002,Washington Nationals,New York Mets,4,1
+2003,Boston Red Sox,Oakland Athletics,16,2
+2004,Atlanta Braves,Philadelphia Phillies,8,4
+2005,Milwaukee Brewers,Pittsburgh Pirates,1,0
+2006,Los Angeles Angels,Seattle Mariners,8,11
+2007,Toronto Blue Jays,Tampa Bay Rays,3,8
+2008,Houston Astros,Texas Rangers,8,10
+2009,New York Yankees,Baltimore Orioles,0,2
+2010,San Francisco Giants,Chicago Cubs,3,2
+2011,St. Louis Cardinals,Cincinnati Reds,1,9
+2012,Miami Marlins,Cleveland Indians,3,8
+2013,Arizona D'Backs,Colorado Rockies,9,4
+2014,Detroit Tigers,Kansas City Royals,2,5
+2015,San Diego Padres,Los Angeles Dodgers,1,5
+2016,Chicago White Sox,Minnesota Twins,3,11
+2017,Washington Nationals,New York Mets,1,3
+2018,Boston Red Sox,Oakland Athletics,11,2
+2019,Atlanta Braves,Philadelphia Phillies,6,4
+2020,Milwaukee Brewers,Pittsburgh Pirates,7,4
+2021,Los Angeles Angels,Seattle Mariners,10,3
+2022,Toronto Blue Jays,Tampa Bay Rays,5,7
+2023,Houston Astros,Texas Rangers,4,12
+2024,New York Yankees,Baltimore Orioles,5,2
+2025,San Francisco Giants,Chicago Cubs,2,3
+2026,St. Louis Cardinals,Cincinnati Reds,5,2
+2027,Miami Marlins,Cleveland Indians,5,6
+2028,Arizona D'Backs,Colorado Rockies,8,5
+2029,Detroit Tigers,Kansas City Royals,6,5
+2030,San Diego Padres,Los Angeles Dodgers,4,7
+2031,Chicago White Sox,Minnesota Twins,13,11
+2032,Washington Nationals,New York Mets,1,5
+2033,Boston Red Sox,Oakland Athletics,0,1
+2034,Atlanta Braves,Philadelphia Phillies,2,0
+2035,Milwaukee Brewers,Pittsburgh Pirates,10,0
+2036,Los Angeles Angels,Seattle Mariners,4,2
+2037,Toronto Blue Jays,Tampa Bay Rays,5,3
+2038,Houston Astros,Texas Rangers,7,6
+2039,Detroit Tigers,Chicago White Sox,5,3
+2040,New York Mets,Cincinnati Reds,5,0
+2041,Houston Astros,Cleveland Indians,6,2
+2042,San Francisco Giants,Colorado Rockies,0,6
+2043,Arizona D'Backs,Los Angeles Dodgers,2,10
+2044,Philadelphia Phillies,Miami Marlins,6,2
+2045,Chicago Cubs,Milwaukee Brewers,7,2
+2046,Kansas City Royals,Minnesota Twins,11,5
+2047,Toronto Blue Jays,New York Yankees,3,5
+2048,Los Angeles Angels,Oakland Athletics,10,7
+2049,St. Louis Cardinals,Pittsburgh Pirates,12,6
+2050,Boston Red Sox,San Diego Padres,1,2
+2051,Texas Rangers,Seattle Mariners,6,14
+2052,Baltimore Orioles,Tampa Bay Rays,7,3
+2053,Atlanta Braves,Washington Nationals,4,6
+2054,Detroit Tigers,Chicago White Sox,0,2
+2055,New York Mets,Cincinnati Reds,5,3
+2056,Houston Astros,Cleveland Indians,4,3
+2057,San Francisco Giants,Colorado Rockies,3,2
+2058,Arizona D'Backs,Los Angeles Dodgers,2,5
+2059,Philadelphia Phillies,Miami Marlins,4,3
+2060,Chicago Cubs,Milwaukee Brewers,5,12
+2061,Kansas City Royals,Minnesota Twins,10,3
+2062,Toronto Blue Jays,New York Yankees,6,7
+2063,Los Angeles Angels,Oakland Athletics,2,3
+2064,St. Louis Cardinals,Pittsburgh Pirates,9,7
+2065,Boston Red Sox,San Diego Padres,5,1
+2066,Texas Rangers,Seattle Mariners,10,7
+2067,Baltimore Orioles,Tampa Bay Rays,11,2
+2068,Atlanta Braves,Washington Nationals,7,9
+2069,Detroit Tigers,Chicago White Sox,4,7
+2070,New York Mets,Cincinnati Reds,6,3
+2071,Houston Astros,Cleveland Indians,5,6
+2072,San Francisco Giants,Colorado Rockies,5,6
+2073,Arizona D'Backs,Los Angeles Dodgers,1,3
+2074,Philadelphia Phillies,Miami Marlins,0,6
+2075,Chicago Cubs,Milwaukee Brewers,1,2
+2076,Kansas City Royals,Minnesota Twins,5,6
+2077,Toronto Blue Jays,New York Yankees,0,2
+2078,Los Angeles Angels,Oakland Athletics,1,4
+2079,St. Louis Cardinals,Pittsburgh Pirates,3,4
+2080,Boston Red Sox,San Diego Padres,7,2
+2081,Texas Rangers,Seattle Mariners,3,8
+2082,Baltimore Orioles,Tampa Bay Rays,6,7
+2083,Atlanta Braves,Washington Nationals,4,5
+2084,Houston Astros,Cleveland Indians,7,10
+2085,Tampa Bay Rays,New York Yankees,4,5
+2086,Cincinnati Reds,Pittsburgh Pirates,1,4
+2087,Colorado Rockies,San Diego Padres,1,14
+2088,Texas Rangers,Seattle Mariners,3,6
+2089,Milwaukee Brewers,St. Louis Cardinals,12,5
+2090,Philadelphia Phillies,Washington Nationals,4,1
+2091,Texas Rangers,Los Angeles Angels,2,1
+2092,San Francisco Giants,Arizona D'Backs,7,6
+2093,New York Mets,Atlanta Braves,6,4
+2094,Kansas City Royals,Chicago White Sox,2,7
+2095,Baltimore Orioles,Detroit Tigers,3,4
+2096,Chicago Cubs,Houston Astros,2,0
+2097,Los Angeles Dodgers,Miami Marlins,1,4
+2098,Cleveland Indians,Minnesota Twins,5,4
+2099,Tampa Bay Rays,New York Yankees,5,7
+2100,Seattle Mariners,Oakland Athletics,3,2
+2101,Cincinnati Reds,Pittsburgh Pirates,4,3
+2102,Colorado Rockies,San Diego Padres,4,1
+2103,Milwaukee Brewers,St. Louis Cardinals,3,4
+2104,Boston Red Sox,Toronto Blue Jays,13,3
+2105,Philadelphia Phillies,Washington Nationals,4,5
+2106,Texas Rangers,Los Angeles Angels,8,5
+2107,San Francisco Giants,Arizona D'Backs,11,3
+2108,New York Mets,Atlanta Braves,3,4
+2109,Kansas City Royals,Chicago White Sox,6,5
+2110,Baltimore Orioles,Detroit Tigers,11,3
+2111,Chicago Cubs,Houston Astros,1,2
+2112,Los Angeles Dodgers,Miami Marlins,5,0
+2113,Cleveland Indians,Minnesota Twins,1,2
+2114,Tampa Bay Rays,New York Yankees,1,5
+2115,Seattle Mariners,Oakland Athletics,14,3
+2116,Cincinnati Reds,Pittsburgh Pirates,8,7
+2117,Colorado Rockies,San Diego Padres,3,6
+2118,Milwaukee Brewers,St. Louis Cardinals,1,5
+2119,Boston Red Sox,Toronto Blue Jays,2,3
+2120,Philadelphia Phillies,Washington Nationals,0,3
+2121,Texas Rangers,Los Angeles Angels,2,3
+2122,San Francisco Giants,Arizona D'Backs,5,3
+2123,New York Mets,Atlanta Braves,10,3
+2124,Kansas City Royals,Chicago White Sox,2,0
+2125,Baltimore Orioles,Detroit Tigers,3,1
+2126,Chicago Cubs,Houston Astros,9,5
+2127,Los Angeles Dodgers,Miami Marlins,0,3
+2128,Cleveland Indians,Minnesota Twins,7,1
+2129,Tampa Bay Rays,New York Yankees,4,2
+2130,Seattle Mariners,Oakland Athletics,3,2
+2131,Cincinnati Reds,Pittsburgh Pirates,8,0
+2132,Colorado Rockies,San Diego Padres,3,2
+2133,Milwaukee Brewers,St. Louis Cardinals,2,1
+2134,Boston Red Sox,Toronto Blue Jays,11,8
+2135,Philadelphia Phillies,Washington Nationals,2,3
+2136,Seattle Mariners,Los Angeles Angels,8,1
+2137,Colorado Rockies,Arizona D'Backs,9,12
+2138,Miami Marlins,Atlanta Braves,7,12
+2139,Baltimore Orioles,Boston Red Sox,2,12
+2140,Cleveland Indians,Chicago White Sox,4,11
+2141,Milwaukee Brewers,Cincinnati Reds,0,3
+2142,Minnesota Twins,Detroit Tigers,2,4
+2143,Texas Rangers,Houston Astros,4,3
+2144,Oakland Athletics,Kansas City Royals,16,3
+2145,Los Angeles Dodgers,New York Yankees,8,2
+2146,Pittsburgh Pirates,Philadelphia Phillies,2,6
+2147,San Diego Padres,San Francisco Giants,4,0
+2148,Chicago Cubs,St. Louis Cardinals,4,1
+2149,Tampa Bay Rays,Toronto Blue Jays,2,3
+2150,New York Mets,Washington Nationals,1,8
+2151,Seattle Mariners,Los Angeles Angels,8,0
+2152,Colorado Rockies,Arizona D'Backs,4,11
+2153,Miami Marlins,Atlanta Braves,7,5
+2154,Baltimore Orioles,Boston Red Sox,6,3
+2155,Cleveland Indians,Chicago White Sox,1,8
+2156,Milwaukee Brewers,Cincinnati Reds,4,6
+2157,Minnesota Twins,Detroit Tigers,8,1
+2158,Texas Rangers,Houston Astros,3,2
+2159,Oakland Athletics,Kansas City Royals,5,4
+2160,Los Angeles Dodgers,New York Yankees,0,3
+2161,Pittsburgh Pirates,Philadelphia Phillies,5,3
+2162,San Diego Padres,San Francisco Giants,6,4
+2163,Chicago Cubs,St. Louis Cardinals,2,4
+2164,Tampa Bay Rays,Toronto Blue Jays,6,2
+2165,New York Mets,Washington Nationals,4,3
+2166,Seattle Mariners,Los Angeles Angels,2,1
+2167,Colorado Rockies,Arizona D'Backs,6,11
+2168,Miami Marlins,Atlanta Braves,7,5
+2169,Baltimore Orioles,Boston Red Sox,1,0
+2170,Cleveland Indians,Chicago White Sox,6,1
+2171,Milwaukee Brewers,Cincinnati Reds,7,0
+2172,Minnesota Twins,Detroit Tigers,6,9
+2173,Texas Rangers,Houston Astros,4,8
+2174,Oakland Athletics,Kansas City Royals,8,0
+2175,Los Angeles Dodgers,New York Yankees,2,0
+2176,Pittsburgh Pirates,Philadelphia Phillies,2,6
+2177,San Diego Padres,San Francisco Giants,3,1
+2178,Chicago Cubs,St. Louis Cardinals,7,0
+2179,Tampa Bay Rays,Toronto Blue Jays,8,1
+2180,New York Mets,Washington Nationals,0,1
+2181,Toronto Blue Jays,Los Angeles Angels,7,2
+2182,Los Angeles Dodgers,Arizona D'Backs,3,7
+2183,Tampa Bay Rays,Baltimore Orioles,7,6
+2184,New York Yankees,Boston Red Sox,5,7
+2185,Cleveland Indians,Chicago White Sox,1,2
+2186,Milwaukee Brewers,Chicago Cubs,5,4
+2187,Minnesota Twins,Detroit Tigers,5,1
+2188,Oakland Athletics,Kansas City Royals,14,5
+2189,Pittsburgh Pirates,Philadelphia Phillies,15,2
+2190,St. Louis Cardinals,San Francisco Giants,2,6
+2191,Toronto Blue Jays,Los Angeles Angels,5,0
+2192,Los Angeles Dodgers,Arizona D'Backs,3,2
+2193,Washington Nationals,Atlanta Braves,7,2
+2194,Tampa Bay Rays,Baltimore Orioles,4,5
+2195,New York Yankees,Boston Red Sox,4,7
+2196,Milwaukee Brewers,Chicago Cubs,4,5
+2197,Pittsburgh Pirates,Cincinnati Reds,9,7
+2198,Detroit Tigers,Cleveland Indians,4,11
+2199,San Diego Padres,Colorado Rockies,7,8
+2200,Chicago White Sox,Kansas City Royals,7,4
+2201,Minnesota Twins,New York Mets,0,3
+2202,Miami Marlins,Philadelphia Phillies,3,4
+2203,Houston Astros,Seattle Mariners,6,0
+2204,St. Louis Cardinals,San Francisco Giants,2,8
+2205,Oakland Athletics,Texas Rangers,6,7
+2206,Toronto Blue Jays,Los Angeles Angels,1,6
+2207,Los Angeles Dodgers,Arizona D'Backs,6,2
+2208,Washington Nationals,Atlanta Braves,3,7
+2209,Tampa Bay Rays,Baltimore Orioles,5,2
+2210,New York Yankees,Boston Red Sox,5,6
+2211,Milwaukee Brewers,Chicago Cubs,11,3
+2212,Pittsburgh Pirates,Cincinnati Reds,10,4
+2213,Pittsburgh Pirates,Cincinnati Reds,7,3
+2214,Detroit Tigers,Cleveland Indians,0,1
+2215,San Diego Padres,Colorado Rockies,0,8
+2216,Chicago White Sox,Kansas City Royals,2,3
+2217,Minnesota Twins,New York Mets,2,3
+2218,Miami Marlins,Philadelphia Phillies,0,8
+2219,Houston Astros,Seattle Mariners,2,1
+2220,St. Louis Cardinals,San Francisco Giants,3,2
+2221,Oakland Athletics,Texas Rangers,11,2
+2222,Toronto Blue Jays,Los Angeles Angels,0,4
+2223,Los Angeles Dodgers,Arizona D'Backs,9,10
+2224,Washington Nationals,Atlanta Braves,2,6
+2225,Tampa Bay Rays,Baltimore Orioles,1,2
+2226,New York Yankees,Boston Red Sox,4,5
+2227,Milwaukee Brewers,Chicago Cubs,3,1
+2228,Pittsburgh Pirates,Cincinnati Reds,4,7
+2229,Detroit Tigers,Cleveland Indians,9,5
+2230,San Diego Padres,Colorado Rockies,3,6
+2231,Chicago White Sox,Kansas City Royals,3,10
+2232,Minnesota Twins,New York Mets,2,3
+2233,Miami Marlins,Philadelphia Phillies,5,4
+2234,Houston Astros,Seattle Mariners,3,7
+2235,St. Louis Cardinals,San Francisco Giants,3,0
+2236,Oakland Athletics,Texas Rangers,5,2
+2237,Boston Red Sox,Baltimore Orioles,5,2
+2238,Cincinnati Reds,Chicago Cubs,2,5
+2239,St. Louis Cardinals,Colorado Rockies,5,3
+2240,Chicago White Sox,Kansas City Royals,3,8
+2241,San Francisco Giants,Los Angeles Dodgers,1,2
+2242,Washington Nationals,Miami Marlins,3,4
+2243,Atlanta Braves,New York Mets,7,3
+2244,Houston Astros,Oakland Athletics,4,2
+2245,Arizona D'Backs,San Diego Padres,2,3
+2246,Toronto Blue Jays,Seattle Mariners,3,2
+2247,Los Angeles Angels,Texas Rangers,2,3
+2248,Boston Red Sox,Baltimore Orioles,5,2
+2249,Cincinnati Reds,Chicago Cubs,1,6
+2250,Kansas City Royals,Cleveland Indians,1,2
+2251,St. Louis Cardinals,Colorado Rockies,10,5
+2252,San Francisco Giants,Los Angeles Dodgers,2,0
+2253,Washington Nationals,Miami Marlins,0,1
+2254,Pittsburgh Pirates,Milwaukee Brewers,6,3
+2255,Detroit Tigers,Minnesota Twins,8,1
+2256,Atlanta Braves,New York Mets,5,4
+2257,Houston Astros,Oakland Athletics,2,1
+2258,Chicago White Sox,Philadelphia Phillies,6,7
+2259,Arizona D'Backs,San Diego Padres,2,5
+2260,Toronto Blue Jays,Seattle Mariners,10,2
+2261,New York Yankees,Tampa Bay Rays,5,3
+2262,Los Angeles Angels,Texas Rangers,4,5
+2263,Boston Red Sox,Baltimore Orioles,5,1
+2264,Cincinnati Reds,Chicago Cubs,2,9
+2265,Kansas City Royals,Cleveland Indians,3,4
+2266,St. Louis Cardinals,Colorado Rockies,1,11
+2267,San Francisco Giants,Los Angeles Dodgers,3,9
+2268,Washington Nationals,Miami Marlins,8,3
+2269,Pittsburgh Pirates,Milwaukee Brewers,4,1
+2270,Atlanta Braves,New York Mets,4,3
+2271,Houston Astros,Oakland Athletics,6,5
+2272,Chicago White Sox,Philadelphia Phillies,3,8
+2273,Arizona D'Backs,San Diego Padres,3,2
+2274,Toronto Blue Jays,Seattle Mariners,1,2
+2275,New York Yankees,Tampa Bay Rays,11,5
+2276,Los Angeles Angels,Texas Rangers,5,4
+2277,Boston Red Sox,Baltimore Orioles,5,3
+2278,Kansas City Royals,Cleveland Indians,2,5
+2279,Los Angeles Angels,Houston Astros,2,0
+2280,Colorado Rockies,Los Angeles Dodgers,4,7
+2281,Atlanta Braves,Miami Marlins,6,3
+2282,Pittsburgh Pirates,Milwaukee Brewers,1,3
+2283,Detroit Tigers,Minnesota Twins,9,2
+2284,Detroit Tigers,Minnesota Twins,4,2
+2285,Philadelphia Phillies,New York Mets,8,9
+2286,San Francisco Giants,San Diego Padres,2,1
+2287,New York Yankees,Tampa Bay Rays,0,2
+2288,Arizona D'Backs,Baltimore Orioles,2,3
+2289,St. Louis Cardinals,Chicago Cubs,0,5
+2290,Chicago White Sox,Cleveland Indians,4,10
+2291,Kansas City Royals,Detroit Tigers,3,8
+2292,Los Angeles Angels,Houston Astros,10,6
+2293,Colorado Rockies,Los Angeles Dodgers,2,5
+2294,Atlanta Braves,Miami Marlins,3,2
+2295,Cincinnati Reds,Milwaukee Brewers,4,5
+2296,Seattle Mariners,Minnesota Twins,10,1
+2297,Philadelphia Phillies,New York Mets,5,10
+2298,Texas Rangers,Oakland Athletics,3,0
+2299,Washington Nationals,Pittsburgh Pirates,5,6
+2300,San Francisco Giants,San Diego Padres,2,7
+2301,Boston Red Sox,Tampa Bay Rays,2,1
+2302,New York Yankees,Toronto Blue Jays,0,9
+2303,Arizona D'Backs,Baltimore Orioles,1,6
+2304,St. Louis Cardinals,Chicago Cubs,10,4
+2305,Chicago White Sox,Cleveland Indians,8,1
+2306,Kansas City Royals,Detroit Tigers,7,4
+2307,Los Angeles Angels,Houston Astros,10,4
+2308,Colorado Rockies,Los Angeles Dodgers,1,14
+2309,Atlanta Braves,Miami Marlins,4,6
+2310,Cincinnati Reds,Milwaukee Brewers,6,1
+2311,Seattle Mariners,Minnesota Twins,2,3
+2312,Philadelphia Phillies,New York Mets,10,8
+2313,Texas Rangers,Oakland Athletics,5,0
+2314,Washington Nationals,Pittsburgh Pirates,6,1
+2315,San Francisco Giants,San Diego Padres,9,6
+2316,Boston Red Sox,Tampa Bay Rays,6,4
+2317,New York Yankees,Toronto Blue Jays,0,3
+2318,Arizona D'Backs,Baltimore Orioles,1,2
+2319,St. Louis Cardinals,Chicago Cubs,1,3
+2320,Chicago White Sox,Cleveland Indians,3,0
+2321,Kansas City Royals,Detroit Tigers,12,9
+2322,Los Angeles Angels,Houston Astros,1,4
+2323,Colorado Rockies,Los Angeles Dodgers,3,4
+2324,Cincinnati Reds,Milwaukee Brewers,4,2
+2325,Seattle Mariners,Minnesota Twins,4,3
+2326,Philadelphia Phillies,New York Mets,0,17
+2327,Texas Rangers,Oakland Athletics,1,7
+2328,Washington Nationals,Pittsburgh Pirates,10,7
+2329,San Francisco Giants,San Diego Padres,3,4
+2330,Boston Red Sox,Tampa Bay Rays,3,2
+2331,New York Yankees,Toronto Blue Jays,3,4
+2332,Oakland Athletics,Los Angeles Angels,1,2
+2333,Tampa Bay Rays,Chicago White Sox,1,7
+2334,Cleveland Indians,Detroit Tigers,7,4
+2335,Seattle Mariners,Houston Astros,4,3
+2336,New York Mets,Miami Marlins,3,7
+2337,Chicago Cubs,Pittsburgh Pirates,12,2
+2338,Cincinnati Reds,St. Louis Cardinals,15,2
+2339,Milwaukee Brewers,Texas Rangers,8,3
+2340,New York Yankees,Toronto Blue Jays,7,5
+2341,Arizona D'Backs,Washington Nationals,14,4
+2342,Oakland Athletics,Los Angeles Angels,1,8
+2343,Philadelphia Phillies,Atlanta Braves,6,7
+2344,Tampa Bay Rays,Chicago White Sox,6,13
+2345,Cleveland Indians,Detroit Tigers,0,12
+2346,Seattle Mariners,Houston Astros,4,8
+2347,Minnesota Twins,Kansas City Royals,3,4
+2348,New York Mets,Miami Marlins,12,1
+2349,Boston Red Sox,New York Yankees,4,6
+2350,Chicago Cubs,Pittsburgh Pirates,6,4
+2351,Los Angeles Dodgers,San Diego Padres,1,7
+2352,Colorado Rockies,San Francisco Giants,3,12
+2353,Cincinnati Reds,St. Louis Cardinals,5,12
+2354,Milwaukee Brewers,Texas Rangers,4,6
+2355,Baltimore Orioles,Toronto Blue Jays,1,5
+2356,Arizona D'Backs,Washington Nationals,2,4
+2357,Oakland Athletics,Los Angeles Angels,6,8
+2358,Philadelphia Phillies,Atlanta Braves,2,12
+2359,Tampa Bay Rays,Chicago White Sox,0,1
+2360,Cleveland Indians,Detroit Tigers,3,6
+2361,Seattle Mariners,Houston Astros,12,4
+2362,Minnesota Twins,Kansas City Royals,2,5
+2363,New York Mets,Miami Marlins,5,2
+2364,Boston Red Sox,New York Yankees,3,5
+2365,Chicago Cubs,Pittsburgh Pirates,4,8
+2366,Los Angeles Dodgers,San Diego Padres,5,6
+2367,Colorado Rockies,San Francisco Giants,2,0
+2368,Cincinnati Reds,St. Louis Cardinals,2,1
+2369,Milwaukee Brewers,Texas Rangers,5,8
+2370,Baltimore Orioles,Toronto Blue Jays,3,2
+2371,Arizona D'Backs,Washington Nationals,3,0
+2372,Philadelphia Phillies,Atlanta Braves,2,5
+2373,Tampa Bay Rays,Chicago White Sox,5,3
+2374,Minnesota Twins,Kansas City Royals,7,6
+2375,Boston Red Sox,New York Yankees,1,5
+2376,Chicago Cubs,Pittsburgh Pirates,1,1
+2377,Los Angeles Dodgers,San Diego Padres,9,4
+2378,Oakland Athletics,Seattle Mariners,2,3
+2379,Colorado Rockies,San Francisco Giants,2,7
+2380,Cincinnati Reds,St. Louis Cardinals,3,4
+2381,Baltimore Orioles,Toronto Blue Jays,4,0
+2382,Arizona D'Backs,Washington Nationals,3,5
+2383,Houston Astros,Los Angeles Angels,1,7
+2384,San Diego Padres,Arizona D'Backs,3,5
+2385,Detroit Tigers,Atlanta Braves,6,2
+2386,Toronto Blue Jays,Boston Red Sox,3,5
+2387,Minnesota Twins,Chicago White Sox,3,7
+2388,Chicago Cubs,Cincinnati Reds,7,3
+2389,Milwaukee Brewers,Colorado Rockies,1,4
+2390,Cleveland Indians,Kansas City Royals,7,2
+2391,Baltimore Orioles,New York Yankees,8,1
+2392,New York Mets,Philadelphia Phillies,5,1
+2393,Oakland Athletics,Seattle Mariners,1,5
+2394,Los Angeles Dodgers,San Francisco Giants,3,9
+2395,Pittsburgh Pirates,St. Louis Cardinals,0,7
+2396,Tampa Bay Rays,Texas Rangers,1,3
+2397,Miami Marlins,Washington Nationals,7,4
+2398,Houston Astros,Los Angeles Angels,3,0
+2399,San Diego Padres,Arizona D'Backs,5,9
+2400,Detroit Tigers,Atlanta Braves,3,5
+2401,Toronto Blue Jays,Boston Red Sox,4,3
+2402,Minnesota Twins,Chicago White Sox,6,0
+2403,Chicago Cubs,Cincinnati Reds,4,7
+2404,Milwaukee Brewers,Colorado Rockies,4,3
+2405,Cleveland Indians,Kansas City Royals,6,3
+2406,Baltimore Orioles,New York Yankees,3,7
+2407,New York Mets,Philadelphia Phillies,5,3
+2408,Oakland Athletics,Seattle Mariners,9,8
+2409,Los Angeles Dodgers,San Francisco Giants,0,3
+2410,Pittsburgh Pirates,St. Louis Cardinals,3,4
+2411,Tampa Bay Rays,Texas Rangers,4,1
+2412,Miami Marlins,Washington Nationals,1,2
+2413,Houston Astros,Los Angeles Angels,1,8
+2414,San Diego Padres,Arizona D'Backs,2,3
+2415,Detroit Tigers,Atlanta Braves,0,1
+2416,Toronto Blue Jays,Boston Red Sox,2,1
+2417,Minnesota Twins,Chicago White Sox,6,3
+2418,Chicago Cubs,Cincinnati Reds,7,4
+2419,Milwaukee Brewers,Colorado Rockies,6,4
+2420,Cleveland Indians,Kansas City Royals,3,2
+2421,Baltimore Orioles,New York Yankees,5,2
+2422,New York Mets,Philadelphia Phillies,2,5
+2423,Oakland Athletics,Seattle Mariners,3,2
+2424,Los Angeles Dodgers,San Francisco Giants,1,7
+2425,Pittsburgh Pirates,St. Louis Cardinals,4,10
+2426,Tampa Bay Rays,Texas Rangers,6,4
+2427,Miami Marlins,Washington Nationals,7,10
+2428,Baltimore Orioles,Toronto Blue Jays,2,5
+2429,San Francisco Giants,New York Mets,3,0
+2430,Boston Red Sox,Cleveland Indians,4,5
+2431,Toronto Blue Jays,Texas Rangers,10,1
+2432,San Francisco Giants,Chicago Cubs,0,1
+2433,Boston Red Sox,Cleveland Indians,0,6
+2434,Toronto Blue Jays,Texas Rangers,5,3
+2435,Los Angeles Dodgers,Washington Nationals,4,3
+2436,San Francisco Giants,Chicago Cubs,2,5
+2437,Texas Rangers,Toronto Blue Jays,6,7
+2438,Los Angeles Dodgers,Washington Nationals,2,5
+2439,Cleveland Indians,Boston Red Sox,4,3
+2440,Washington Nationals,Los Angeles Dodgers,8,3
+2441,Chicago Cubs,San Francisco Giants,5,6
+2442,Washington Nationals,Los Angeles Dodgers,5,6
+2443,Chicago Cubs,San Francisco Giants,6,5
+2444,Los Angeles Dodgers,Washington Nationals,4,3
+2445,Toronto Blue Jays,Cleveland Indians,0,2
+2446,Los Angeles Dodgers,Chicago Cubs,4,8
+2447,Toronto Blue Jays,Cleveland Indians,1,2
+2448,Los Angeles Dodgers,Chicago Cubs,1,0
+2449,Cleveland Indians,Toronto Blue Jays,4,2
+2450,Chicago Cubs,Los Angeles Dodgers,0,6
+2451,Cleveland Indians,Toronto Blue Jays,1,5
+2452,Chicago Cubs,Los Angeles Dodgers,10,2
+2453,Cleveland Indians,Toronto Blue Jays,3,0
+2454,Chicago Cubs,Los Angeles Dodgers,8,4
+2455,Los Angeles Dodgers,Chicago Cubs,0,5
+2456,Chicago Cubs,Cleveland Indians,0,6
+2457,Chicago Cubs,Cleveland Indians,5,1
+2458,Cleveland Indians,Chicago Cubs,1,0
+2459,Cleveland Indians,Chicago Cubs,7,2
+2460,Cleveland Indians,Chicago Cubs,2,3
+2461,Chicago Cubs,Cleveland Indians,9,3
+2462,Chicago Cubs,Cleveland Indians,8,7

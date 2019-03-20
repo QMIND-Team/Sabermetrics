@@ -1,3 +1,4 @@
+import pandas as pd
 
 def calculateExpectedScores(R1, R2):
     '''
@@ -38,3 +39,14 @@ def calculateNewRating(oldRating, expectedResult, trueResult, kFactor):
 
     newRating = oldRating + (kFactor * (trueResult - expectedResult))
     return newRating
+
+
+def playSeason(path):
+
+    seasonDF = pd.read_csv(path)
+    eloRatings = pd.read_csv('elo_ratings.csv')
+
+    pass
+
+
+
