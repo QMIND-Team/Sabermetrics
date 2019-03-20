@@ -114,5 +114,5 @@ def playAllSeasons():
 
 
 eloRatings = playAllSeasons()
-print(eloRatings)
+eloRatings.to_csv("new_elo_ratings.csv")
 
