@@ -1,4 +1,5 @@
 import pandas as pd
+import math
 
 def calculateExpectedScores(R1, R2):
     '''
@@ -19,7 +20,7 @@ def calculateExpectedScores(R1, R2):
 
     # calculate E1 and E2 which are the expected scores
     E1 = Q1 / (Q1 + Q2)
-    E2 = 1 - E1 # Q2/ (Q1 + Q2)
+    E2 = 1 - E1 # Q2 / (Q1 + Q2)
 
     expectedScores = (E1, E2)
 
@@ -33,25 +34,29 @@ def calculateNewRating(oldRating, expectedResult, trueResult, kFactor):
     :param int oldRating: previous Elo rating of the entity
     :param float expectedResult: win expectancy for the team
     :param float trueResult: 1 for a win and 0 for a loss
-    :param float kFactor: weight constant for the tournament
+    :param float kFactor: weight constant for the season
     :return int newRating: Elo rating of the entity after game is played
     '''
 
     newRating = oldRating + (kFactor * (trueResult - expectedResult))
-    return newRating
+    return int(newRating)
 
 
-def playSeason(path):
+def seasonEloRatings(seasonDF, eloRatings):
 
-    seasonDF = pd.read_csv(path)
-    eloRatings = pd.read_csv('elo_ratings.csv')
+    #seasonDF = pd.read_csv(path, index_col=0)
+    #eloRatings = pd.read_csv('elo_ratings.csv', index_col=0)
+
+    #print(eloRatings.head())
 
     for index, row in seasonDF.iterrows():
         homeTeam = row['Home Team']
         awayTeam = row['Away Team']
         homeTeamScore = row['Home Team Score']
         awayTeamScore = row['Away Team Score']
-        homeEloRating = int(eloRatings.loc[eloRatings['Team'] == homeTeam, 'Elo Rating']) + 24 # home team advantage
+        if (homeTeam not in eloRatings['Team'].unique()):
+            eloRatings
+        homeEloRating = int(eloRatings.loc[eloRatings['Team'] == homeTeam, 'Elo Rating'])  + 24 # add home team advantage
         awayEloRating = int(eloRatings.loc[eloRatings['Team'] == awayTeam, 'Elo Rating'])
         homeExpected, awayExpected = calculateExpectedScores(homeEloRating, awayEloRating)
         if homeTeamScore > awayTeamScore:
@@ -60,13 +65,54 @@ def playSeason(path):
         else:
             homeResult = 0
             awayResult = 1
-        kFactor = 5
+        runDifferential = abs(homeTeamScore - awayTeamScore)
+        kFactor = 0.5 * runDifferential
         newHomeRating = calculateNewRating(homeEloRating, homeExpected, homeResult, kFactor)
         newAwayRating = calculateNewRating(awayEloRating, awayExpected, awayResult, kFactor)
-        print(homeEloRating, awayEloRating)
-        print(newHomeRating, newAwayRating)
+        eloRatings.loc[eloRatings['Team'] == homeTeam, 'Elo Rating'] = newHomeRating
+        eloRatings.loc[eloRatings['Team'] == awayTeam, 'Elo Rating'] = newAwayRating
+
+    return eloRatings
 
 
-playSeason('2014_schedule.csv')
+def scaleRatings(eloRatings):
 
+    minRating = eloRatings['Elo Rating'].min()
+    maxRating = eloRatings['Elo Rating'].max()
+
+    upperBound = 1700
+    lowerBound = 1300
+
+    for index, row in eloRatings.iterrows():
+        value = row['Elo Rating']
+        newValue = lowerBound + ((value - minRating) / (maxRating - minRating) * (upperBound - lowerBound))
+        eloRatings.loc[eloRatings['Team'] == row['Team'], 'Elo Rating'] = int(newValue)
+
+    return eloRatings
+
+
+def playSeason(seasonDF, eloRatings):
+
+    eloRatings = seasonEloRatings(seasonDF, eloRatings)
+    return scaleRatings(eloRatings)
+
+
+def playAllSeasons():
+
+    startYear = 2014
+    endYear = 2017
+
+    #seasonDF = pd.read_csv(path, index_col=0)
+    eloRatings = pd.read_csv('elo_ratings.csv', index_col=0)
+
+    for year in range(startYear, endYear + 1):
+        path = f'{year}_schedule.csv'
+        seasonDF = pd.read_csv(path, index_col=0)
+        eloRatings = playSeason(seasonDF, eloRatings)
+
+    return eloRatings
+
+
+eloRatings = playAllSeasons()
+print(eloRatings)
 

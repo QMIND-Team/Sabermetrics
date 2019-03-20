@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 
 
-url = 'https://www.baseball-reference.com/leagues/MLB/2014-schedule.shtml'
+url = 'https://www.baseball-reference.com/leagues/MLB/2016-schedule.shtml'
 page = requests.get(url)
 soup = Soup(page.text, 'html.parser')
 tags = soup.find_all("p", attrs={'class': 'game'})
@@ -23,7 +23,7 @@ for tag in tags:
         data += [[homeTeam, awayTeam, homeTeamScore, awayTeamScore]]
 
 schedule = pd.DataFrame(data=data, columns=["Home Team", "Away Team", "Home Team Score", "Away Team Score"])
-schedule.to_csv(r'2014_schedule.csv')
+schedule.to_csv(r'2016_schedule.csv')
 
 
 team_dict = {""}
