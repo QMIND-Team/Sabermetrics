@@ -17,11 +17,12 @@ import Simulator.MLB_2019_Schedule as MLB
 warnings.simplefilter("ignore")
 
 pd.set_option("display.max_rows", 162)
-
 pd.set_option("display.max_columns", 9)
+
 
 # Data Frame for box score output
 columnNames = ["Inning", "Home Score", "Away Score", "Hits", "Walks"]
+
 
 # class for season
 class Season:
@@ -91,8 +92,6 @@ class Game:
         else:                               # points awarded to team of index one in the bottom of innings
             self.score[0] = self.score[0] + 1
             self.runsBottom = self.runsBottom + 1
-        if season.hardCoding:               # if user is hard coding a game, input the data to df when method is called
-            game.game_df = inputData(game.game_df)
         batter.nextBatter()
 
     # method for behavior of an out in the game
@@ -129,7 +128,7 @@ class Inning(Game):
     def inningSwitch(self):                 # sets outs back to zero and switches between top and bottom of inning
         bases.first = False
         bases.second = False
-        bases.third = False        
+        bases.third = False
         if game.top:
             self.outs = 0
             self.bottomOf()
@@ -161,8 +160,6 @@ class Batter:
         if self.strikes == 3:               # if batter has 3 strikes, batter is out
             game.out()
             self.nextBatter()               # calls function to get stats on the next batter
-        if season.hardCoding:  # if user is hard coding a game, input the data to df when method is called
-            game.game_df = inputData(game.game_df)
 
     # method for behavior of a ball
     def ball(self):
@@ -170,10 +167,7 @@ class Batter:
         if self.balls == 4:                 # if batter gets 4 balls
             self.walks = self.walks + 1
             self.single()                   # walk to first
-            self.walks = self.walks + 1
             self.nextBatter()               # calls function to get the next batters stats
-        if season.hardCoding:               # if user is hard coding a game, input the data to df when method is called
-            game.game_df = inputData(game.game_df)
 
     # method to fetch next batter statistics
     def nextBatter(self):
@@ -541,11 +535,9 @@ def getRunExpectancy():
 
 # method to update the data frame of events occurring in the hard coded game
 def inputData(dataFrame):
-    walks = abs(batter.walks)
-    hits = batter.hits - walks
     dataFrame = dataFrame[["Inning", "Home Score", "Away Score", "Hits", "Walks"]]
     dataFrame = dataFrame.append({"Inning": game.inning, "Home Score": game.runsTop, "Away Score": game.runsBottom,
-                                  "Hits": hits, "Walks": walks}, ignore_index=True)
+                                  "Hits": batter.hits-batter.walks, "Walks": batter.walks}, ignore_index=True)
     return dataFrame
 
 
@@ -597,48 +589,3 @@ NL = np.array([Cubs, Dodgers, Cardinals, Mets, Pirates, Nationals, Braves, Brewe
 AL = np.array([Yankees, RedSox, Indians, Astros, WhiteSox, Athletics, Orioles, Rays, Angels,
                BlueJays, Twins, Royals, Mariners, Rangers, Tigers])
 
-
-# run the season
-while season.games < 163:
-    swing = uniform(0.0, 1.0)
-    if swing <= 0.635:  # batters swing at 63.5% of all pitches
-        strikeZone = uniform(0.0, 1.0)
-        if strikeZone <= 0.45:  # 45% of all pitches are inside the strike zone
-            hit = uniform(0.0, 1.0)
-            if hit <= 0.8075:  # 80.75% of swings in strike zone will hit
-                expectancy = getRunExpectancy()
-                runChance = uniform(0.0, 3.0)
-                if runChance <= expectancy:
-                    game.runScored()
-                else:
-                    game.out()
-            else:  # swing and miss, resulting in a strike
-                batter.strike()
-        else:  # not in strike zone but still swing, results in strike
-            batter.strike()
-    else:  # batter did not swing and not in strike zone, results in a ball
-        batter.ball()
-    if bases.first:
-        throwOut = uniform(0.0, 1.0)
-        if throwOut <= 0.3:
-            game.out()
-            bases.first = False
-        else:
-            pass
-    elif bases.second:
-        throwOut = uniform(0.0, 1.0)
-        if throwOut <= 0.3:
-            game.out()
-            bases.second = False
-        else:
-            pass
-    elif bases.third:
-        throwOut = uniform(0.0, 1.0)
-        if throwOut <= 0.3:
-            game.out()
-            bases.third = False
-        else:
-            pass
-          
-season.data_df.set_index("Game", inplace=True, drop=True)
-print(season.data_df)

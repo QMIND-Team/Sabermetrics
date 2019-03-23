@@ -33,7 +33,7 @@ def calculateWAR1(df1, df2, df3, playerId):
 
     # pass the three dataframes through marcel and get projections for war
     firstAvg = marcel.leagueAverage(df1, perGame=1)['WAR']
-    secongAvg = marcel.leagueAverage(df2, perGame=1)['WAR']
+    secondAvg = marcel.leagueAverage(df2, perGame=1)['WAR']
     thirdAvg = marcel.leagueAverage(df3, perGame=1)['WAR']
     mostRecentSeason = df1['Year']
     predictedWAR = marcel.marcelModel('WAR', playerId, mostRecentSeason, firstAvg, secondAvg, thirdAvg)
@@ -67,7 +67,7 @@ def calculateWAR2(df1, df2, df3, playerId):
     # and leverage index
     pred['LI'] = (1 + pred['gmLI']) / 2
 
-    predictedWAR = (((((leagueFIP - pred['FIP']) / (pred['HR'] + pred['K'] + pred['BB'])) + pred['RL']) * pred['IP/9']) * pred['LI']) + (
+    predictedWAR = (((((leagueAverageDict1['FIP'] - pred['FIP']) / (pred['HR'] + pred['K'] + pred['BB'])) + pred['RL']) * pred['IP/9']) * pred['LI']) + (
                 -0.00095 * pred['IP'])
 
     return predictedWAR
