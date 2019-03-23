@@ -17,12 +17,11 @@ import Simulator.MLB_2019_Schedule as MLB
 warnings.simplefilter("ignore")
 
 pd.set_option("display.max_rows", 162)
-pd.set_option("display.max_columns", 6)
 
+pd.set_option("display.max_columns", 9)
 
-# Data Frame headings for a hardcoded game
-game_df = pd.DataFrame(columns={"Inning", "Home score", "Away score", "Strikes", "Balls", "Outs"})
-
+# Data Frame for box score output
+columnNames = ["Inning", "Home Score", "Away Score", "Hits", "Walks"]
 
 # class for season
 class Season:
@@ -79,15 +78,19 @@ class Game:
         self.outs = 0
         self.score = [0, 0]
         self.top = False
+        self.runsTop = 0
+        self.runsBottom = 0
         # Data Frame headings for a hardcoded game
-        self.game_df = pd.DataFrame(columns={"Inning", "Home score", "Away score", "Strikes", "Balls", "Outs"})
+        self.game_df = pd.DataFrame(columns=columnNames)
 
     # method for adding runs scored for each team
     def runScored(self):
         if self.top:                        # if top of the inning points awarded to the team of index zero
             self.score[1] = self.score[1] + 1
+            self.runsTop = self.runsTop + 1
         else:                               # points awarded to team of index one in the bottom of innings
             self.score[0] = self.score[0] + 1
+            self.runsBottom = self.runsBottom + 1
         if season.hardCoding:               # if user is hard coding a game, input the data to df when method is called
             game.game_df = inputData(game.game_df)
         batter.nextBatter()
@@ -100,8 +103,12 @@ class Game:
             self.outs = 0
             inning.inningSwitch()
             if not game.top:                # if its the bottom of the inning, start next inning
+                self.game_df = inputData(self.game_df)
+                self.runsTop = 0
+                self.runsBottom = 0
+                batter.hits = 0
+                batter.walks = 0
                 self.inning = self.inning + 1
-
         if self.inning >= 10 and self.score[0] != self.score[1]:        # if 10 innings reached and not tied
             season.nextGame()                                           # game ends, go to next game
             self.endGame()
@@ -122,9 +129,7 @@ class Inning(Game):
     def inningSwitch(self):                 # sets outs back to zero and switches between top and bottom of inning
         bases.first = False
         bases.second = False
-        bases.third = False
-        batter.hits = 0
-        batter.walks = 0
+        bases.third = False        
         if game.top:
             self.outs = 0
             self.bottomOf()
@@ -163,6 +168,7 @@ class Batter:
     def ball(self):
         self.balls = self.balls + 1         # add one to ball count
         if self.balls == 4:                 # if batter gets 4 balls
+            self.walks = self.walks + 1
             self.single()                   # walk to first
             self.walks = self.walks + 1
             self.nextBatter()               # calls function to get the next batters stats
@@ -181,8 +187,8 @@ class Batter:
 
     # method for behavior of a single hit
     def single(self):
-        self.nextBatter()
         self.hits = self.hits + 1
+        self.nextBatter()
         if bases.basesLoaded:               # bases will stay loaded and one run will be scored
             game.runScored()
         else:
@@ -200,8 +206,8 @@ class Batter:
 
     # method for behavior of a double hit
     def double(self):
-        self.nextBatter()
         self.hits = self.hits + 1
+        self.nextBatter()
         if bases.basesLoaded:               # if bases loaded, two players will score and first will become empty
             bases.first = False
             game.runScored()
@@ -220,8 +226,8 @@ class Batter:
 
     # method for behavior of a triple hit
     def triple(self):
-        self.nextBatter()
         self.hits = self.hits + 1
+        self.nextBatter()
         if bases.basesLoaded:               # all players on base will score a run
             bases.first = False
             bases.second = False
@@ -242,8 +248,8 @@ class Batter:
 
     # method for behavior of a home run hit
     def homeRun(self):
-        self.nextBatter()
         self.hits = self.hits + 1
+        self.nextBatter()
         if bases.basesLoaded:               # all players on base and batter will score a run
             bases.first = False
             bases.second = False
@@ -535,10 +541,11 @@ def getRunExpectancy():
 
 # method to update the data frame of events occurring in the hard coded game
 def inputData(dataFrame):
-    dataFrame = dataFrame[["Inning", "Home score", "Away score", "Strikes", "Balls", "Outs"]]
-    dataFrame = dataFrame.append({"Inning": game.inning, "Home score": game.score[0], "Away score": game.score[1],
-                                  "Strikes": batter.strikes, "Balls": batter.balls, "Outs": game.outs},
-                                 ignore_index=True)
+    walks = abs(batter.walks)
+    hits = batter.hits - walks
+    dataFrame = dataFrame[["Inning", "Home Score", "Away Score", "Hits", "Walks"]]
+    dataFrame = dataFrame.append({"Inning": game.inning, "Home Score": game.runsTop, "Away Score": game.runsBottom,
+                                  "Hits": hits, "Walks": walks}, ignore_index=True)
     return dataFrame
 
 
@@ -594,22 +601,22 @@ AL = np.array([Yankees, RedSox, Indians, Astros, WhiteSox, Athletics, Orioles, R
 # run the season
 while season.games < 163:
     swing = uniform(0.0, 1.0)
-    if swing <= 0.635:                              # batters swing at 63.5% of all pitches
+    if swing <= 0.635:  # batters swing at 63.5% of all pitches
         strikeZone = uniform(0.0, 1.0)
-        if strikeZone <= 0.45:                      # 45% of all pitches are inside the strike zone
+        if strikeZone <= 0.45:  # 45% of all pitches are inside the strike zone
             hit = uniform(0.0, 1.0)
-            if hit <= 0.8075:                       # 80.75% of swings in strike zone will hit
+            if hit <= 0.8075:  # 80.75% of swings in strike zone will hit
                 expectancy = getRunExpectancy()
                 runChance = uniform(0.0, 3.0)
                 if runChance <= expectancy:
                     game.runScored()
                 else:
                     game.out()
-            else:                                   # swing and miss, resulting in a strike
+            else:  # swing and miss, resulting in a strike
                 batter.strike()
-        else:                                       # not in strike zone but still swing, results in strike
+        else:  # not in strike zone but still swing, results in strike
             batter.strike()
-    else:                                           # batter did not swing and not in strike zone, results in a ball
+    else:  # batter did not swing and not in strike zone, results in a ball
         batter.ball()
     if bases.first:
         throwOut = uniform(0.0, 1.0)
@@ -632,7 +639,6 @@ while season.games < 163:
             bases.third = False
         else:
             pass
-
-
+          
 season.data_df.set_index("Game", inplace=True, drop=True)
-season.data_df
+print(season.data_df)
