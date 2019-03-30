@@ -10,3 +10,10 @@ allFeatures = ['Season', 'Team', 'W', 'L', 'SV', 'G_x', 'GS', 'IP', 'SO', 'K/9',
        'WAR_y']
 
 
+hr= [ 'HR/9', 'WAR_y', 'L', 'ERA', 'ISO', 'GS', 'BsR', 'xFIP', 'BB/9', 'W'] 33.800626900480054
+
+
+SO = ['L', 'BABIP_x', 'xFIP', 'ERA', 'HR/9', 'BB%', 'G_y', 'K/9', 'wRC+', 'HR/FB', 'G_x'] #The RMSE is:  107.06826707496887
+
+
+k/9 =  ['L', 'BB%', 'G_x', 'xFIP', 'Off', 'G_y', 'LOB%', 'ERA'] #RMSE is: 0.6660406644314525

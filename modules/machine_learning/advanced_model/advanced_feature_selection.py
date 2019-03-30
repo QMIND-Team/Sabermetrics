@@ -1,6 +1,4 @@
-
-import modules.machine_learning.main_functions as mf
-import modules.machine_learning.main_advanced_functions as maf
+import modules.machine_learning.advanced_model.main_advanced_functions as maf
 import random
 
 
@@ -17,7 +15,6 @@ def advancedFeatureAdder(df ,end ,start ,testRange ,targetFeature ,method ,seaso
     while (finished == 0):
         change = 0
         testAgain = list()
-        firstTest = list()
         print("Getting the starting RMSE")
         bestAccurracy, bestAvgRMSE = maf.runAdvancedModel(testedFeatures, df, end, start, showProcess, testRange,
                                                       targetFeature, method, seasonsToTest)
@@ -26,8 +23,6 @@ def advancedFeatureAdder(df ,end ,start ,testRange ,targetFeature ,method ,seaso
         print("The starting average RMSE is ", bestAvgRMSE)
         print("\n")
 
-        # --------------------------------------------
-        # print(toTestFeatures)
 
         for testing in toTestFeatures:
             print("#---------------------------------------------------------")
@@ -82,9 +77,6 @@ def advancedFeatureRemover(df, end, start, testRange, targetFeature, method, sea
         print("The starting accuracy is: ", bestAccurracy)
         print("The starting average RMSE is ", bestAvgRMSE)
         print("\n")
-
-        # --------------------------------------------
-        # print(toTestFeatures)
         toTestFeatures = testedFeatures
         for testing in toTestFeatures:
             print("#---------------------------------------------------------")
@@ -119,9 +111,6 @@ def advancedFeatureRemover(df, end, start, testRange, targetFeature, method, sea
             finished = 1
 
     return testedFeatures, removedFeatures
-
-
-
 
 
 def advancedFeatureSelection(df ,end ,start ,testRange ,targetFeature ,method ,seasonsToTest ,testedFeatures,toTestFeatures ,showProcess):

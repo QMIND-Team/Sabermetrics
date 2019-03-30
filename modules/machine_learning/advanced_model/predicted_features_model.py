@@ -1,5 +1,5 @@
-import modules.machine_learning.help_model as hm
-import modules.machine_learning.machine_learning  as ml
+import modules.machine_learning.ml_methods.help_model as hm
+import modules.machine_learning.ml_methods.machine_learning  as ml
 from sklearn.metrics import mean_squared_error
 from math import sqrt
 import pandas as pd
@@ -46,44 +46,36 @@ def predictedFeaturesModel(targetFeature, df, method,end,trainRange,showPreds):
     trainY = trainY.fillna(trainY.median())
     testY = testY.fillna(testY.median())
 
+
     trainX = trainX.values
-    trainY = trainY.values
     testX = testX.values
 
-    '''
-    print(type(trainX))
-    print(type(trainY))
-    print(type(testX))
-
-    print(trainX)
-    print(trainY)
-    print(testX)
-    '''
     if method == "XGB":
         preds = ml.XGB(trainX,trainY,testX)
-    if method == "LR":
-        #preds = ml.linearRegression(trainX,trainY,testX)
-        preds = ml.LRFS(trainX,trainY,testX,testY)
-    if method == "SVM":
+
+    if method == "LRFS":
+        preds = ml.LRFS(trainX,trainY,testX) #notice how it does not have feature selection
+    if  method == "SVM":
         preds = ml.SVM(trainX,trainY,testX)
+
+    if method == "LR":
+        preds = ml.LR(trainX, trainY, testX)
 
     testY[targetFeature] = testY[targetFeature] / 1000
     preds = preds / 1000
 
     showPreds["prediction"] = preds
-    showPreds["difference"] = showPreds["difference"].abs()
+    #   showPreds["difference"] = showPreds["difference"].abs()
     showPreds = showPreds.sort_values(by="Team", ascending=True)
 
     showPreds["W"] = showPreds["W"]/1000
-    showPreds["difference"] = showPreds[targetFeature] - showPreds["prediction"]
-
-
+    #showPreds["difference"] = showPreds[targetFeature] - showPreds["prediction"]
 
 
     with pd.option_context('display.max_rows', None, 'display.max_columns', None):
         print(showPreds)
 
-
+    testY = testY.fillna(testY.median())
 
     RMSE = sqrt(mean_squared_error(testY, preds))
     print("++++++++++++++++++")
