@@ -2,8 +2,7 @@
 import random
 import warnings
 warnings.filterwarnings("ignore")
-import modules.machine_learning.model as mod
-
+import modules.machine_learning.ml_methods.model as mod
 
 
 def getFeatures(df,trainRange,seasonsTested,testedFeatures,toTestFeatures,requiredColumns,finished,target,method):
@@ -24,9 +23,6 @@ def getFeatures(df,trainRange,seasonsTested,testedFeatures,toTestFeatures,requir
         print("The starting average RMS is ",bestAvgRMS)
         print("\n")
 
-        #--------------------------------------------
-        #print(toTestFeatures)
-
         for testing in toTestFeatures:
             print("#---------------------------------------------------------")
 
@@ -44,11 +40,11 @@ def getFeatures(df,trainRange,seasonsTested,testedFeatures,toTestFeatures,requir
             MDAVG,avgRMS = mod.runModel(testDf,trainRange,seasonsTested,target,method,0,1)
 
             print("After testing: ",testing," the accuracy is ",MDAVG)
-            print("After testing: ",testing," the average RMS is ",avgRMS,"\n")
-            if(avgRMS-bestAvgRMS<3):
-                testAgain.extend([testing])
-
-
+            print("After testing: ",testing," the average RMSE is ",avgRMS,"\n")
+            if(avgRMS<bestAvgRMS):
+                bestAvgRMS = avgRMS
+                testedFeatures.extend([testing])
+                print(testing," has been added")
 
         print("The features that will be retested are: ",testAgain)
         print("The final features are: ",testedFeatures)
@@ -60,11 +56,10 @@ def getFeatures(df,trainRange,seasonsTested,testedFeatures,toTestFeatures,requir
             getFeatures(df, trainRange, 5, 5, testAgain, requiredColumns, 0)
 
         else:
-            finished =1
             print("Complete")
             return testedFeatures,testAgain
 
-def removeFeatures(df,trainRange,seasonsTested,testedFeatures,requiredColumns,target):
+def removeFeatures(df,trainRange,seasonsTested,testedFeatures,requiredColumns,target,method):
     print("Now removing Columns ")
     random.shuffle(testedFeatures)
     print(testedFeatures)
@@ -98,7 +93,7 @@ def removeFeatures(df,trainRange,seasonsTested,testedFeatures,requiredColumns,ta
         MDAVG, avgRMS = mod.runModel(testDf, trainRange, seasonsTested, target,method,0,1)
 
         print("After testing: ", testing, " the accuracy is ", MDAVG)
-        print("After testing: ", testing, " the average RMS is ", avgRMS)
+        print("After testing: ", testing, " the average RMSE is ", avgRMS)
 
         if(avgRMS<bestAvgRMS):
             print(testing, " was removed ")

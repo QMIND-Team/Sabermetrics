@@ -1,6 +1,6 @@
-import modules.machine_learning.help_model as hm
-import modules.machine_learning.machine_learning  as ml
-import modules.machine_learning.demonstrate_model as dem
+import modules.machine_learning.ml_methods.help_model as hm
+import modules.machine_learning.ml_methods.machine_learning  as ml
+import modules.machine_learning.main_model.demonstrate_model as dem
 from sklearn.metrics import mean_squared_error
 from math import sqrt
 import pandas as pd
@@ -28,7 +28,8 @@ def runModel(testDf ,trainRange,seasonsTested ,target,method,showPreds,showFULLR
 
     return MDAVG, avgRMS
 
-def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePredictions =0,onlyPredictions =0):
+def model(targetFeature, df, start, end,method,noPreds=0,demonstrate=0,givePredictions =0,onlyPredictions =0):
+
 
     df = df.fillna(df.median())
     df = df[df.Season >= start]
@@ -46,12 +47,6 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
     if demonstrate == 1:
         dem.checkpointOne(trainX,trainY,end)
 
-
-
-    # The learning algorithms that are used in this program use the values of rows in a dataframe to predict a target value in the same row
-    # Therefore, the number target feature of the next year must be added to the row that corresponds to the same team from the previous year
-
-    # The nested for loops below adds the target feature from "trainY" in year "z" to the corresponding "trainX" row from year "x-1"
     if demonstrate == 1:
         dem.checkpointTwo(trainX,trainY)
 
@@ -67,35 +62,12 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
     if demonstrate == 1:
         dem.checkpointThree(trainX)
 
-    #  The trainY data is now in the  same row as the corresponding trainX data
-    #print(trainX)
-    #print(trainX.head())
     trainY = trainX["targetFeature"]
     if demonstrate == 1:
         dem.checkpointFour(trainY)
     trainX = hm.get_numerical_data(trainX)
     if demonstrate == 1:
         dem.checkpointFive(trainX)
-
-
-    #---------------------------------------------------------------------------------------------
-    '''
-
-    for i in trainX.index:
-        seasonX = trainX.loc[i, 'Season']
-        teamX = trainX.loc[i, 'Team']
-        for j in trainY.index:
-            seasonY = trainY.loc[j, 'Season']
-            teamY = trainY.loc[j, 'Team']
-            if ((seasonX == seasonY - 1) and (teamX == teamY)):
-                
-                trainX.loc[i, "targetFeature"] = trainY.loc[j, targetFeature]
-
-
-    '''
-
-    #---------------------------------------------------------------------------------------------
-    #Important Step
 
     trainX = trainX.drop(["targetFeature"], axis=1) #To prevent overfitting, the target feature is dropped from the trainX data
     if demonstrate == 1:
@@ -131,9 +103,6 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
     testX = hm.get_numerical_data(testX)
     testX = preprocessing.scale(testX)
 
-    #print(type(trainX))
-    #print(type(trainY))
-    #print(type(testX))
 
     if demonstrate ==1:
         dem.checkpointNine()
@@ -142,27 +111,27 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
     if method == "XGB":
         preds = ml.XGB(trainX,trainY,testX)
 
-    if method == "LR":
-        preds = ml.LRFS(trainX,trainY,testX,testY)
+    if method == "LRFS":
+        preds = ml.LRFS(trainX,trainY,testX)
 
     if method == "SVM":
         preds = ml.SVM(trainX,trainY,testX)
 
+    if method == "LR":
+        preds = ml.LR(trainX,trainY,testX)
+
     if demonstrate==1:
         dem.checkpointTen(method,preds)
 
-    showPreds["prediction"] = preds
+    showPreds["prediction"] = preds/1000
+    showPreds["targetFeature"] = showPreds["targetFeature"]/1000
     showPreds["difference"] = showPreds["targetFeature"] - showPreds["prediction"]
     showPreds["difference"] = showPreds["difference"].abs()
     showPreds = showPreds.sort_values(by="Team", ascending=True)
 
-    #if showResult == 1 and demonstrate != 1:
-       #with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-            #print(showPreds)
 
     if demonstrate ==1:
         dem.checkpointEleven(showPreds)
-
 
     if givePredictions ==1:
         predictions = showPreds[['Team','Season','prediction']]
@@ -173,15 +142,17 @@ def model(targetFeature, df, start, end,method,showResult=0,demonstrate=0,givePr
 
 
     meanDifference = showPreds.loc[:, "difference"].mean()
+    testY = testY.fillna(testY.median())
+
     RMSE = sqrt(mean_squared_error(testY, preds))
 
+    print("--------------")
+    if onlyPredictions ==1:
+        return predictions
 
+    if noPreds ==1:
+        with pd.option_context('display.max_rows', None, 'display.max_columns', None):
+            print(showPreds)
+            return meanDifference,RMSE,preds
 
-    if demonstrate ==1:
-        dem.checkpointTwelve(meanDifference,RMSE)
-    if demonstrate != 1 :
-         print("-----------------") # to show loading
-    if onlyPredictions==1:
-         return predictions
-    else:
-        return meanDifference,RMSE,predictions
+    return meanDifference,RMSE
