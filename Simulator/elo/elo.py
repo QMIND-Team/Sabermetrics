@@ -1,5 +1,5 @@
 import pandas as pd
-import math
+
 
 def calculateExpectedScores(R1, R2):
     '''
@@ -54,8 +54,6 @@ def seasonEloRatings(seasonDF, eloRatings):
         awayTeam = row['Away Team']
         homeTeamScore = row['Home Team Score']
         awayTeamScore = row['Away Team Score']
-        if (homeTeam not in eloRatings['Team'].unique()):
-            eloRatings
         homeEloRating = int(eloRatings.loc[eloRatings['Team'] == homeTeam, 'Elo Rating'])  + 24 # add home team advantage
         awayEloRating = int(eloRatings.loc[eloRatings['Team'] == awayTeam, 'Elo Rating'])
         homeExpected, awayExpected = calculateExpectedScores(homeEloRating, awayEloRating)
@@ -66,8 +64,11 @@ def seasonEloRatings(seasonDF, eloRatings):
             homeResult = 0
             awayResult = 1
         runDifferential = abs(homeTeamScore - awayTeamScore)
-        kFactor = 0.5 * runDifferential
-        newHomeRating = calculateNewRating(homeEloRating, homeExpected, homeResult, kFactor)
+        if (runDifferential < 3):
+            kFactor = runDifferential / 2
+        else:
+            kFactor = runDifferential
+        newHomeRating = calculateNewRating(homeEloRating, homeExpected, homeResult, kFactor) - 24
         newAwayRating = calculateNewRating(awayEloRating, awayExpected, awayResult, kFactor)
         eloRatings.loc[eloRatings['Team'] == homeTeam, 'Elo Rating'] = newHomeRating
         eloRatings.loc[eloRatings['Team'] == awayTeam, 'Elo Rating'] = newAwayRating
@@ -99,20 +100,21 @@ def playSeason(seasonDF, eloRatings):
 
 def playAllSeasons():
 
-    startYear = 2014
+    startYear = 2016
     endYear = 2017
 
     #seasonDF = pd.read_csv(path, index_col=0)
-    eloRatings = pd.read_csv('elo_ratings.csv', index_col=0)
+    eloRatings = pd.read_csv('elo/elo_ratings.csv', index_col=0)
 
     for year in range(startYear, endYear + 1):
-        path = f'{year}_schedule.csv'
+        path = f'elo/{year}_schedule.csv'
         seasonDF = pd.read_csv(path, index_col=0)
         eloRatings = playSeason(seasonDF, eloRatings)
 
     return eloRatings
 
 
-eloRatings = playAllSeasons()
-eloRatings.to_csv("new_elo_ratings.csv")
+eloRatings = playAllSeasons().sort_values(by=['Elo Rating'], ascending=False)
+eloRatings.to_csv("elo/new_elo_ratings.csv")
+
 
